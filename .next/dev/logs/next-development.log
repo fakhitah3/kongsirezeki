@@ -1,0 +1,14 @@
+[00:00:02.449] Server  LOG     ✓ Ready in 2.2s
+[00:00:07.722] Server  ERROR   ⨯ FirebaseError: Firebase: Error (auth/invalid-api-key).
+[00:00:07.963] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:08.173] Browser ERROR   uncaughtError: FirebaseError: Firebase: Error (auth/invalid-api-key).
+[00:01:43.867] Server  LOG       Reload env: .env.local
+[00:01:44.228] Server  ERROR   ⨯ FirebaseError: Firebase: Error (auth/invalid-api-key).
+[00:01:44.376] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:45.213] Browser ERROR   uncaughtError: FirebaseError: Firebase: Error (auth/invalid-api-key).
+[00:03:15.259] Server  LOG       Reload env: .env.local
+[00:03:15.647] Server  LOG     ✓ Compiled in 311ms
+[00:03:15.735] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:03:15.736] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./Documents/Project/kongsirezeki/lib/firebase.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[00:03:15.736] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[00:03:15.869] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
