@@ -1772,3 +1772,77 @@ https://nextjs.org/docs/messages/module-not-found
 [00:53:36.957] Server  LOG     ✓ Compiled in 176ms
 [00:54:31.676] Server  LOG     ✓ Compiled in 61ms
 [00:55:10.035] Server  LOG     ✓ Compiled in 69ms
+[00:58:29.533] Server  LOG     ✓ Compiled in 379ms
+[01:00:12.263] Server  LOG     ✓ Compiled in 389ms
+[01:00:25.134] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:00:41.725] Browser ERROR   Error submitting donation: {"code":"permission-denied","name":"FirebaseError"}
+[01:01:50.905] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:17.483] Server  LOG     ✓ Compiled in 530ms
+[01:03:25.348] Server  LOG     ✓ Compiled in 1196ms
+[01:03:26.984] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:03:30.216] Server  LOG     ✓ Compiled in 114ms
+[01:03:36.430] Server  LOG     ✓ Compiled in 121ms
+[01:03:47.226] Server  LOG     ✓ Compiled in 198ms
+[01:03:59.272] Server  LOG     ✓ Compiled in 91ms
+[01:04:20.327] Server  LOG     ✓ Compiled in 228ms
+[01:04:20.428] Browser ERROR   ./Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx:507:5
+Parsing ecmascript source code failed
+  505 |     </div>
+  506 |
+> 507 |     {/* Success Popup */}
+      |     ^
+  508 |     {showSuccessPopup && (
+  509 |       <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+  510 |         <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl transform transition-all">
+
+Expected ',', got '{'
+
+Import trace:
+  Server Component:
+    ./Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx
+    ./Documents/Project/kongsirezeki/app/donate/page.tsx
+[01:04:41.024] Server  LOG     ✓ Compiled in 95ms
+[01:04:41.806] Browser ERROR   ./Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx:551:1
+Parsing ecmascript source code failed
+  549 |       </div>
+  550 |     </div>
+> 551 |
+      | ^
+
+Expected ',', got '<eof>'
+
+Import trace:
+  Server Component:
+    ./Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx
+    ./Documents/Project/kongsirezeki/app/donate/page.tsx
+[01:04:46.278] Server  LOG     ✓ Compiled in 1095ms
+[01:06:07.740] Server  LOG     ✓ Compiled in 200ms
+[01:06:24.515] Server  LOG     ✓ Compiled in 140ms
+[01:06:43.724] Server  LOG     ✓ Compiled in 155ms
+[01:06:55.621] Server  LOG     ✓ Compiled in 108ms
+[01:07:20.544] Server  LOG     ✓ Compiled in 58ms
+[01:07:20.657] Browser ERROR   ./Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx:455:16
+Parsing ecmascript source code failed
+  453 |                   </div>
+  454 |                 </div>
+> 455 |               </div>
+      |                ^^^^^
+  456 |             )}
+  457 |
+  458 |             {/* Additional Description */}
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx
+    ./Documents/Project/kongsirezeki/app/donate/page.tsx
+[01:07:38.323] Server  LOG     ✓ Compiled in 866ms
+[01:07:53.285] Server  LOG     ✓ Compiled in 152ms
+[01:08:47.384] Server  LOG     ✓ Compiled in 132ms
+[01:08:51.916] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:09:25.762] Browser ERROR   Error submitting donation: {"code":"permission-denied","name":"FirebaseError"}
+[01:10:15.540] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:11:57.890] Server  LOG     ✓ Compiled in 465ms
+[01:12:06.486] Server  LOG     ✓ Compiled in 205ms
+[01:12:28.083] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
