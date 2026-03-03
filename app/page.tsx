@@ -2,8 +2,6 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import StatsSection from "./components/StatsSection";
 import CampaignSection from "./components/CampaignSection";
-import HowToApply from "./components/HowToApply";
-import HowToDonate from "./components/HowToDonate";
 
 export default function HomePage() {
   return (
@@ -11,9 +9,7 @@ export default function HomePage() {
       
       <HeroSection />
       <StatsSection />
-      <CampaignSection />
-      <HowToApply />
-      <HowToDonate />
+      <CampaignSection/>
     </main>
   );
 }

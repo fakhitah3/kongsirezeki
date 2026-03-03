@@ -9,7 +9,7 @@ import { useRouter } from "next/navigation";
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("student");
+  const [role, setRole] = useState("pelajar");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const router = useRouter();
@@ -27,10 +27,23 @@ export default function RegisterPage() {
         createdAt: serverTimestamp(),
       });
 
-      setMessage("Pendaftaran berjaya! Anda akan dialihkan ke halaman log masuk...");
+      setMessage("Pendaftaran berjaya! Anda akan dialihkan ke dashboard...");
       
+      // Redirect to appropriate dashboard based on role
       setTimeout(() => {
-        router.push('/login');
+        switch (role) {
+          case "pelajar":
+            router.push("/dashboard/student");
+            break;
+          case "penyumbang":
+            router.push("/dashboard/donor");
+            break;
+          case "sukarelawan":
+            router.push("/dashboard/volunteer");
+            break;
+          default:
+            router.push("/");
+        }
       }, 2000);
       
     } catch (err) {

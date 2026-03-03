@@ -1,14 +1,243 @@
-[00:00:02.449] Server  LOG     ✓ Ready in 2.2s
-[00:00:07.722] Server  ERROR   ⨯ FirebaseError: Firebase: Error (auth/invalid-api-key).
-[00:00:07.963] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:08.173] Browser ERROR   uncaughtError: FirebaseError: Firebase: Error (auth/invalid-api-key).
-[00:01:43.867] Server  LOG       Reload env: .env.local
-[00:01:44.228] Server  ERROR   ⨯ FirebaseError: Firebase: Error (auth/invalid-api-key).
-[00:01:44.376] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:01:45.213] Browser ERROR   uncaughtError: FirebaseError: Firebase: Error (auth/invalid-api-key).
-[00:03:15.259] Server  LOG       Reload env: .env.local
-[00:03:15.647] Server  LOG     ✓ Compiled in 311ms
-[00:03:15.735] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:15.736] Server  WARN    ⚠ Fast Refresh had to perform a full reload when ./Documents/Project/kongsirezeki/lib/firebase.ts changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
-[00:03:15.736] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
-[00:03:15.869] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:01.006] Server  LOG     ✓ Ready in 764ms
+[00:00:04.491] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:41.565] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:08:48.384] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:21.153] Server  LOG     ✓ Compiled in 142ms
+[00:09:26.110] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:29.381] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:36.008] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:10:29.053] Server  LOG     ✓ Compiled in 86ms
+[00:11:36.742] Server  LOG     ✓ Compiled in 148ms
+[00:14:31.722] Server  LOG     ✓ Compiled in 151ms
+[00:14:51.686] Server  LOG     ✓ Compiled in 113ms
+[00:14:56.481] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:15:23.785] Server  LOG     ✓ Compiled in 112ms
+[00:16:00.806] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:16:27.886] Server  LOG     ✓ Compiled in 111ms
+[00:16:41.780] Server  LOG     ✓ Compiled in 95ms
+[00:18:35.372] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.378] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.382] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.382] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.384] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.387] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.388] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.388] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.389] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.389] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.389] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.390] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.390] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.390] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:18:35.501] Browser ERROR   ./Documents/Project/kongsirezeki/app/page.tsx:4:1
+Module not found: Can't resolve './components/CampaignSection'
+  2 | import HeroSection from "./components/HeroSection";
+  3 | import StatsSection from "./components/StatsSection";
+> 4 | import CampaignSection from "./components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 |
+  6 | export default function HomePage() {
+  7 |   return (
+
+https://nextjs.org/docs/messages/module-not-found
+[00:18:46.408] Browser ERROR   [2026-03-03T00:43:22.226Z]  @firebase/firestore: Firestore (12.10.0): Uncaught Error in snapshot listener: FirebaseError: [code=permission-denied]: Missing or insufficient permissions.
+[00:19:44.702] Browser ERROR   Error fetching stats: {"code":"permission-denied","name":"FirebaseError"}
+[00:19:44.702] Browser ERROR   Error fetching stats: {"code":"permission-denied","name":"FirebaseError"}
+[00:36:21.320] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:38:42.698] Server  LOG     ✓ Compiled in 168ms

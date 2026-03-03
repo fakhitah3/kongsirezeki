@@ -8,10 +8,10 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/firebase/auth/dist/esm/index.esm.js [app-client] (ecmascript) <locals>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$firebase$2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/firebase/node_modules/@firebase/auth/dist/esm/index.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$firebase$2f$firestore$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/firebase/firestore/dist/esm/index.esm.js [app-client] (ecmascript) <locals>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@firebase/firestore/dist/index.esm.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/firebase/auth/dist/esm/index.esm.js [app-client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/@firebase/auth/dist/esm/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$firebase$2f$firestore$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/firebase/firestore/dist/esm/index.esm.js [app-client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/@firebase/firestore/dist/index.esm.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/lib/firebase.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/next/navigation.js [app-client] (ecmascript)");
@@ -27,15 +27,15 @@ var _s = __turbopack_context__.k.signature();
 function RegisterPage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(23);
-    if ($[0] !== "68528b1f40fae707e286b690bc3b622543f354aa456d056e22438d3bc20c5af0") {
+    if ($[0] !== "412f4f0f000cc92b7e0a50dc8451bd1ca7118c0319fad0a42900264c1d694ce2") {
         for(let $i = 0; $i < 23; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "68528b1f40fae707e286b690bc3b622543f354aa456d056e22438d3bc20c5af0";
+        $[0] = "412f4f0f000cc92b7e0a50dc8451bd1ca7118c0319fad0a42900264c1d694ce2";
     }
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
-    const [role, setRole] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("student");
+    const [role, setRole] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("pelajar");
     const [message, setMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
@@ -47,16 +47,36 @@ function RegisterPage() {
                 try {
                     setError("");
                     setMessage("");
-                    const userCred = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$firebase$2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createUserWithEmailAndPassword"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["auth"], email, password);
-                    await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setDoc"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], "users", userCred.user.uid), {
+                    const userCred = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["createUserWithEmailAndPassword"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["auth"], email, password);
+                    await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["setDoc"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["doc"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], "users", userCred.user.uid), {
                         email,
                         role,
-                        createdAt: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["serverTimestamp"])()
+                        createdAt: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["serverTimestamp"])()
                     });
-                    setMessage("Pendaftaran berjaya! Anda akan dialihkan ke halaman log masuk...");
+                    setMessage("Pendaftaran berjaya! Anda akan dialihkan ke dashboard...");
                     setTimeout({
                         "RegisterPage[handleRegister > setTimeout()]": ()=>{
-                            router.push("/login");
+                            bb38: switch(role){
+                                case "pelajar":
+                                    {
+                                        router.push("/dashboard/student");
+                                        break bb38;
+                                    }
+                                case "penyumbang":
+                                    {
+                                        router.push("/dashboard/donor");
+                                        break bb38;
+                                    }
+                                case "sukarelawan":
+                                    {
+                                        router.push("/dashboard/volunteer");
+                                        break bb38;
+                                    }
+                                default:
+                                    {
+                                        router.push("/");
+                                    }
+                            }
                         }
                     }["RegisterPage[handleRegister > setTimeout()]"], 2000);
                 } catch (t1) {
@@ -80,7 +100,7 @@ function RegisterPage() {
             children: "Daftar Akaun"
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-            lineNumber: 59,
+            lineNumber: 79,
             columnNumber: 10
         }, this);
         $[6] = t1;
@@ -94,7 +114,7 @@ function RegisterPage() {
             children: message
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-            lineNumber: 66,
+            lineNumber: 86,
             columnNumber: 21
         }, this);
         $[7] = message;
@@ -109,7 +129,7 @@ function RegisterPage() {
             children: error
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-            lineNumber: 74,
+            lineNumber: 94,
             columnNumber: 19
         }, this);
         $[9] = error;
@@ -127,7 +147,7 @@ function RegisterPage() {
             }["RegisterPage[<input>.onChange]"]
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-            lineNumber: 82,
+            lineNumber: 102,
             columnNumber: 10
         }, this);
         $[11] = t4;
@@ -145,7 +165,7 @@ function RegisterPage() {
             }["RegisterPage[<input>.onChange]"]
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-            lineNumber: 91,
+            lineNumber: 111,
             columnNumber: 10
         }, this);
         $[12] = t5;
@@ -165,7 +185,7 @@ function RegisterPage() {
                     children: "Pelajar"
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-                    lineNumber: 102,
+                    lineNumber: 122,
                     columnNumber: 43
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -173,7 +193,7 @@ function RegisterPage() {
                     children: "Penyumbang"
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-                    lineNumber: 102,
+                    lineNumber: 122,
                     columnNumber: 83
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -181,13 +201,13 @@ function RegisterPage() {
                     children: "Sukarelawan"
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-                    lineNumber: 102,
+                    lineNumber: 122,
                     columnNumber: 129
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-            lineNumber: 100,
+            lineNumber: 120,
             columnNumber: 10
         }, this);
         $[13] = t6;
@@ -202,7 +222,7 @@ function RegisterPage() {
             children: "Daftar"
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-            lineNumber: 109,
+            lineNumber: 129,
             columnNumber: 10
         }, this);
         $[14] = handleRegister;
@@ -225,13 +245,13 @@ function RegisterPage() {
                     children: "Log masuk"
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-                    lineNumber: 117,
+                    lineNumber: 137,
                     columnNumber: 82
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-            lineNumber: 117,
+            lineNumber: 137,
             columnNumber: 10
         }, this);
         $[16] = router;
@@ -255,7 +275,7 @@ function RegisterPage() {
             ]
         }, void 0, true, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Registration.tsx",
-            lineNumber: 127,
+            lineNumber: 147,
             columnNumber: 10
         }, this);
         $[18] = t2;
@@ -268,7 +288,7 @@ function RegisterPage() {
     }
     return t9;
 }
-_s(RegisterPage, "3FDM2OrYe9fFLhQjzcaMe1gT6jQ=", false, function() {
+_s(RegisterPage, "ijkH9JraX30jz/D9YBkVDrDzLUE=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

@@ -9,7 +9,7 @@ export default function DashboardRouter() {
 
   useEffect(() => {
   getUserRole().then((role) => {
-    if (role === "pelajar") router.push("/dashboard/pelajar");
+    if (role === "pelajar") router.push("/dashboard/student");
     if (role === "penyumbang") router.push("/dashboard/penyumbang");
     if (role === "sukarelawan") router.push("/dashboard/sukarelawan");
     if (role === "admin") router.push("/dashboard/admin");

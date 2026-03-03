@@ -8,11 +8,12 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/next/dist/compiled/react/compiler-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/firebase/auth/dist/esm/index.esm.js [app-client] (ecmascript) <locals>");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$firebase$2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/firebase/node_modules/@firebase/auth/dist/esm/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/firebase/auth/dist/esm/index.esm.js [app-client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/@firebase/auth/dist/esm/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/lib/firebase.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/next/navigation.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$useUserRole$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Documents/Project/kongsirezeki/lib/useUserRole.ts [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -21,14 +22,15 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 function LoginPage() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(18);
-    if ($[0] !== "23ebd1e1fc8e1a5c3a3d9f7ff3de09996b061cc5c9d75f4ddf939007999a6457") {
+    if ($[0] !== "1b1bb5451496f79cfbc62fb093c9071e995b29ebd3c43ba58efaeb0d1b4f5cae") {
         for(let $i = 0; $i < 18; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "23ebd1e1fc8e1a5c3a3d9f7ff3de09996b061cc5c9d75f4ddf939007999a6457";
+        $[0] = "1b1bb5451496f79cfbc62fb093c9071e995b29ebd3c43ba58efaeb0d1b4f5cae";
     }
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
@@ -41,8 +43,34 @@ function LoginPage() {
                 ;
                 try {
                     setError("");
-                    await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$firebase$2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["signInWithEmailAndPassword"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["auth"], email, password);
-                    router.push("/");
+                    await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["signInWithEmailAndPassword"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["auth"], email, password);
+                    const role = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$useUserRole$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getUserRole"])();
+                    bb18: switch(role){
+                        case "pelajar":
+                            {
+                                router.push("/dashboard/student");
+                                break bb18;
+                            }
+                        case "penyumbang":
+                            {
+                                router.push("/dashboard/donor");
+                                break bb18;
+                            }
+                        case "sukarelawan":
+                            {
+                                router.push("/dashboard/volunteer");
+                                break bb18;
+                            }
+                        case "admin":
+                            {
+                                router.push("/dashboard/admin");
+                                break bb18;
+                            }
+                        default:
+                            {
+                                router.push("/");
+                            }
+                    }
                 } catch (t1) {
                     setError("Email atau kata laluan salah. Sila cuba lagi.");
                 }
@@ -63,7 +91,7 @@ function LoginPage() {
             children: "Log Masuk"
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
-            lineNumber: 44,
+            lineNumber: 71,
             columnNumber: 10
         }, this);
         $[5] = t1;
@@ -77,7 +105,7 @@ function LoginPage() {
             children: error
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
-            lineNumber: 51,
+            lineNumber: 78,
             columnNumber: 19
         }, this);
         $[6] = error;
@@ -95,7 +123,7 @@ function LoginPage() {
             }["LoginPage[<input>.onChange]"]
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
-            lineNumber: 59,
+            lineNumber: 86,
             columnNumber: 10
         }, this);
         $[8] = t3;
@@ -113,7 +141,7 @@ function LoginPage() {
             }["LoginPage[<input>.onChange]"]
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
-            lineNumber: 68,
+            lineNumber: 95,
             columnNumber: 10
         }, this);
         $[9] = t4;
@@ -128,7 +156,7 @@ function LoginPage() {
             children: "Login"
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
-            lineNumber: 77,
+            lineNumber: 104,
             columnNumber: 10
         }, this);
         $[10] = handleLogin;
@@ -148,12 +176,12 @@ function LoginPage() {
                 children: "Lupa kata laluan?"
             }, void 0, false, {
                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
-                lineNumber: 85,
+                lineNumber: 112,
                 columnNumber: 51
             }, this)
         }, void 0, false, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
-            lineNumber: 85,
+            lineNumber: 112,
             columnNumber: 10
         }, this);
         $[12] = router;
@@ -175,7 +203,7 @@ function LoginPage() {
             ]
         }, void 0, true, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
-            lineNumber: 95,
+            lineNumber: 122,
             columnNumber: 10
         }, this);
         $[14] = t2;

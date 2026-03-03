@@ -4,6 +4,7 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { getUserRole } from "@/lib/useUserRole";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,26 @@ export default function LoginPage() {
     try {
       setError("");
       await signInWithEmailAndPassword(auth, email, password);
-      router.push("/");
+      
+      // Get user role and redirect to appropriate dashboard
+      const role = await getUserRole();
+      
+      switch (role) {
+        case "pelajar":
+          router.push("/dashboard/student");
+          break;
+        case "penyumbang":
+          router.push("/dashboard/donor");
+          break;
+        case "sukarelawan":
+          router.push("/dashboard/volunteer");
+          break;
+        case "admin":
+          router.push("/dashboard/admin");
+          break;
+        default:
+          router.push("/");
+      }
     } catch (err) {
       setError("Email atau kata laluan salah. Sila cuba lagi.");
     }

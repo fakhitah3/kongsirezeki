@@ -40,7 +40,12 @@ export default function Navbar() {
       // Not logged in - show default menu
       return (
         <>
-          <li className="hover:text-blue-700 cursor-pointer">Utama</li>
+          <li 
+            className="hover:text-blue-700 cursor-pointer"
+            onClick={() => router.push('/')}
+          >
+            Utama
+          </li>
           <li className="hover:text-blue-700 cursor-pointer">Tentang Kami</li>
           <li 
             className="hover:text-blue-700 cursor-pointer"
@@ -128,9 +133,16 @@ export default function Navbar() {
   return (
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-blue-700">
-          Food Bank Kampus
-        </h1>
+        <div className="flex items-center space-x-3">
+          <img 
+            src="/logo.png" 
+            alt="Kongsi Rezeki Logo" 
+            className="h-12 w-12"
+          />
+          <h1 className="text-xl font-bold text-blue-700">
+            KONGSI REZEKI
+          </h1>
+        </div>
 
         <ul className="flex space-x-6 text-sm font-medium text-gray-700">
           {renderNavItems()}

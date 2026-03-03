@@ -50,7 +50,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kong
 ;
 ;
 const metadata = {
-    title: "Food Bank Kampus",
+    title: "KONGSI REZEKI",
     description: "Inisiatif Food Bank Kampus - Menyokong kesejahteraan makanan pelajar"
 };
 function RootLayout({ children }) {
