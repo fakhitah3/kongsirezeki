@@ -44,7 +44,14 @@ function BuatSumbangan() {
     const [message, setMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [error, setError] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [showSuccessPopup, setShowSuccessPopup] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [minDate, setMinDate] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "BuatSumbangan.useEffect": ()=>{
+            // Set min date only on client side to avoid hydration mismatch
+            setMinDate(new Date().toISOString().split('T')[0]);
+        }
+    }["BuatSumbangan.useEffect"], []);
     const handleChange = (e)=>{
         const { name, value } = e.target;
         if (name.includes(".")) {
@@ -73,8 +80,32 @@ function BuatSumbangan() {
                 }
             }));
     };
+    const handleClearForm = ()=>{
+        setForm({
+            jenisSumbangan: "",
+            makanan: {
+                jenis: "",
+                kuantiti: 0,
+                unit: "kg",
+                tarikhLuput: "",
+                penerangan: ""
+            },
+            wang: {
+                jumlah: 0,
+                kaedah: "",
+                buktiFile: null
+            },
+            penerangan: ""
+        });
+        setError("");
+        setMessage("");
+    };
     const uploadFile = async (file_0)=>{
-        const storageRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ref"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["storage"], `donation-proofs/${Date.now()}_${file_0.name}`);
+        // Only run on client side
+        if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
+        ;
+        const timestamp = Date.now();
+        const storageRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ref"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["storage"], `donation-proofs/${timestamp}_${file_0.name}`);
         await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["uploadBytes"])(storageRef, file_0);
         const downloadURL = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$storage$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getDownloadURL"])(storageRef);
         return downloadURL;
@@ -113,6 +144,7 @@ function BuatSumbangan() {
             const donationDoc = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["addDoc"])((0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["collection"])(__TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["db"], "donations"), donationData);
             // If it's a food donation, also add to Stock collection
             if (form.jenisSumbangan === "makanan") {
+                const today = new Date().toISOString().split('T')[0];
                 const stockData = {
                     donationId: donationDoc.id,
                     jenisMakanan: form.makanan.jenis,
@@ -124,7 +156,7 @@ function BuatSumbangan() {
                     // Available for distribution
                     penyumbang: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["auth"].currentUser?.displayName || "Anonymous User",
                     penyumbangEmail: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["auth"].currentUser?.email || "anonymous@kongsirezeki.com",
-                    tarikhMasuk: new Date().toISOString().split('T')[0],
+                    tarikhMasuk: today,
                     createdAt: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["serverTimestamp"])(),
                     updatedAt: (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["serverTimestamp"])()
                 };
@@ -160,7 +192,7 @@ function BuatSumbangan() {
         }
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 py-10 px-4",
+        className: "min-h-screen bg-gradient-to-br from-blue-50 to-red-50 py-10 px-4",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-4xl mx-auto",
             children: [
@@ -172,7 +204,7 @@ function BuatSumbangan() {
                             children: "Buat Sumbangan"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                            lineNumber: 172,
+                            lineNumber: 203,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -180,13 +212,13 @@ function BuatSumbangan() {
                             children: "Sumbangan anda akan membantu pelajar yang memerlukan. Sila isi maklumat di bawah dengan lengkap."
                         }, void 0, false, {
                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                            lineNumber: 175,
+                            lineNumber: 206,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                    lineNumber: 171,
+                    lineNumber: 202,
                     columnNumber: 9
                 }, this),
                 message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -202,19 +234,19 @@ function BuatSumbangan() {
                                 clipRule: "evenodd"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                lineNumber: 183,
+                                lineNumber: 214,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                            lineNumber: 182,
+                            lineNumber: 213,
                             columnNumber: 13
                         }, this),
                         message
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                    lineNumber: 181,
+                    lineNumber: 212,
                     columnNumber: 21
                 }, this),
                 error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -230,19 +262,19 @@ function BuatSumbangan() {
                                 clipRule: "evenodd"
                             }, void 0, false, {
                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                lineNumber: 190,
+                                lineNumber: 221,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                            lineNumber: 189,
+                            lineNumber: 220,
                             columnNumber: 13
                         }, this),
                         error
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                    lineNumber: 188,
+                    lineNumber: 219,
                     columnNumber: 19
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -268,7 +300,7 @@ function BuatSumbangan() {
                                                             d: "M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                            lineNumber: 203,
+                                                            lineNumber: 234,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -277,25 +309,25 @@ function BuatSumbangan() {
                                                             clipRule: "evenodd"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                            lineNumber: 204,
+                                                            lineNumber: 235,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                    lineNumber: 202,
+                                                    lineNumber: 233,
                                                     columnNumber: 19
                                                 }, this),
                                                 "Jenis Sumbangan"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                            lineNumber: 201,
+                                            lineNumber: 232,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 200,
+                                        lineNumber: 231,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -314,7 +346,7 @@ function BuatSumbangan() {
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 211,
+                                                        lineNumber: 242,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -322,7 +354,7 @@ function BuatSumbangan() {
                                                         children: "🍱"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 212,
+                                                        lineNumber: 243,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -330,7 +362,7 @@ function BuatSumbangan() {
                                                         children: "Makanan"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 213,
+                                                        lineNumber: 244,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -338,13 +370,13 @@ function BuatSumbangan() {
                                                         children: "Makanan kering atau basah"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 214,
+                                                        lineNumber: 245,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 210,
+                                                lineNumber: 241,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
@@ -360,7 +392,7 @@ function BuatSumbangan() {
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 218,
+                                                        lineNumber: 249,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -368,7 +400,7 @@ function BuatSumbangan() {
                                                         children: "💰"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 219,
+                                                        lineNumber: 250,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -376,7 +408,7 @@ function BuatSumbangan() {
                                                         children: "Wang"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 220,
+                                                        lineNumber: 251,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -384,32 +416,32 @@ function BuatSumbangan() {
                                                         children: "Sumbangan tunai atau online"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 221,
+                                                        lineNumber: 252,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 217,
+                                                lineNumber: 248,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 209,
+                                        lineNumber: 240,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                lineNumber: 199,
+                                lineNumber: 230,
                                 columnNumber: 13
                             }, this),
                             form.jenisSumbangan === "makanan" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-green-50 border-2 border-green-200 rounded-xl p-6",
+                                className: "bg-red-50 border-2 border-red-200 rounded-xl p-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                        className: "text-lg font-semibold text-green-800 mb-4 flex items-center",
+                                        className: "text-lg font-semibold text-red-800 mb-4 flex items-center",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
                                                 className: "w-5 h-5 mr-2",
@@ -421,19 +453,19 @@ function BuatSumbangan() {
                                                     clipRule: "evenodd"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                    lineNumber: 230,
+                                                    lineNumber: 261,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 229,
+                                                lineNumber: 260,
                                                 columnNumber: 19
                                             }, this),
                                             "Maklumat Makanan"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 228,
+                                        lineNumber: 259,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -450,13 +482,13 @@ function BuatSumbangan() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 238,
+                                                                lineNumber: 269,
                                                                 columnNumber: 37
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 237,
+                                                        lineNumber: 268,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -465,17 +497,17 @@ function BuatSumbangan() {
                                                         value: form.makanan.jenis,
                                                         onChange: handleChange,
                                                         placeholder: "Contoh: Beras, Mie, Biskut",
-                                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors",
+                                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors",
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 240,
+                                                        lineNumber: 271,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 236,
+                                                lineNumber: 267,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -489,13 +521,13 @@ function BuatSumbangan() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 245,
+                                                                lineNumber: 276,
                                                                 columnNumber: 32
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 244,
+                                                        lineNumber: 275,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -508,25 +540,25 @@ function BuatSumbangan() {
                                                                 onChange: handleChange,
                                                                 min: "1",
                                                                 placeholder: "0",
-                                                                className: "flex-1 border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors",
+                                                                className: "flex-1 border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors",
                                                                 required: true
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 248,
+                                                                lineNumber: 279,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
                                                                 name: "makanan.unit",
                                                                 value: form.makanan.unit,
                                                                 onChange: handleChange,
-                                                                className: "border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors",
+                                                                className: "border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors",
                                                                 children: [
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
                                                                         value: "kg",
                                                                         children: "kg"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                        lineNumber: 250,
+                                                                        lineNumber: 281,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -534,7 +566,7 @@ function BuatSumbangan() {
                                                                         children: "pcs"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                        lineNumber: 251,
+                                                                        lineNumber: 282,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -542,7 +574,7 @@ function BuatSumbangan() {
                                                                         children: "box"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                        lineNumber: 252,
+                                                                        lineNumber: 283,
                                                                         columnNumber: 25
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -550,31 +582,31 @@ function BuatSumbangan() {
                                                                         children: "botol"
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                        lineNumber: 253,
+                                                                        lineNumber: 284,
                                                                         columnNumber: 25
                                                                     }, this)
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 249,
+                                                                lineNumber: 280,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 247,
+                                                        lineNumber: 278,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 243,
+                                                lineNumber: 274,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 235,
+                                        lineNumber: 266,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -589,13 +621,13 @@ function BuatSumbangan() {
                                                         children: "*"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 261,
+                                                        lineNumber: 292,
                                                         columnNumber: 34
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 260,
+                                                lineNumber: 291,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -603,18 +635,18 @@ function BuatSumbangan() {
                                                 name: "makanan.tarikhLuput",
                                                 value: form.makanan.tarikhLuput,
                                                 onChange: handleChange,
-                                                min: new Date().toISOString().split('T')[0],
-                                                className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors",
+                                                min: minDate,
+                                                className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors",
                                                 required: true
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 263,
+                                                lineNumber: 294,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 259,
+                                        lineNumber: 290,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -625,7 +657,7 @@ function BuatSumbangan() {
                                                 children: "Penerangan Makanan"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 267,
+                                                lineNumber: 298,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -634,22 +666,22 @@ function BuatSumbangan() {
                                                 onChange: handleChange,
                                                 rows: 3,
                                                 placeholder: "Contoh: Makanan kering, masih dalam pembungkusan asal, halal",
-                                                className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors resize-none"
+                                                className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors resize-none"
                                             }, void 0, false, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 270,
+                                                lineNumber: 301,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 266,
+                                        lineNumber: 297,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                lineNumber: 227,
+                                lineNumber: 258,
                                 columnNumber: 51
                             }, this),
                             form.jenisSumbangan === "wang" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -667,7 +699,7 @@ function BuatSumbangan() {
                                                         d: "M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 278,
+                                                        lineNumber: 309,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -676,20 +708,20 @@ function BuatSumbangan() {
                                                         clipRule: "evenodd"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 279,
+                                                        lineNumber: 310,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 277,
+                                                lineNumber: 308,
                                                 columnNumber: 19
                                             }, this),
                                             "Maklumat Wang"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 276,
+                                        lineNumber: 307,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -706,13 +738,13 @@ function BuatSumbangan() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 287,
+                                                                lineNumber: 318,
                                                                 columnNumber: 35
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 286,
+                                                        lineNumber: 317,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -723,7 +755,7 @@ function BuatSumbangan() {
                                                                 children: "RM"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 290,
+                                                                lineNumber: 321,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -738,19 +770,19 @@ function BuatSumbangan() {
                                                                 required: true
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 291,
+                                                                lineNumber: 322,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 289,
+                                                        lineNumber: 320,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 285,
+                                                lineNumber: 316,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -764,13 +796,13 @@ function BuatSumbangan() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 297,
+                                                                lineNumber: 328,
                                                                 columnNumber: 41
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 296,
+                                                        lineNumber: 327,
                                                         columnNumber: 21
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -785,7 +817,7 @@ function BuatSumbangan() {
                                                                 children: "Pilih kaedah"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 300,
+                                                                lineNumber: 331,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -793,7 +825,7 @@ function BuatSumbangan() {
                                                                 children: "Pemindahan Online"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 301,
+                                                                lineNumber: 332,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -801,7 +833,7 @@ function BuatSumbangan() {
                                                                 children: "Tunai"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 302,
+                                                                lineNumber: 333,
                                                                 columnNumber: 23
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -809,25 +841,25 @@ function BuatSumbangan() {
                                                                 children: "Cek"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 303,
+                                                                lineNumber: 334,
                                                                 columnNumber: 23
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 299,
+                                                        lineNumber: 330,
                                                         columnNumber: 21
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                lineNumber: 295,
+                                                lineNumber: 326,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 284,
+                                        lineNumber: 315,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -839,7 +871,7 @@ function BuatSumbangan() {
                                                     children: "Muat Naik Bukti (PDF/JPG/PNG)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                    lineNumber: 310,
+                                                    lineNumber: 341,
                                                     columnNumber: 23
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -849,7 +881,7 @@ function BuatSumbangan() {
                                                     className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                    lineNumber: 313,
+                                                    lineNumber: 344,
                                                     columnNumber: 23
                                                 }, this),
                                                 form.wang.buktiFile && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -865,12 +897,12 @@ function BuatSumbangan() {
                                                                 clipRule: "evenodd"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                                lineNumber: 316,
+                                                                lineNumber: 347,
                                                                 columnNumber: 29
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                            lineNumber: 315,
+                                                            lineNumber: 346,
                                                             columnNumber: 27
                                                         }, this),
                                                         form.wang.buktiFile.name,
@@ -878,31 +910,31 @@ function BuatSumbangan() {
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                    lineNumber: 314,
+                                                    lineNumber: 345,
                                                     columnNumber: 47
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                            lineNumber: 309,
+                                            lineNumber: 340,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 308,
+                                        lineNumber: 339,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                lineNumber: 275,
+                                lineNumber: 306,
                                 columnNumber: 48
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-gray-50 p-6 rounded-xl",
+                                className: "bg-purple-50 p-6 rounded-xl",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
-                                        className: "block text-lg font-semibold text-gray-800 mb-3",
+                                        className: "block text-lg font-semibold text-purple-800 mb-3",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center",
                                             children: [
@@ -916,24 +948,24 @@ function BuatSumbangan() {
                                                         clipRule: "evenodd"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 329,
+                                                        lineNumber: 360,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                    lineNumber: 328,
+                                                    lineNumber: 359,
                                                     columnNumber: 19
                                                 }, this),
                                                 "Penerangan Tambahan"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                            lineNumber: 327,
+                                            lineNumber: 358,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 326,
+                                        lineNumber: 357,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -945,13 +977,13 @@ function BuatSumbangan() {
                                         className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none transition-colors resize-none"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 334,
+                                        lineNumber: 365,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                lineNumber: 325,
+                                lineNumber: 356,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -960,7 +992,7 @@ function BuatSumbangan() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         type: "submit",
                                         disabled: loading,
-                                        className: "flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl",
+                                        className: "flex-1 bg-gradient-to-r from-red-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl",
                                         children: loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center justify-center",
                                             children: [
@@ -978,7 +1010,7 @@ function BuatSumbangan() {
                                                             strokeWidth: "4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                            lineNumber: 342,
+                                                            lineNumber: 373,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -987,20 +1019,20 @@ function BuatSumbangan() {
                                                             d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                            lineNumber: 343,
+                                                            lineNumber: 374,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                    lineNumber: 341,
+                                                    lineNumber: 372,
                                                     columnNumber: 21
                                                 }, this),
                                                 "Menghantar..."
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                            lineNumber: 340,
+                                            lineNumber: 371,
                                             columnNumber: 28
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center justify-center",
@@ -1015,51 +1047,51 @@ function BuatSumbangan() {
                                                         clipRule: "evenodd"
                                                     }, void 0, false, {
                                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                        lineNumber: 348,
+                                                        lineNumber: 379,
                                                         columnNumber: 23
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                                    lineNumber: 347,
+                                                    lineNumber: 378,
                                                     columnNumber: 21
                                                 }, this),
                                                 "Hantar Sumbangan"
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                            lineNumber: 346,
+                                            lineNumber: 377,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 339,
+                                        lineNumber: 370,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         type: "button",
-                                        onClick: ()=>router.back(),
+                                        onClick: handleClearForm,
                                         className: "px-6 py-4 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors",
                                         children: "Batal"
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 354,
+                                        lineNumber: 385,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                lineNumber: 338,
+                                lineNumber: 369,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                        lineNumber: 197,
+                        lineNumber: 228,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                    lineNumber: 196,
+                    lineNumber: 227,
                     columnNumber: 9
                 }, this),
                 showSuccessPopup && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1081,17 +1113,17 @@ function BuatSumbangan() {
                                             clipRule: "evenodd"
                                         }, void 0, false, {
                                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                            lineNumber: 367,
+                                            lineNumber: 398,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                        lineNumber: 366,
+                                        lineNumber: 397,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                    lineNumber: 365,
+                                    lineNumber: 396,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -1099,7 +1131,7 @@ function BuatSumbangan() {
                                     children: "Sumbangan Berjaya!"
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                    lineNumber: 371,
+                                    lineNumber: 402,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1107,7 +1139,7 @@ function BuatSumbangan() {
                                     children: __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$lib$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["auth"].currentUser ? "Terima kasih atas sokongan anda." : "Terima kasih atas sokongan anda sebagai penderma tanpa nama."
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                    lineNumber: 375,
+                                    lineNumber: 406,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1115,38 +1147,38 @@ function BuatSumbangan() {
                                     children: "Dialog ini akan ditutup secara automatik..."
                                 }, void 0, false, {
                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                                    lineNumber: 379,
+                                    lineNumber: 410,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                            lineNumber: 364,
+                            lineNumber: 395,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                        lineNumber: 363,
+                        lineNumber: 394,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-                    lineNumber: 362,
+                    lineNumber: 393,
                     columnNumber: 30
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-            lineNumber: 169,
+            lineNumber: 200,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/Documents/Project/kongsirezeki/app/components/BuatSumbangan.tsx",
-        lineNumber: 168,
+        lineNumber: 199,
         columnNumber: 10
     }, this);
 }
-_s(BuatSumbangan, "llN55LV4XMmf7ZU5YbXQ2yo9scI=", false, function() {
+_s(BuatSumbangan, "u+cc6hMdeXchtUfXyHgr/ORRT2c=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
     ];

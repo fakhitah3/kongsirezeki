@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { auth, db, storage } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
@@ -44,7 +44,13 @@ export default function BuatSumbangan() {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+  const [minDate, setMinDate] = useState("");
   const router = useRouter();
+
+  useEffect(() => {
+    // Set min date only on client side to avoid hydration mismatch
+    setMinDate(new Date().toISOString().split('T')[0]);
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -77,8 +83,35 @@ export default function BuatSumbangan() {
     }));
   };
 
+  const handleClearForm = () => {
+    setForm({
+      jenisSumbangan: "",
+      makanan: {
+        jenis: "",
+        kuantiti: 0,
+        unit: "kg",
+        tarikhLuput: "",
+        penerangan: ""
+      },
+      wang: {
+        jumlah: 0,
+        kaedah: "",
+        buktiFile: null
+      },
+      penerangan: ""
+    });
+    setError("");
+    setMessage("");
+  };
+
   const uploadFile = async (file: File): Promise<string> => {
-    const storageRef = ref(storage, `donation-proofs/${Date.now()}_${file.name}`);
+    // Only run on client side
+    if (typeof window === 'undefined') {
+      throw new Error('File upload can only be performed on the client side');
+    }
+    
+    const timestamp = Date.now();
+    const storageRef = ref(storage, `donation-proofs/${timestamp}_${file.name}`);
     await uploadBytes(storageRef, file);
     const downloadURL = await getDownloadURL(storageRef);
     return downloadURL;
@@ -124,6 +157,7 @@ export default function BuatSumbangan() {
 
       // If it's a food donation, also add to Stock collection
       if (form.jenisSumbangan === "makanan") {
+        const today = new Date().toISOString().split('T')[0];
         const stockData = {
           donationId: donationDoc.id,
           jenisMakanan: form.makanan.jenis,
@@ -134,7 +168,7 @@ export default function BuatSumbangan() {
           status: "available", // Available for distribution
           penyumbang: auth.currentUser?.displayName || "Anonymous User",
           penyumbangEmail: auth.currentUser?.email || "anonymous@kongsirezeki.com",
-          tarikhMasuk: new Date().toISOString().split('T')[0],
+          tarikhMasuk: today,
           createdAt: serverTimestamp(),
           updatedAt: serverTimestamp()
         };
@@ -175,7 +209,7 @@ export default function BuatSumbangan() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 py-10 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-red-50 py-10 px-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
@@ -263,8 +297,8 @@ export default function BuatSumbangan() {
 
             {/* Food Details */}
             {form.jenisSumbangan === "makanan" && (
-              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-green-800 mb-4 flex items-center">
+              <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-red-800 mb-4 flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z" clipRule="evenodd" />
                   </svg>
@@ -282,7 +316,7 @@ export default function BuatSumbangan() {
                       value={form.makanan.jenis}
                       onChange={handleChange}
                       placeholder="Contoh: Beras, Mie, Biskut"
-                      className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors"
+                      className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
                       required
                     />
                   </div>
@@ -299,14 +333,14 @@ export default function BuatSumbangan() {
                         onChange={handleChange}
                         min="1"
                         placeholder="0"
-                        className="flex-1 border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors"
+                        className="flex-1 border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
                         required
                       />
                       <select
                         name="makanan.unit"
                         value={form.makanan.unit}
                         onChange={handleChange}
-                        className="border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors"
+                        className="border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
                       >
                         <option value="kg">kg</option>
                         <option value="pcs">pcs</option>
@@ -326,8 +360,8 @@ export default function BuatSumbangan() {
                     name="makanan.tarikhLuput"
                     value={form.makanan.tarikhLuput}
                     onChange={handleChange}
-                    min={new Date().toISOString().split('T')[0]}
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors"
+                    min={minDate}
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
                     required
                   />
                 </div>
@@ -342,7 +376,7 @@ export default function BuatSumbangan() {
                     onChange={handleChange}
                     rows={3}
                     placeholder="Contoh: Makanan kering, masih dalam pembungkusan asal, halal"
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors resize-none"
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors resize-none"
                   />
                 </div>
               </div>
@@ -424,8 +458,8 @@ export default function BuatSumbangan() {
             )}
 
             {/* Additional Description */}
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <label className="block text-lg font-semibold text-gray-800 mb-3">
+            <div className="bg-purple-50 p-6 rounded-xl">
+              <label className="block text-lg font-semibold text-purple-800 mb-3">
                 <span className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
@@ -448,7 +482,7 @@ export default function BuatSumbangan() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="flex-1 bg-gradient-to-r from-red-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 {loading ? (
                   <span className="flex items-center justify-center">
@@ -470,7 +504,7 @@ export default function BuatSumbangan() {
               
               <button
                 type="button"
-                onClick={() => router.back()}
+                onClick={handleClearForm}
                 className="px-6 py-4 border-2 border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-colors"
               >
                 Batal
