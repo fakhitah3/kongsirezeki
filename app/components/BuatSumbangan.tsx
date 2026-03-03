@@ -173,7 +173,7 @@ export default function BuatSumbangan() {
           updatedAt: serverTimestamp()
         };
 
-        await addDoc(collection(db, "stock"), stockData);
+        await addDoc(collection(db, "stocks"), stockData);
       }
 
       // Show success popup and auto-close after 5 seconds

@@ -342,7 +342,9 @@ export default function PengurusanStok() {
                       </span>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      {stock.tarikhMasuk?.toDate()?.toLocaleDateString("ms-MY")}
+                      {stock.tarikhMasuk && typeof stock.tarikhMasuk.toDate === 'function' 
+                        ? stock.tarikhMasuk.toDate().toLocaleDateString("ms-MY") 
+                        : stock.tarikhMasuk || '-'}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                       <div className="flex space-x-2">

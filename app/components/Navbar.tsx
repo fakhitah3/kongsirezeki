@@ -106,8 +106,7 @@ export default function Navbar() {
         { label: "Pengurusan Kempen", path: "/admin/campaigns" },
         { label: "Pengurusan Sumbangan", path: "/admin/donations" },
         { label: "Pengurusan Slot", path: "/admin/slots" },
-        { label: "Laporan", path: "/admin/reports" },
-        { label: "Tetapan Sistem", path: "/admin/settings" }
+        { label: "Laporan", path: "/admin/reports" }
       ]
     };
 

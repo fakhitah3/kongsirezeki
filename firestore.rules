@@ -27,6 +27,29 @@ service cloud.firestore {
       allow write: if true; // Allow anyone to write stock (for food donations)
     }
     
+    match /stocks/{doc} {
+      allow read: if request.auth != null;
+      allow write: if true; // Allow anyone to write stocks (for food donations)
+    }
+    
+    match /tasks/{doc} {
+      allow read: if true;
+      allow write: if request.auth != null;
+      indexes: [
+        { fields: ["status"], order: "asc" },
+        { fields: ["date"], order: "asc" }
+      ]
+    }
+    
+    match /taskApplications/{doc} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+      indexes: [
+        { fields: ["studentId", "status"], order: "desc" },
+        { fields: ["taskId", "status"], order: "desc" }
+      ]
+    }
+    
     // Default rule for other collections
     match /{document=**} {
       allow read: if request.auth != null;

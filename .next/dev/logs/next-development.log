@@ -2360,3 +2360,862 @@ It can also happen if the client has a browser extension installed which messes 
 [01:27:43.276] Server  LOG     ✓ Compiled in 200ms
 [01:27:47.996] Server  LOG     ✓ Compiled in 240ms
 [01:27:53.746] Server  LOG     ✓ Compiled in 118ms
+[01:41:42.356] Server  LOG     ✓ Compiled in 2.2s
+[01:42:50.298] Server  LOG     ✓ Compiled in 424ms
+[01:44:25.239] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:47:12.655] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:53:36.534] Server  LOG     ✓ Compiled in 0ms
+[01:53:40.128] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:56:28.905] Server  LOG     ○ Compiling /dashboard/admin ...
+[01:57:14.844] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:57:17.979] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:57:21.592] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:57:24.453] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:59:14.737] Server  LOG     ✓ Compiled in 11ms
+[01:59:41.555] Browser ERROR   uncaughtError: TypeError: stats.totalMoneyAmount.toFixed is not a function
+[02:00:00.550] Server  LOG     ✓ Compiled in 552ms
+[02:00:00.563] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:00:07.465] Server  LOG     ✓ Finished filesystem cache database compaction in 17.9s
+[02:00:08.377] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:00:10.675] Browser ERROR   uncaughtError: TypeError: stats.totalMoneyAmount.toFixed is not a function
+[02:00:26.860] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:00:26.879] Server  LOG     ✓ Compiled in 236ms
+[02:00:27.777] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:00:56.290] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:00:56.427] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/admin/set..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/Documents...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="ms">
+                          <body
+-                           data-new-gr-c-s-check-loaded="14.1275.0"
+-                           data-gr-ext-installed=""
+                          >
+                  ...
+
+[02:00:59.600] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:01:07.034] Server  LOG     ✓ Compiled in 309ms
+[02:02:09.465] Server  LOG     ✓ Compiled in 516ms
+[02:02:55.976] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:03:28.976] Server  LOG     ✓ Compiled in 1307ms
+[02:03:33.052] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:05:28.881] Server  LOG     ✓ Compiled in 125ms
+[02:05:55.800] Browser ERROR   Error submitting donation: {"code":"permission-denied","name":"FirebaseError"}
+[02:06:39.522] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:06:50.267] Browser ERROR   Error submitting donation: {"code":"permission-denied","name":"FirebaseError"}
+[02:07:34.618] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:03.467] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:08:23.166] Browser ERROR   uncaughtError: TypeError: stock_5.tarikhMasuk?.toDate is not a function
+[02:08:41.690] Server  LOG     ✓ Compiled in 598ms
+[02:08:41.696] Server  WARN    ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+[02:08:44.174] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:09:12.187] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:09:37.854] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:09:37.856] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/tasks" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/Documents...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="ms">
+                          <body
+-                           data-new-gr-c-s-check-loaded="14.1275.0"
+-                           data-gr-ext-installed=""
+                          >
+                  ...
+
+[02:10:24.016] Server  LOG     ✓ Compiled in 891ms
+[02:10:27.228] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:11:04.597] Browser ERROR   Error fetching volunteer data: {"code":"failed-precondition","name":"FirebaseError"}
+[02:11:08.630] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:11:40.297] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+
+./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+
+
+[02:11:41.145] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:11:41.146] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:11:41.146] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:11:41.146] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:11:41.528] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:11:41.528] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:11:41.528] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:11:41.528] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:11:41.528] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:11:41.528] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:11:41.560] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+
+./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+
+
+[02:11:41.645] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+
+./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+
+
+[02:11:41.803] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+
+./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+
+
+[02:11:41.866] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+
+./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+
+
+[02:11:41.941] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+
+./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+
+
+[02:11:42.310] Browser ERROR   uncaughtError: Error: ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+[02:11:42.893] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:11:42.894] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:11:42.894] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:11:42.894] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:12:21.455] Server  LOG     ✓ Compiled in 349ms
+[02:12:21.594] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+
+./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+
+
+[02:12:22.169] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:12:22.169] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:12:22.672] Browser ERROR   uncaughtError: Error: ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+[02:12:23.159] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:12:23.165] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:12:23.165] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:12:23.170] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:12:56.894] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+
+./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+
+
+[02:12:57.173] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:12:57.173] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:12:57.627] Browser ERROR   uncaughtError: Error: ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+
+[02:12:57.807] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:12:57.807] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:12:57.921] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:12:57.921] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:13:29.008] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:350:14
+Parsing ecmascript source code failed
+  348 |                 </div>
+  349 |               </div>
+> 350 |             )}
+      |              ^
+  351 |           </div>
+  352 |         </div>
+  353 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+[02:13:29.008] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:352:10
+Parsing ecmascript source code failed
+  350 |             )}
+  351 |           </div>
+> 352 |         </div>
+      |          ^^^^^
+  353 |       </div>
+  354 |     </div>
+  355 |   );
+
+Unterminated regexp literal
+[02:13:40.523] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:357:1
+Parsing ecmascript source code failed
+  355 |   );
+  356 | }
+> 357 | }
+      | ^
+  358 |
+
+Expression expected
+[02:14:00.123] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:357:1
+Parsing ecmascript source code failed
+  355 |   );
+  356 | }
+> 357 | }
+      | ^
+  358 |
+
+Expression expected
+[02:14:00.869] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:14:01.072] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:357:1
+Parsing ecmascript source code failed
+  355 |   );
+  356 | }
+> 357 | }
+      | ^
+  358 |
+
+Expression expected
+[02:14:01.786] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/dashboard..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/Documents...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="ms">
+                          <body
+-                           data-new-gr-c-s-check-loaded="14.1275.0"
+-                           data-gr-ext-installed=""
+-                           style={{overflow-x:"hidden",overflow-y:"hidden"}}
+                          >
+                  ...
+
+[02:14:02.229] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:357:1
+Parsing ecmascript source code failed
+  355 |   );
+  356 | }
+> 357 | }
+      | ^
+  358 |
+
+Expression expected
+[02:14:04.802] Browser ERROR   Error fetching volunteer data: {"code":"failed-precondition","name":"FirebaseError"}
+[02:14:12.802] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:357:1
+Parsing ecmascript source code failed
+  355 |   );
+  356 | }
+> 357 | }
+      | ^
+  358 |
+
+Expression expected
+[02:14:17.209] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:14:17.837] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:357:1
+Parsing ecmascript source code failed
+  355 |   );
+  356 | }
+> 357 | }
+      | ^
+  358 |
+
+Expression expected
+[02:14:17.837] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/dashboard..." notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="/Documents...">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <script>
+                      <RootLayout>
+                        <html lang="ms">
+                          <body
+-                           data-new-gr-c-s-check-loaded="14.1275.0"
+-                           data-gr-ext-installed=""
+-                           style={{overflow-x:"hidden",overflow-y:"hidden"}}
+                          >
+                  ...
+
+[02:14:17.942] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:357:1
+Parsing ecmascript source code failed
+  355 |   );
+  356 | }
+> 357 | }
+      | ^
+  358 |
+
+Expression expected
+[02:14:20.125] Browser ERROR   Error fetching volunteer data: {"code":"failed-precondition","name":"FirebaseError"}
+[02:14:35.731] Browser ERROR   ./Documents/Project/kongsirezeki/app/tasks/page.tsx:357:1
+Parsing ecmascript source code failed
+  355 |   );
+  356 | }
+> 357 | }
+      | ^
+  358 |
+
+Expression expected
+[02:14:45.605] Server  LOG     ✓ Compiled in 1309ms
+[02:14:48.849] Browser ERROR   Error fetching tasks: {"code":"failed-precondition","name":"FirebaseError"}
+[02:14:48.849] Browser ERROR   Error fetching tasks: {"code":"failed-precondition","name":"FirebaseError"}
+[02:14:48.849] Browser ERROR   Error fetching tasks: {"code":"failed-precondition","name":"FirebaseError"}
+[02:15:55.561] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:15:57.990] Browser ERROR   Error fetching tasks: {"code":"failed-precondition","name":"FirebaseError"}
+[02:15:57.990] Browser ERROR   Error fetching tasks: {"code":"failed-precondition","name":"FirebaseError"}
+[02:16:07.326] Browser ERROR   Error fetching task data: {"code":"failed-precondition","name":"FirebaseError"}
+[02:16:14.081] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:16:16.298] Browser ERROR   Error fetching tasks: {"code":"failed-precondition","name":"FirebaseError"}
+[02:16:16.298] Browser ERROR   Error fetching tasks: {"code":"failed-precondition","name":"FirebaseError"}
+[02:18:34.757] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:18:40.634] Server  LOG     ✓ Compiled in 1104ms

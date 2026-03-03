@@ -136,7 +136,7 @@ function PengurusanSlot() {
             case "available":
                 return "Tersedia";
             case "disabled":
-                return "Dilumpuhkan";
+                return "Tidak Aktif";
             default:
                 return status_0;
         }
@@ -560,7 +560,7 @@ function PengurusanSlot() {
                                                                 onClick: ()=>toggleSlotStatus(slot_0.id, slot_0.status),
                                                                 disabled: updating === slot_0.id,
                                                                 className: `px-3 py-1 rounded text-xs disabled:opacity-50 ${slot_0.status === "available" ? "bg-red-600 hover:bg-red-700 text-white" : "bg-green-600 hover:bg-green-700 text-white"}`,
-                                                                children: updating === slot_0.id ? "..." : slot_0.status === "available" ? "Lumpuhkan" : "Aktifkan"
+                                                                children: updating === slot_0.id ? "..." : slot_0.status === "available" ? "Nyahaktif" : "Aktifkan"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/Documents/Project/kongsirezeki/app/components/PengurusanSlot.tsx",
                                                                 lineNumber: 246,

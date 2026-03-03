@@ -134,7 +134,7 @@ export default function PengurusanSlot() {
       case "available":
         return "Tersedia";
       case "disabled":
-        return "Dilumpuhkan";
+        return "Tidak Aktif";
       default:
         return status;
     }
@@ -301,7 +301,7 @@ export default function PengurusanSlot() {
                               : "bg-green-600 hover:bg-green-700 text-white"
                           }`}
                         >
-                          {updating === slot.id ? "..." : slot.status === "available" ? "Lumpuhkan" : "Aktifkan"}
+                          {updating === slot.id ? "..." : slot.status === "available" ? "Nyahaktif" : "Aktifkan"}
                         </button>
                         <button
                           onClick={() => handleDelete(slot.id)}
