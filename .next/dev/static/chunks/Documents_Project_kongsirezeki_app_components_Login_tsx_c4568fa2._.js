@@ -25,12 +25,12 @@ var _s = __turbopack_context__.k.signature();
 ;
 function LoginPage() {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(18);
-    if ($[0] !== "1b1bb5451496f79cfbc62fb093c9071e995b29ebd3c43ba58efaeb0d1b4f5cae") {
-        for(let $i = 0; $i < 18; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(23);
+    if ($[0] !== "2da6aa65b904772cfc151eb5faa1d2eab393a1f1df6acfaf6f551cc9616b4e30") {
+        for(let $i = 0; $i < 23; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "1b1bb5451496f79cfbc62fb093c9071e995b29ebd3c43ba58efaeb0d1b4f5cae";
+        $[0] = "2da6aa65b904772cfc151eb5faa1d2eab393a1f1df6acfaf6f551cc9616b4e30";
     }
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
@@ -190,8 +190,56 @@ function LoginPage() {
         t6 = $[13];
     }
     let t7;
-    if ($[14] !== t2 || $[15] !== t5 || $[16] !== t6) {
-        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    if ($[14] !== router) {
+        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+            className: "text-center text-gray-600",
+            children: [
+                "Tiada akaun?",
+                " ",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                    className: "text-blue-700 cursor-pointer hover:underline font-medium",
+                    onClick: {
+                        "LoginPage[<span>.onClick]": ()=>router.push("/register")
+                    }["LoginPage[<span>.onClick]"],
+                    children: "Daftar sekarang"
+                }, void 0, false, {
+                    fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
+                    lineNumber: 122,
+                    columnNumber: 68
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
+            lineNumber: 122,
+            columnNumber: 10
+        }, this);
+        $[14] = router;
+        $[15] = t7;
+    } else {
+        t7 = $[15];
+    }
+    let t8;
+    if ($[16] !== t6 || $[17] !== t7) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "space-y-4",
+            children: [
+                t6,
+                t7
+            ]
+        }, void 0, true, {
+            fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
+            lineNumber: 132,
+            columnNumber: 10
+        }, this);
+        $[16] = t6;
+        $[17] = t7;
+        $[18] = t8;
+    } else {
+        t8 = $[18];
+    }
+    let t9;
+    if ($[19] !== t2 || $[20] !== t5 || $[21] !== t8) {
+        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: "max-w-md mx-auto py-20",
             children: [
                 t1,
@@ -199,21 +247,21 @@ function LoginPage() {
                 t3,
                 t4,
                 t5,
-                t6
+                t8
             ]
         }, void 0, true, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Login.tsx",
-            lineNumber: 122,
+            lineNumber: 141,
             columnNumber: 10
         }, this);
-        $[14] = t2;
-        $[15] = t5;
-        $[16] = t6;
-        $[17] = t7;
+        $[19] = t2;
+        $[20] = t5;
+        $[21] = t8;
+        $[22] = t9;
     } else {
-        t7 = $[17];
+        t9 = $[22];
     }
-    return t7;
+    return t9;
 }
 _s(LoginPage, "nORxhW6qfpGzR0M5TFYU5NIDhVI=", false, function() {
     return [

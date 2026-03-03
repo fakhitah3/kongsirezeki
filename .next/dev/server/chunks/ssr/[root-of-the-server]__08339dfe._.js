@@ -248,6 +248,7 @@ function Navbar() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         className: "hover:text-blue-700 cursor-pointer",
+                        onClick: ()=>router.push('/sukarelawan'),
                         children: "Sukarelawan"
                     }, void 0, false, {
                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
@@ -256,11 +257,11 @@ function Navbar() {
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                         className: "text-blue-700 font-semibold cursor-pointer",
-                        onClick: ()=>router.push('/register'),
-                        children: "Login / Daftar"
+                        onClick: ()=>router.push('/login'),
+                        children: "Login"
                     }, void 0, false, {
                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
-                        lineNumber: 63,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, this)
                 ]
@@ -270,7 +271,7 @@ function Navbar() {
         const roleMenus = {
             pelajar: [
                 {
-                    label: "Dashboard Pelajar",
+                    label: "Utama",
                     path: "/dashboard/student"
                 },
                 {
@@ -296,7 +297,7 @@ function Navbar() {
             ],
             penyumbang: [
                 {
-                    label: "Dashboard Penyumbang",
+                    label: "Utama",
                     path: "/dashboard/donor"
                 },
                 {
@@ -318,7 +319,7 @@ function Navbar() {
             ],
             sukarelawan: [
                 {
-                    label: "Dashboard Sukarelawan",
+                    label: "Utama",
                     path: "/dashboard/volunteer"
                 },
                 {
@@ -336,7 +337,7 @@ function Navbar() {
             ],
             admin: [
                 {
-                    label: "Dashboard Admin",
+                    label: "Dashboard",
                     path: "/dashboard/admin"
                 },
                 {
@@ -383,7 +384,7 @@ function Navbar() {
                         children: item.label
                     }, index, false, {
                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
-                        lineNumber: 115,
+                        lineNumber: 120,
                         columnNumber: 11
                     }, this)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -392,7 +393,7 @@ function Navbar() {
                     children: "Log Keluar"
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
-                    lineNumber: 123,
+                    lineNumber: 128,
                     columnNumber: 9
                 }, this)
             ]
@@ -412,7 +413,7 @@ function Navbar() {
                             className: "h-12 w-12"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
-                            lineNumber: 137,
+                            lineNumber: 142,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -420,13 +421,13 @@ function Navbar() {
                             children: "KONGSI REZEKI"
                         }, void 0, false, {
                             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
-                            lineNumber: 142,
+                            lineNumber: 147,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
-                    lineNumber: 136,
+                    lineNumber: 141,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -434,18 +435,18 @@ function Navbar() {
                     children: renderNavItems()
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
-                    lineNumber: 147,
+                    lineNumber: 152,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
-            lineNumber: 135,
+            lineNumber: 140,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/Documents/Project/kongsirezeki/app/components/Navbar.tsx",
-        lineNumber: 134,
+        lineNumber: 139,
         columnNumber: 5
     }, this);
 }

@@ -1,0 +1,13 @@
+__turbopack_load_page_chunks__("/_error", [
+  "static/chunks/bfb88_next_dist_compiled_ef523ec7._.js",
+  "static/chunks/bfb88_next_dist_shared_lib_033a2284._.js",
+  "static/chunks/bfb88_next_dist_client_27d9b81e._.js",
+  "static/chunks/bfb88_next_dist_33e7a313._.js",
+  "static/chunks/bfb88_next_error_c91a3c86.js",
+  "static/chunks/[next]_entry_page-loader_ts_a3920bea._.js",
+  "static/chunks/bfb88_react-dom_6586b066._.js",
+  "static/chunks/bfb88_7b572783._.js",
+  "static/chunks/[root-of-the-server]__d87801c6._.js",
+  "static/chunks/Documents_Project_kongsirezeki_pages__error_2da965e7._.js",
+  "static/chunks/turbopack-Documents_Project_kongsirezeki_pages__error_6ea2e19f._.js"
+])

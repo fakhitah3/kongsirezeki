@@ -241,3 +241,1534 @@ https://nextjs.org/docs/messages/module-not-found
 [00:19:44.702] Browser ERROR   Error fetching stats: {"code":"permission-denied","name":"FirebaseError"}
 [00:36:21.320] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:38:42.698] Server  LOG     ✓ Compiled in 168ms
+[00:42:34.717] Server  LOG     ✓ Compiled in 1ms
+[00:42:39.397] Server  LOG     ✓ Compiled in 341ms
+[00:45:42.168] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:46:10.861] Server  ERROR   ⨯ Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onClick} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:46:11.093] Browser ERROR   uncaughtError: Error: Event handlers cannot be passed to Client Component props.
+  <button onClick={function onClick} className=... children=...>
+                  ^^^^^^^^^^^^^^^^^^
+If you need interactivity, consider converting part of this to a Client Component.
+[00:46:37.831] Server  LOG     ✓ Compiled in 330ms
+[00:46:38.596] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:46:54.364] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:01.334] Server  LOG     ✓ Compiled in 114ms
+[00:48:08.813] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:48:39.462] Server  LOG     ✓ Compiled in 156ms
+[00:48:53.287] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:49:44.728] Server  LOG     ✓ Compiled in 198ms
+[00:49:48.749] Server  LOG     ✓ Compiled in 112ms
+[00:49:54.612] Server  LOG     ✓ Compiled in 111ms
+[00:50:34.535] Server  LOG     ✓ Compiled in 132ms
+[00:51:16.912] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:19.650] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:52:19.803] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:19.803] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:19.803] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:19.803] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.547] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:52:20.556] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.557] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:20.568] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:52:20.600] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:52:20.622] Server  ERROR   ⨯ ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:52:20.879] Browser ERROR   uncaughtError: Error: ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:52:21.808] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:21.810] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:21.810] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:21.810] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:21.810] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:6:1
+Module not found: Can't resolve '../components/CampaignSection'
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+> 6 | import CampaignSection from "../components/CampaignSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  7 |
+  8 | export default function DonorDashboard() {
+  9 |   return (
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:21.810] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:4:1
+Module not found: Can't resolve '../components/HeroSection'
+  2 |
+  3 | import Navbar from "../components/Navbar";
+> 4 | import HeroSection from "../components/HeroSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:21.810] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:3:1
+Module not found: Can't resolve '../components/Navbar'
+  1 | "use client";
+  2 |
+> 3 | import Navbar from "../components/Navbar";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import HeroSection from "../components/HeroSection";
+  5 | import StatsSection from "../components/StatsSection";
+  6 | import CampaignSection from "../components/CampaignSection";
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:21.810] Browser ERROR   ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx:5:1
+Module not found: Can't resolve '../components/StatsSection'
+  3 | import Navbar from "../components/Navbar";
+  4 | import HeroSection from "../components/HeroSection";
+> 5 | import StatsSection from "../components/StatsSection";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  6 | import CampaignSection from "../components/CampaignSection";
+  7 |
+  8 | export default function DonorDashboard() {
+
+Import traces:
+  Client Component Browser:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component Browser]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Client Component SSR]
+    ./Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:52:23.283] Server  LOG     ✓ Compiled in 117ms
+[00:52:24.426] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:36.134] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:52:57.367] Server  LOG     ✓ Compiled in 96ms
+[00:53:00.863] Server  LOG     ✓ Compiled in 24ms
+[00:53:05.530] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:53:36.957] Server  LOG     ✓ Compiled in 176ms
+[00:54:31.676] Server  LOG     ✓ Compiled in 61ms
+[00:55:10.035] Server  LOG     ✓ Compiled in 69ms

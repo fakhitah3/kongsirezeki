@@ -9,6 +9,8 @@ import { useRouter } from "next/navigation";
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [role, setRole] = useState("pelajar");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
@@ -23,6 +25,8 @@ export default function RegisterPage() {
 
       await setDoc(doc(db, "users", userCred.user.uid), {
         email,
+        name,
+        phoneNumber,
         role,
         createdAt: serverTimestamp(),
       });
@@ -46,8 +50,24 @@ export default function RegisterPage() {
         }
       }, 2000);
       
-    } catch (err) {
-      setError("Pendaftaran gagal. Sila cuba lagi.");
+    } catch (err: any) {
+      let errorMessage = "Pendaftaran gagal. Sila cuba lagi.";
+      
+      if (err.code === 'auth/email-already-in-use') {
+        errorMessage = "Email ini sudah digunakan. Sila gunakan email lain atau log masuk.";
+      } else if (err.code === 'auth/invalid-email') {
+        errorMessage = "Format email tidak sah. Sila semak semula email anda.";
+      } else if (err.code === 'auth/weak-password') {
+        errorMessage = "Kata laluan terlalu lemah. Sila gunakan sekurang-kurangnya 6 aksara.";
+      } else if (err.code === 'auth/network-request-failed') {
+        errorMessage = "Masalah sambungan internet. Sila semak sambungan anda dan cuba lagi.";
+      } else if (err.code === 'auth/too-many-requests') {
+        errorMessage = "Terlalu banyak percubaan. Sila tunggu beberapa minit dan cuba lagi.";
+      } else if (err.message) {
+        errorMessage = err.message;
+      }
+      
+      setError(errorMessage);
     }
   };
 
@@ -69,7 +89,22 @@ export default function RegisterPage() {
 
       <input
         className="border p-2 w-full mb-3"
+        placeholder="Nama Penuh"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <input
+        className="border p-2 w-full mb-3"
+        placeholder="Nombor Telefon"
+        value={phoneNumber}
+        onChange={(e) => setPhoneNumber(e.target.value)}
+      />
+
+      <input
+        className="border p-2 w-full mb-3"
         placeholder="Email"
+        value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
 
@@ -77,6 +112,7 @@ export default function RegisterPage() {
         className="border p-2 w-full mb-3"
         type="password"
         placeholder="Kata Laluan"
+        value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
 

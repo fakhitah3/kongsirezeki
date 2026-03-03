@@ -58,14 +58,26 @@ export default function LoginPage() {
         Login
       </button>
       
-      <p className="text-center text-gray-600">
-        <span 
-          className="text-blue-700 cursor-pointer hover:underline"
-          onClick={() => router.push('/reset-password')}
-        >
-          Lupa kata laluan?
-        </span>
-      </p>
+      <div className="space-y-4">
+        <p className="text-center text-gray-600">
+          <span 
+            className="text-blue-700 cursor-pointer hover:underline"
+            onClick={() => router.push('/reset-password')}
+          >
+            Lupa kata laluan?
+          </span>
+        </p>
+        
+        <p className="text-center text-gray-600">
+          Tiada akaun?{" "}
+          <span 
+            className="text-blue-700 cursor-pointer hover:underline font-medium"
+            onClick={() => router.push('/register')}
+          >
+            Daftar sekarang
+          </span>
+        </p>
+      </div>
     </div>
   );
 }

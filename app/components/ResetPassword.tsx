@@ -23,8 +23,22 @@ export default function ResetPasswordPage() {
         router.push('/login');
       }, 3000);
       
-    } catch (err) {
-      setError("Email tidak ditemui atau terdapat ralat. Sila cuba lagi.");
+    } catch (err: any) {
+      let errorMessage = "Email tidak ditemui atau terdapat ralat. Sila cuba lagi.";
+      
+      if (err.code === 'auth/user-not-found') {
+        errorMessage = "Email ini tidak didaftarkan dalam sistem kami.";
+      } else if (err.code === 'auth/invalid-email') {
+        errorMessage = "Format email tidak sah. Sila semak semula email anda.";
+      } else if (err.code === 'auth/network-request-failed') {
+        errorMessage = "Masalah sambungan internet. Sila semak sambungan anda dan cuba lagi.";
+      } else if (err.code === 'auth/too-many-requests') {
+        errorMessage = "Terlalu banyak permintaan. Sila tunggu beberapa minit dan cuba lagi.";
+      } else if (err.message) {
+        errorMessage = err.message;
+      }
+      
+      setError(errorMessage);
     }
   };
 
@@ -58,7 +72,7 @@ export default function ResetPasswordPage() {
         onClick={handleResetPassword}
         className="bg-blue-700 text-white px-4 py-2 rounded w-full mb-4"
       >
-        Hantar Pautan Reset
+        Reset
       </button>
       
       <p className="text-center text-gray-600">

@@ -59,12 +59,17 @@ export default function Navbar() {
           >
             Sumbang Sekarang
           </li>
-          <li className="hover:text-blue-700 cursor-pointer">Sukarelawan</li>
+          <li 
+            className="hover:text-blue-700 cursor-pointer"
+            onClick={() => router.push('/sukarelawan')}
+          >
+            Sukarelawan
+          </li>
           <li 
             className="text-blue-700 font-semibold cursor-pointer"
-            onClick={() => router.push('/register')}
+            onClick={() => router.push('/login')}
           >
-            Login / Daftar
+            Login
           </li>
         </>
       );
@@ -73,7 +78,7 @@ export default function Navbar() {
     // Logged in - show role-specific menu
     const roleMenus = {
       pelajar: [
-        { label: "Dashboard Pelajar", path: "/dashboard/student" },
+        { label: "Utama", path: "/dashboard/student" },
         { label: "Mohon Bantuan", path: "/apply" },
         { label: "Status Permohonan", path: "/status" },
         { label: "Pilih Slot Pengambilan", path: "/slots" },
@@ -81,20 +86,20 @@ export default function Navbar() {
         { label: "Profil", path: "/profile" }
       ],
       penyumbang: [
-        { label: "Dashboard Penyumbang", path: "/dashboard/donor" },
+        { label: "Utama", path: "/dashboard/donor" },
         { label: "Buat Sumbangan", path: "/donate" },
         { label: "Senarai Kempen", path: "/campaigns" },
         { label: "Rekod Sumbangan", path: "/donation-records" },
         { label: "Profil", path: "/profile" }
       ],
       sukarelawan: [
-        { label: "Dashboard Sukarelawan", path: "/dashboard/volunteer" },
+        { label: "Utama", path: "/dashboard/volunteer" },
         { label: "Senarai Tugasan", path: "/tasks" },
         { label: "Update Status Tugasan", path: "/task-status" },
         { label: "Profil", path: "/profile" }
       ],
       admin: [
-        { label: "Dashboard Admin", path: "/dashboard/admin" },
+        { label: "Dashboard", path: "/dashboard/admin" },
         { label: "Pengurusan Pelajar", path: "/admin/students" },
         { label: "Pengurusan Permohonan", path: "/admin/applications" },
         { label: "Pengurusan Stok", path: "/admin/stock" },

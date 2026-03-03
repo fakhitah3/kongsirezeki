@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/fakhitahridzuan/Documents/Project/kongsirezeki/app/dashboard/donor/page.tsx"],"sourcesContent":["\"use client\";\n\nimport Navbar from \"../components/Navbar\";\nimport HeroSection from \"../components/HeroSection\";\nimport StatsSection from \"../components/StatsSection\";\nimport CampaignSection from \"../components/CampaignSection\";\n\nexport default function DonorDashboard() {\n  return (\n    <main>\n      <Navbar />\n      \n      <HeroSection />\n      <StatsSection />\n      <CampaignSection />\n    </main>\n  );\n}\n"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;AAAA;;;;;;AAOe,SAAS;IACtB,qBACE,sRAAC;;0BACC,sRAAC;;;;;0BAED,sRAAC;;;;;0BACD,sRAAC;;;;;0BACD,sRAAC;;;;;;;;;;;AAGP"}}]
+}
