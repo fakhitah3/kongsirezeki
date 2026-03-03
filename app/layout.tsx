@@ -5,6 +5,11 @@ import Navbar from "./components/Navbar";
 export const metadata: Metadata = {
   title: "KONGSI REZEKI",
   description: "Inisiatif Food Bank Kampus - Menyokong kesejahteraan makanan pelajar",
+  icons: {
+    icon: '/logo.png',
+    apple: '/logo.png',
+    shortcut: '/logo.png',
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ms">
-      <body>
+      <body suppressHydrationWarning={true}>
         <Navbar />
         {children}
       </body>
