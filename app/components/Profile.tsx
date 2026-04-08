@@ -170,13 +170,13 @@ export default function Profile() {
             {!editMode && (
               <button
                 onClick={() => setEditMode(true)}
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700  transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <span className="flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M13.586 3.586a1 1 0 00-1.414 1.414L10.586 8.586a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
                   </svg>
-                  Edit Profil
+                  Edit 
                 </span>
               </button>
             )}
@@ -388,10 +388,10 @@ export default function Profile() {
                       </span>
                     ) : (
                       <span className="flex items-center justify-center">
-                        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <svg className="w-5 h-5 mr-2 transition-colors hover:text-blue-700" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010-1.414l-8-8a1 1 0 00-1.414 0L8.586 4.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
                         </svg>
-                        Simpan Perubahan
+                        Simpan
                       </span>
                     )}
                   </button>

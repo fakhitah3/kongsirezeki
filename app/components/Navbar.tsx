@@ -46,7 +46,12 @@ export default function Navbar() {
           >
             Utama
           </li>
-          <li className="hover:text-blue-700 cursor-pointer">Tentang Kami</li>
+          <li 
+            className="hover:text-blue-700 cursor-pointer"
+            onClick={() => router.push('/about')}
+          >
+            Tentang Kami
+          </li>
           <li 
             className="hover:text-blue-700 cursor-pointer"
             onClick={() => router.push('/apply')}

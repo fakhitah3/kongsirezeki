@@ -17,11 +17,11 @@ var _s = __turbopack_context__.k.signature();
 function HeroSection() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(20);
-    if ($[0] !== "4bf714a44b7b2d82de9f6229bfc3b5a9e700d41d119d449658c8b46564109739") {
+    if ($[0] !== "04151c6ae46ba4220e1653c6764fa002b69911f2362b2cc2b39fb17be2308c6f") {
         for(let $i = 0; $i < 20; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4bf714a44b7b2d82de9f6229bfc3b5a9e700d41d119d449658c8b46564109739";
+        $[0] = "04151c6ae46ba4220e1653c6764fa002b69911f2362b2cc2b39fb17be2308c6f";
     }
     const [currentSlide, setCurrentSlide] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     let t0;
@@ -276,7 +276,7 @@ function HeroSection() {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: _HeroSectionButtonOnClick,
-                    className: "bg-gradient-to-r from-red-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl",
+                    className: "bg-purple-600 hover:bg-purple-700  text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl",
                     children: "Sumbang Sekarang"
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/HeroSection.tsx",
@@ -290,7 +290,7 @@ function HeroSection() {
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/HeroSection.tsx",
                     lineNumber: 136,
-                    columnNumber: 334
+                    columnNumber: 325
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                     onClick: _HeroSectionButtonOnClick3,
@@ -299,7 +299,7 @@ function HeroSection() {
                 }, void 0, false, {
                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/HeroSection.tsx",
                     lineNumber: 136,
-                    columnNumber: 509
+                    columnNumber: 500
                 }, this)
             ]
         }, void 0, true, {

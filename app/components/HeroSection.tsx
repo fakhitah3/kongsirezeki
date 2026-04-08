@@ -131,7 +131,7 @@ export default function HeroSection() {
         <div className="mt-12 flex flex-wrap justify-center gap-4">
           <button 
             onClick={() => window.location.href = '/donate'}
-            className="bg-gradient-to-r from-red-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+            className="bg-purple-600 hover:bg-purple-700  text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             Sumbang Sekarang
           </button>

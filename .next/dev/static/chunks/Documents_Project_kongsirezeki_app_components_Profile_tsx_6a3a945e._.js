@@ -256,7 +256,7 @@ function Profile() {
                                 }, this),
                                 !editMode && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     onClick: ()=>setEditMode(true),
-                                    className: "bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl",
+                                    className: "bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700  transition-all duration-200 shadow-lg hover:shadow-xl",
                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "flex items-center",
                                         children: [
@@ -278,7 +278,7 @@ function Profile() {
                                                 lineNumber: 150,
                                                 columnNumber: 19
                                             }, this),
-                                            "Edit Profil"
+                                            "Edit"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/Documents/Project/kongsirezeki/app/components/Profile.tsx",
@@ -974,7 +974,7 @@ function Profile() {
                                                     className: "flex items-center justify-center",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                            className: "w-5 h-5 mr-2",
+                                                            className: "w-5 h-5 mr-2 transition-colors hover:text-blue-700",
                                                             fill: "currentColor",
                                                             viewBox: "0 0 20 20",
                                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Documents$2f$Project$2f$kongsirezeki$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -991,7 +991,7 @@ function Profile() {
                                                             lineNumber: 301,
                                                             columnNumber: 25
                                                         }, this),
-                                                        "Simpan Perubahan"
+                                                        "Simpan"
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/Documents/Project/kongsirezeki/app/components/Profile.tsx",

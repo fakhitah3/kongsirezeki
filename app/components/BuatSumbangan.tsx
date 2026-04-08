@@ -269,7 +269,6 @@ export default function BuatSumbangan() {
                     className="sr-only"
                     required
                   />
-                  <div className="text-2xl mb-2">🍱</div>
                   <div className="font-medium text-gray-800">Makanan</div>
                   <div className="text-sm text-gray-600 mt-1">Makanan kering atau basah</div>
                 </label>
@@ -288,7 +287,6 @@ export default function BuatSumbangan() {
                     className="sr-only"
                     required
                   />
-                  <div className="text-2xl mb-2">💰</div>
                   <div className="font-medium text-gray-800">Wang</div>
                   <div className="text-sm text-gray-600 mt-1">Sumbangan tunai atau online</div>
                 </label>
@@ -297,8 +295,8 @@ export default function BuatSumbangan() {
 
             {/* Food Details */}
             {form.jenisSumbangan === "makanan" && (
-              <div className="bg-red-50 border-2 border-red-200 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-red-800 mb-4 flex items-center">
+              <div className="bg-green-50 border-2 border-green-200 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-green-800 mb-4 flex items-center">
                   <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z" clipRule="evenodd" />
                   </svg>
@@ -308,7 +306,7 @@ export default function BuatSumbangan() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Jenis Makanan <span className="text-red-500">*</span>
+                      Jenis Makanan <span className="text-green-500">*</span>
                     </label>
                     <input
                       type="text"
@@ -316,14 +314,14 @@ export default function BuatSumbangan() {
                       value={form.makanan.jenis}
                       onChange={handleChange}
                       placeholder="Contoh: Beras, Mie, Biskut"
-                      className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
+                      className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors"
                       required
                     />
                   </div>
                   
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Kuantiti <span className="text-red-500">*</span>
+                      Kuantiti <span className="text-green-500">*</span>
                     </label>
                     <div className="flex space-x-2">
                       <input
@@ -333,14 +331,14 @@ export default function BuatSumbangan() {
                         onChange={handleChange}
                         min="1"
                         placeholder="0"
-                        className="flex-1 border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
+                        className="flex-1 border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors"
                         required
                       />
                       <select
                         name="makanan.unit"
                         value={form.makanan.unit}
                         onChange={handleChange}
-                        className="border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
+                        className="border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors"
                       >
                         <option value="kg">kg</option>
                         <option value="pcs">pcs</option>
@@ -353,7 +351,7 @@ export default function BuatSumbangan() {
 
                 <div className="mt-6">
                   <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Tarikh Luput <span className="text-red-500">*</span>
+                    Tarikh Luput <span className="text-green-500">*</span>
                   </label>
                   <input
                     type="date"
@@ -361,7 +359,7 @@ export default function BuatSumbangan() {
                     value={form.makanan.tarikhLuput}
                     onChange={handleChange}
                     min={minDate}
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors"
                     required
                   />
                 </div>
@@ -376,7 +374,7 @@ export default function BuatSumbangan() {
                     onChange={handleChange}
                     rows={3}
                     placeholder="Contoh: Makanan kering, masih dalam pembungkusan asal, halal"
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors resize-none"
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors resize-none"
                   />
                 </div>
               </div>
@@ -456,34 +454,15 @@ export default function BuatSumbangan() {
                   </div>
                 </div>
             )}
-
-            {/* Additional Description */}
-            <div className="bg-purple-50 p-6 rounded-xl">
-              <label className="block text-lg font-semibold text-purple-800 mb-3">
-                <span className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-                  </svg>
-                  Penerangan Tambahan
-                </span>
-              </label>
-              <textarea
-                name="penerangan"
-                value={form.penerangan}
-                onChange={handleChange}
-                rows={4}
-                placeholder="Sebarang maklumat tambahan mengenai sumbangan anda"
-                className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none transition-colors resize-none"
-              />
-            </div>
-
+            
             {/* Submit Button */}
             <div className="flex flex-col sm:flex-row gap-4">
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-gradient-to-r from-red-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="flex-1 bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
               >
+                
                 {loading ? (
                   <span className="flex items-center justify-center">
                     <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none" viewBox="0 0 24 24">
