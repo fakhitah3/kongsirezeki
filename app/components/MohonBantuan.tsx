@@ -124,10 +124,7 @@ export default function MohonBantuan() {
             <div className="bg-gray-50 p-6 rounded-xl">
               <label className="block text-lg font-semibold text-gray-800 mb-3">
                 <span className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-                    <path fillRule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 100 4h2a2 2 0 100 4h2a1 1 0 100 2 2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clipRule="evenodd" />
-                  </svg>
+                  
                   Jenis Bantuan
                 </span>
               </label>
