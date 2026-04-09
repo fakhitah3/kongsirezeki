@@ -212,7 +212,7 @@ function MohonBantuan() {
                                                 children: "Pilih jenis bantuan"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 118,
+                                                lineNumber: 117,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -220,7 +220,7 @@ function MohonBantuan() {
                                                 children: "Bantuan makanan asas"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 119,
+                                                lineNumber: 118,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -228,7 +228,7 @@ function MohonBantuan() {
                                                 children: "Food pack mingguan"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 120,
+                                                lineNumber: 119,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -236,13 +236,13 @@ function MohonBantuan() {
                                                 children: "Bantuan kecemasan"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 121,
+                                                lineNumber: 120,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 117,
+                                        lineNumber: 116,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -258,33 +258,15 @@ function MohonBantuan() {
                                         className: "block text-lg font-semibold text-gray-800 mb-3",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                    className: "w-5 h-5 mr-2 text-red-600",
-                                                    fill: "currentColor",
-                                                    viewBox: "0 0 20 20",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        d: "M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                        lineNumber: 130,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                    lineNumber: 129,
-                                                    columnNumber: 19
-                                                }, this),
-                                                "Maklumat Akademik"
-                                            ]
-                                        }, void 0, true, {
+                                            children: "Maklumat Akademik"
+                                        }, void 0, false, {
                                             fileName: "[project]/app/components/MohonBantuan.tsx",
-                                            lineNumber: 128,
+                                            lineNumber: 127,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 127,
+                                        lineNumber: 126,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -301,13 +283,13 @@ function MohonBantuan() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                                lineNumber: 139,
+                                                                lineNumber: 136,
                                                                 columnNumber: 29
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                        lineNumber: 138,
+                                                        lineNumber: 135,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -319,13 +301,13 @@ function MohonBantuan() {
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                        lineNumber: 141,
+                                                        lineNumber: 138,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 137,
+                                                lineNumber: 134,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -339,13 +321,13 @@ function MohonBantuan() {
                                                                 children: "*"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                                lineNumber: 146,
+                                                                lineNumber: 143,
                                                                 columnNumber: 30
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                        lineNumber: 145,
+                                                        lineNumber: 142,
                                                         columnNumber: 19
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -356,25 +338,25 @@ function MohonBantuan() {
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                        lineNumber: 148,
+                                                        lineNumber: 145,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 144,
+                                                lineNumber: 141,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 133,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                lineNumber: 126,
+                                lineNumber: 125,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -384,44 +366,15 @@ function MohonBantuan() {
                                         className: "block text-lg font-semibold text-gray-800 mb-3",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                    className: "w-5 h-5 mr-2 text-purple-600",
-                                                    fill: "currentColor",
-                                                    viewBox: "0 0 20 20",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                            d: "M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                            lineNumber: 158,
-                                                            columnNumber: 21
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                            fillRule: "evenodd",
-                                                            d: "M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z",
-                                                            clipRule: "evenodd"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                            lineNumber: 159,
-                                                            columnNumber: 21
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                    lineNumber: 157,
-                                                    columnNumber: 19
-                                                }, this),
-                                                "Status Kewangan"
-                                            ]
-                                        }, void 0, true, {
+                                            children: "Status Kewangan"
+                                        }, void 0, false, {
                                             fileName: "[project]/app/components/MohonBantuan.tsx",
-                                            lineNumber: 156,
+                                            lineNumber: 153,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 155,
+                                        lineNumber: 152,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
@@ -436,7 +389,7 @@ function MohonBantuan() {
                                                 children: "Pilih status kewangan"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 165,
+                                                lineNumber: 159,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -444,7 +397,7 @@ function MohonBantuan() {
                                                 children: "B40"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 166,
+                                                lineNumber: 160,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -452,7 +405,7 @@ function MohonBantuan() {
                                                 children: "Tiada bantuan tetap"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 167,
+                                                lineNumber: 161,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -460,7 +413,7 @@ function MohonBantuan() {
                                                 children: "Kehilangan pendapatan"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 168,
+                                                lineNumber: 162,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -468,19 +421,19 @@ function MohonBantuan() {
                                                 children: "Masalah kewangan lain"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                lineNumber: 169,
+                                                lineNumber: 163,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 164,
+                                        lineNumber: 158,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                lineNumber: 154,
+                                lineNumber: 151,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -490,35 +443,15 @@ function MohonBantuan() {
                                         className: "block text-lg font-semibold text-gray-800 mb-3",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                    className: "w-5 h-5 mr-2 text-blue-600",
-                                                    fill: "currentColor",
-                                                    viewBox: "0 0 20 20",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        fillRule: "evenodd",
-                                                        d: "M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z",
-                                                        clipRule: "evenodd"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                        lineNumber: 178,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                    lineNumber: 177,
-                                                    columnNumber: 19
-                                                }, this),
-                                                "Justifikasi Permohonan"
-                                            ]
-                                        }, void 0, true, {
+                                            children: "Justifikasi Permohonan"
+                                        }, void 0, false, {
                                             fileName: "[project]/app/components/MohonBantuan.tsx",
-                                            lineNumber: 176,
+                                            lineNumber: 170,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 169,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("textarea", {
@@ -531,13 +464,13 @@ function MohonBantuan() {
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 183,
+                                        lineNumber: 175,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                lineNumber: 174,
+                                lineNumber: 168,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -546,7 +479,7 @@ function MohonBantuan() {
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         type: "submit",
                                         disabled: loading,
-                                        className: "flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl",
+                                        className: "flex-1 bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl",
                                         children: loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center justify-center",
                                             children: [
@@ -564,7 +497,7 @@ function MohonBantuan() {
                                                             strokeWidth: "4"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                            lineNumber: 191,
+                                                            lineNumber: 183,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -573,52 +506,32 @@ function MohonBantuan() {
                                                             d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                            lineNumber: 192,
+                                                            lineNumber: 184,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                    lineNumber: 190,
+                                                    lineNumber: 182,
                                                     columnNumber: 21
                                                 }, this),
                                                 "Menghantar..."
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/MohonBantuan.tsx",
-                                            lineNumber: 189,
+                                            lineNumber: 181,
                                             columnNumber: 28
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center justify-center",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                    className: "w-5 h-5 mr-2",
-                                                    fill: "currentColor",
-                                                    viewBox: "0 0 20 20",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        fillRule: "evenodd",
-                                                        d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L10.586 9.5H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z",
-                                                        clipRule: "evenodd"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                        lineNumber: 197,
-                                                        columnNumber: 23
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/MohonBantuan.tsx",
-                                                    lineNumber: 196,
-                                                    columnNumber: 21
-                                                }, this),
-                                                "Hantar Permohonan"
-                                            ]
-                                        }, void 0, true, {
+                                            children: "Hantar Permohonan"
+                                        }, void 0, false, {
                                             fileName: "[project]/app/components/MohonBantuan.tsx",
-                                            lineNumber: 195,
+                                            lineNumber: 187,
                                             columnNumber: 29
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 180,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -628,13 +541,13 @@ function MohonBantuan() {
                                         children: "Batal"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 203,
+                                        lineNumber: 193,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/MohonBantuan.tsx",
-                                lineNumber: 187,
+                                lineNumber: 179,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -667,17 +580,17 @@ function MohonBantuan() {
                                             clipRule: "evenodd"
                                         }, void 0, false, {
                                             fileName: "[project]/app/components/MohonBantuan.tsx",
-                                            lineNumber: 216,
+                                            lineNumber: 206,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                                        lineNumber: 215,
+                                        lineNumber: 205,
                                         columnNumber: 19
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/MohonBantuan.tsx",
-                                    lineNumber: 214,
+                                    lineNumber: 204,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -685,7 +598,7 @@ function MohonBantuan() {
                                     children: "Permohonan Berjaya!"
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/MohonBantuan.tsx",
-                                    lineNumber: 220,
+                                    lineNumber: 210,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -693,7 +606,7 @@ function MohonBantuan() {
                                     children: "Permohonan anda telah diterima dan akan diproses."
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/MohonBantuan.tsx",
-                                    lineNumber: 224,
+                                    lineNumber: 214,
                                     columnNumber: 17
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -701,23 +614,23 @@ function MohonBantuan() {
                                     children: "Dialog ini akan ditutup secara automatik..."
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/MohonBantuan.tsx",
-                                    lineNumber: 228,
+                                    lineNumber: 218,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/MohonBantuan.tsx",
-                            lineNumber: 213,
+                            lineNumber: 203,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/components/MohonBantuan.tsx",
-                        lineNumber: 212,
+                        lineNumber: 202,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/components/MohonBantuan.tsx",
-                    lineNumber: 211,
+                    lineNumber: 201,
                     columnNumber: 30
                 }, this)
             ]

@@ -75,9 +75,7 @@ export default function LoginPage() {
             <div className="bg-gray-50 p-6 rounded-xl">
               <label className="block text-lg font-semibold text-gray-800 mb-3">
                 <span className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path d="M2.003 5.884L10 9a2 2 0 013.997 2.622l8.003-5.884a2 2 0 01-.997.116L10 13a2 2 0 01-.997-.116l-8.003 5.884a2 2 0 01.997-2.622z" />
-                  </svg>
+
                   Alamat Emel
                 </span>
               </label>
@@ -95,9 +93,7 @@ export default function LoginPage() {
             <div className="bg-gray-50 p-6 rounded-xl">
               <label className="block text-lg font-semibold text-gray-800 mb-3">
                 <span className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M5 9V7a5 5 0 00-5 5H2a5 5 0 00-5 5v5a5 5 0 005 5h14a5 5 0 005-5v-5a5 5 0 00-5-5H9z" clipRule="evenodd" />
-                  </svg>
+  
                   Kata Laluan
                 </span>
               </label>
@@ -116,7 +112,7 @@ export default function LoginPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="flex-1 bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 {loading ? (
                   <span className="flex items-center justify-center">
@@ -128,9 +124,7 @@ export default function LoginPage() {
                   </span>
                 ) : (
                   <span className="flex items-center justify-center">
-                    <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                    </svg>
+
                     Log Masuk
                   </span>
                 )}

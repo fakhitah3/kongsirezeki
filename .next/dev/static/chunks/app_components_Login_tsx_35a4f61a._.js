@@ -131,26 +131,8 @@ function LoginPage() {
                                         className: "block text-lg font-semibold text-gray-800 mb-3",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                    className: "w-5 h-5 mr-2 text-blue-600",
-                                                    fill: "currentColor",
-                                                    viewBox: "0 0 20 20",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        d: "M2.003 5.884L10 9a2 2 0 013.997 2.622l8.003-5.884a2 2 0 01-.997.116L10 13a2 2 0 01-.997-.116l-8.003 5.884a2 2 0 01.997-2.622z"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/components/Login.tsx",
-                                                        lineNumber: 75,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/Login.tsx",
-                                                    lineNumber: 74,
-                                                    columnNumber: 19
-                                                }, this),
-                                                "Alamat Emel"
-                                            ]
-                                        }, void 0, true, {
+                                            children: "Alamat Emel"
+                                        }, void 0, false, {
                                             fileName: "[project]/app/components/Login.tsx",
                                             lineNumber: 73,
                                             columnNumber: 17
@@ -169,7 +151,7 @@ function LoginPage() {
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Login.tsx",
-                                        lineNumber: 80,
+                                        lineNumber: 78,
                                         columnNumber: 15
                                     }, this)
                                 ]
@@ -185,35 +167,15 @@ function LoginPage() {
                                         className: "block text-lg font-semibold text-gray-800 mb-3",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                             className: "flex items-center",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                    className: "w-5 h-5 mr-2 text-purple-600",
-                                                    fill: "currentColor",
-                                                    viewBox: "0 0 20 20",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        fillRule: "evenodd",
-                                                        d: "M5 9V7a5 5 0 00-5 5H2a5 5 0 00-5 5v5a5 5 0 005 5h14a5 5 0 005-5v-5a5 5 0 00-5-5H9z",
-                                                        clipRule: "evenodd"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/components/Login.tsx",
-                                                        lineNumber: 88,
-                                                        columnNumber: 21
-                                                    }, this)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/Login.tsx",
-                                                    lineNumber: 87,
-                                                    columnNumber: 19
-                                                }, this),
-                                                "Kata Laluan"
-                                            ]
-                                        }, void 0, true, {
+                                            children: "Kata Laluan"
+                                        }, void 0, false, {
                                             fileName: "[project]/app/components/Login.tsx",
-                                            lineNumber: 86,
+                                            lineNumber: 84,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Login.tsx",
-                                        lineNumber: 85,
+                                        lineNumber: 83,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -225,13 +187,13 @@ function LoginPage() {
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Login.tsx",
-                                        lineNumber: 93,
+                                        lineNumber: 89,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/Login.tsx",
-                                lineNumber: 84,
+                                lineNumber: 82,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -239,7 +201,7 @@ function LoginPage() {
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                     type: "submit",
                                     disabled: loading,
-                                    className: "flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl",
+                                    className: "flex-1 bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl",
                                     children: loading ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "flex items-center justify-center",
                                         children: [
@@ -257,7 +219,7 @@ function LoginPage() {
                                                         strokeWidth: "4"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Login.tsx",
-                                                        lineNumber: 101,
+                                                        lineNumber: 97,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
@@ -266,57 +228,37 @@ function LoginPage() {
                                                         d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/Login.tsx",
-                                                        lineNumber: 102,
+                                                        lineNumber: 98,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/Login.tsx",
-                                                lineNumber: 100,
+                                                lineNumber: 96,
                                                 columnNumber: 21
                                             }, this),
                                             "Log Masuk..."
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/Login.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 95,
                                         columnNumber: 28
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "flex items-center justify-center",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                className: "w-5 h-5 mr-2",
-                                                fill: "currentColor",
-                                                viewBox: "0 0 20 20",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                    fillRule: "evenodd",
-                                                    d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                    clipRule: "evenodd"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/Login.tsx",
-                                                    lineNumber: 107,
-                                                    columnNumber: 23
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/components/Login.tsx",
-                                                lineNumber: 106,
-                                                columnNumber: 21
-                                            }, this),
-                                            "Log Masuk"
-                                        ]
-                                    }, void 0, true, {
+                                        children: "Log Masuk"
+                                    }, void 0, false, {
                                         fileName: "[project]/app/components/Login.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 101,
                                         columnNumber: 29
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Login.tsx",
-                                    lineNumber: 98,
+                                    lineNumber: 94,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Login.tsx",
-                                lineNumber: 97,
+                                lineNumber: 93,
                                 columnNumber: 13
                             }, this)
                         ]
@@ -341,12 +283,12 @@ function LoginPage() {
                                 children: "Lupa kata laluan?"
                             }, void 0, false, {
                                 fileName: "[project]/app/components/Login.tsx",
-                                lineNumber: 119,
+                                lineNumber: 113,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/components/Login.tsx",
-                            lineNumber: 118,
+                            lineNumber: 112,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -360,19 +302,19 @@ function LoginPage() {
                                     children: "Daftar sekarang"
                                 }, void 0, false, {
                                     fileName: "[project]/app/components/Login.tsx",
-                                    lineNumber: 126,
+                                    lineNumber: 120,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/components/Login.tsx",
-                            lineNumber: 124,
+                            lineNumber: 118,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/Login.tsx",
-                    lineNumber: 117,
+                    lineNumber: 111,
                     columnNumber: 9
                 }, this)
             ]

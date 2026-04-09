@@ -42,13 +42,13 @@ export default function StatusPermohonan() {
   const getStatusColor = (status: string) => {
     switch (status) {
       case "pending":
-        return "bg-yellow-100 text-yellow-800 border-yellow-300";
+        return "bg-yellow-50 text-yellow-700 border-yellow-200";
       case "approved":
-        return "bg-blue-100 text-blue-800 border-blue-300";
+        return "bg-blue-50 text-blue-700 border-blue-200";
       case "rejected":
-        return "bg-red-100 text-red-800 border-red-300";
+        return "bg-red-50 text-red-700 border-red-200";
       default:
-        return "bg-gray-100 text-gray-800 border-gray-300";
+        return "bg-gray-50 text-gray-700 border-gray-200";
     }
   };
 
@@ -90,24 +90,29 @@ export default function StatusPermohonan() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-10 px-4">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-2xl font-bold text-blue-700 mb-6">Status Permohonan</h1>
 
         {applications.length === 0 ? (
           <div className="bg-white shadow-lg rounded-lg p-8 text-center">
-            <p className="text-gray-600">Tiada permohonan dijumpai.</p>
+            <p className="text-gray-500">
+              Anda belum membuat sebarang permohonan lagi.
+            </p>
           </div>
         ) : (
           <div className="space-y-4">
             {applications.map((app) => (
-              <div key={app.id} className="bg-white shadow-lg rounded-lg p-6">
+              <div
+                key={app.id}
+                className="bg-white shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl p-6 border border-gray-100"
+              >
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">
+                    <h3 className="text-xl font-bold text-gray-900">
                       {getJenisBantuanText(app.jenisBantuan)}
                     </h3>
-                    <p className="text-sm text-gray-600">
+                    <p className="text-sm text-gray-500 mt-1">
                       Fakulti: {app.fakulti} | Semester: {app.semester}
                     </p>
                   </div>
@@ -120,26 +125,33 @@ export default function StatusPermohonan() {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm bg-gray-50 p-4 rounded-xl">
                   <div>
-                    <p className="font-medium text-gray-700">Status Kewangan:</p>
-                    <p className="text-gray-600">{app.statusKewangan}</p>
+                    <p className="text-xs text-gray-400 uppercase">Status Kewangan</p>
+                    <p className="text-gray-800 font-medium">{app.statusKewangan}</p>
                   </div>
                   <div>
-                    <p className="font-medium text-gray-700">Dihantar pada:</p>
-                    <p className="text-gray-600">
+                    <p className="text-xs text-gray-400 uppercase">Dihantar pada</p>
+                    <p className="text-gray-800 font-medium">
                       {app.createdAt?.toDate()?.toLocaleDateString("ms-MY")}
                     </p>
                   </div>
                 </div>
 
                 {app.justifikasi && (
-                  <div className="mt-4">
-                    <p className="font-medium text-gray-700">Justifikasi:</p>
-                    <p className="text-gray-600 bg-gray-50 p-3 rounded">
-                      {app.justifikasi}
-                    </p>
-                  </div>
+<div className="mt-5">
+  <div className="bg-gray-50 border border-gray-200 rounded-xl p-4">
+    
+    <p className="text-xs text-gray-400 uppercase mb-2">
+      Justifikasi
+    </p>
+
+    <p className="text-gray-700 leading-relaxed">
+      {app.justifikasi}
+    </p>
+
+  </div>
+</div>
                 )}
               </div>
             ))}

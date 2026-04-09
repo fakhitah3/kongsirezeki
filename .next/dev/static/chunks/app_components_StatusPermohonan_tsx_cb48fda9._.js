@@ -22,11 +22,11 @@ var _s = __turbopack_context__.k.signature();
 function StatusPermohonan() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(8);
-    if ($[0] !== "f95790f7ad15f4577b5be4c88a39328e5ee7bafd2e67be7fab09e0145266c571") {
+    if ($[0] !== "a8111e54bf8894b61916350568774fb7c33ea2138726367470dfb413a9bc1bdc") {
         for(let $i = 0; $i < 8; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "f95790f7ad15f4577b5be4c88a39328e5ee7bafd2e67be7fab09e0145266c571";
+        $[0] = "a8111e54bf8894b61916350568774fb7c33ea2138726367470dfb413a9bc1bdc";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -133,7 +133,7 @@ function StatusPermohonan() {
     let t4;
     if ($[6] !== applications) {
         t4 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-h-screen bg-gray-50 py-10 px-4",
+            className: "min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-10 px-4",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "max-w-4xl mx-auto",
                 children: [
@@ -141,22 +141,22 @@ function StatusPermohonan() {
                     applications.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "bg-white shadow-lg rounded-lg p-8 text-center",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-gray-600",
-                            children: "Tiada permohonan dijumpai."
+                            className: "text-gray-500",
+                            children: "Anda belum membuat sebarang permohonan lagi."
                         }, void 0, false, {
                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                             lineNumber: 91,
-                            columnNumber: 193
+                            columnNumber: 225
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/components/StatusPermohonan.tsx",
                         lineNumber: 91,
-                        columnNumber: 130
+                        columnNumber: 162
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "space-y-4",
                         children: applications.map({
                             "StatusPermohonan[applications.map()]": (app)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "bg-white shadow-lg rounded-lg p-6",
+                                    className: "bg-white shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl p-6 border border-gray-100",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "flex justify-between items-start mb-4",
@@ -164,15 +164,15 @@ function StatusPermohonan() {
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                            className: "text-lg font-semibold text-gray-800",
+                                                            className: "text-xl font-bold text-gray-900",
                                                             children: getJenisBantuanText(app.jenisBantuan)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                             lineNumber: 92,
-                                                            columnNumber: 184
+                                                            columnNumber: 252
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-sm text-gray-600",
+                                                            className: "text-sm text-gray-500 mt-1",
                                                             children: [
                                                                 "Fakulti: ",
                                                                 app.fakulti,
@@ -182,13 +182,13 @@ function StatusPermohonan() {
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                             lineNumber: 92,
-                                                            columnNumber: 280
+                                                            columnNumber: 344
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                     lineNumber: 92,
-                                                    columnNumber: 179
+                                                    columnNumber: 247
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     className: `px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(app.status)}`,
@@ -196,95 +196,102 @@ function StatusPermohonan() {
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                     lineNumber: 92,
-                                                    columnNumber: 376
+                                                    columnNumber: 445
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                                             lineNumber: 92,
-                                            columnNumber: 124
+                                            columnNumber: 192
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "grid grid-cols-1 md:grid-cols-2 gap-4 text-sm",
+                                            className: "grid grid-cols-1 md:grid-cols-2 gap-4 text-sm bg-gray-50 p-4 rounded-xl",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "font-medium text-gray-700",
-                                                            children: "Status Kewangan:"
+                                                            className: "text-xs text-gray-400 uppercase",
+                                                            children: "Status Kewangan"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                             lineNumber: 92,
-                                                            columnNumber: 584
+                                                            columnNumber: 679
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-gray-600",
+                                                            className: "text-gray-800 font-medium",
                                                             children: app.statusKewangan
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                             lineNumber: 92,
-                                                            columnNumber: 645
+                                                            columnNumber: 745
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                     lineNumber: 92,
-                                                    columnNumber: 579
+                                                    columnNumber: 674
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "font-medium text-gray-700",
-                                                            children: "Dihantar pada:"
+                                                            className: "text-xs text-gray-400 uppercase",
+                                                            children: "Dihantar pada"
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                             lineNumber: 92,
-                                                            columnNumber: 709
+                                                            columnNumber: 821
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                            className: "text-gray-600",
+                                                            className: "text-gray-800 font-medium",
                                                             children: app.createdAt?.toDate()?.toLocaleDateString("ms-MY")
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                             lineNumber: 92,
-                                                            columnNumber: 768
+                                                            columnNumber: 885
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/components/StatusPermohonan.tsx",
                                                     lineNumber: 92,
-                                                    columnNumber: 704
+                                                    columnNumber: 816
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                                             lineNumber: 92,
-                                            columnNumber: 516
+                                            columnNumber: 585
                                         }, this),
                                         app.justifikasi && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mt-4",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "font-medium text-gray-700",
-                                                    children: "Justifikasi:"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/StatusPermohonan.tsx",
-                                                    lineNumber: 92,
-                                                    columnNumber: 909
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-gray-600 bg-gray-50 p-3 rounded",
-                                                    children: app.justifikasi
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/StatusPermohonan.tsx",
-                                                    lineNumber: 92,
-                                                    columnNumber: 966
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
+                                            className: "mt-5",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "bg-gray-50 border border-gray-200 rounded-xl p-4",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-xs text-gray-400 uppercase mb-2",
+                                                        children: "Justifikasi"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/components/StatusPermohonan.tsx",
+                                                        lineNumber: 92,
+                                                        columnNumber: 1104
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-gray-700 leading-relaxed",
+                                                        children: app.justifikasi
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/components/StatusPermohonan.tsx",
+                                                        lineNumber: 92,
+                                                        columnNumber: 1171
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/components/StatusPermohonan.tsx",
+                                                lineNumber: 92,
+                                                columnNumber: 1038
+                                            }, this)
+                                        }, void 0, false, {
                                             fileName: "[project]/app/components/StatusPermohonan.tsx",
                                             lineNumber: 92,
-                                            columnNumber: 887
+                                            columnNumber: 1016
                                         }, this)
                                     ]
                                 }, app.id, true, {
@@ -296,13 +303,13 @@ function StatusPermohonan() {
                     }, void 0, false, {
                         fileName: "[project]/app/components/StatusPermohonan.tsx",
                         lineNumber: 91,
-                        columnNumber: 261
+                        columnNumber: 311
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/StatusPermohonan.tsx",
                 lineNumber: 91,
-                columnNumber: 62
+                columnNumber: 94
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/components/StatusPermohonan.tsx",
@@ -362,19 +369,19 @@ function _StatusPermohonanGetStatusColor(status) {
     switch(status){
         case "pending":
             {
-                return "bg-yellow-100 text-yellow-800 border-yellow-300";
+                return "bg-yellow-50 text-yellow-700 border-yellow-200";
             }
         case "approved":
             {
-                return "bg-blue-100 text-blue-800 border-blue-300";
+                return "bg-blue-50 text-blue-700 border-blue-200";
             }
         case "rejected":
             {
-                return "bg-red-100 text-red-800 border-red-300";
+                return "bg-red-50 text-red-700 border-red-200";
             }
         default:
             {
-                return "bg-gray-100 text-gray-800 border-gray-300";
+                return "bg-gray-50 text-gray-700 border-gray-200";
             }
     }
 }

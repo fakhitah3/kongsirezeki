@@ -3,8 +3,10 @@
   "/about/page": "app/about/page.js",
   "/apply/page": "app/apply/page.js",
   "/dashboard/student/page": "app/dashboard/student/page.js",
+  "/donate/page": "app/donate/page.js",
   "/login/page": "app/login/page.js",
   "/page": "app/page.js",
   "/slots/page": "app/slots/page.js",
-  "/status/page": "app/status/page.js"
+  "/status/page": "app/status/page.js",
+  "/sukarelawan/page": "app/sukarelawan/page.js"
 }
