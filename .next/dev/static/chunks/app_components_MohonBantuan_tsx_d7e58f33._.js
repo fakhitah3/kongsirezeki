@@ -204,7 +204,7 @@ function MohonBantuan() {
                                         name: "jenisBantuan",
                                         value: form.jenisBantuan,
                                         onChange: handleChange,
-                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:border-blue-500 focus:outline-none transition-colors",
+                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-500 focus:border-blue-500 focus:outline-none transition-colors",
                                         required: true,
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -297,7 +297,7 @@ function MohonBantuan() {
                                                         value: form.fakulti,
                                                         onChange: handleChange,
                                                         placeholder: "Contoh: Fakulti Sains Komputer",
-                                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors",
+                                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-red-500 focus:outline-none transition-colors",
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/MohonBantuan.tsx",
@@ -334,7 +334,7 @@ function MohonBantuan() {
                                                         name: "semester",
                                                         value: form.semester,
                                                         onChange: handleChange,
-                                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors",
+                                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-red-500 focus:outline-none transition-colors",
                                                         required: true
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/MohonBantuan.tsx",
@@ -381,7 +381,7 @@ function MohonBantuan() {
                                         name: "statusKewangan",
                                         value: form.statusKewangan,
                                         onChange: handleChange,
-                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:border-purple-500 focus:outline-none transition-colors",
+                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-500 focus:border-blue-600 focus:outline-none transition-colors",
                                         required: true,
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
@@ -460,7 +460,7 @@ function MohonBantuan() {
                                         onChange: handleChange,
                                         rows: 5,
                                         placeholder: "Sila terangkan mengapa anda memerlukan bantuan ini dan keadaan kewangan anda secara terperinci...",
-                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors resize-none",
+                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-blue-500 focus:outline-none transition-colors resize-none",
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/MohonBantuan.tsx",

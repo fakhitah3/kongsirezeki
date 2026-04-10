@@ -130,80 +130,110 @@ export default function PilihSlotPengambilan() {
     );
   }
 
-  return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4">
-      <div className="max-w-4xl mx-auto">
-        <h1 className="text-2xl font-bold text-blue-700 mb-6">Pilih Slot Pengambilan</h1>
+return (
+  <div className="min-h-screen bg-gray-100 py-10 px-4">
+    <div className="max-w-6xl mx-auto">
 
-        {userBookings.some(b => b.status === "approved") && (
-          <div className="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded mb-6">
-            <p className="font-medium">Slot yang dipilih:</p>
-            <div className="mt-2">
-              {userBookings
-                .filter(b => b.status === "approved")
-                .map(booking => {
-                  const slot = slots.find(s => s.id === booking.slotId);
-                  return slot ? (
-                    <div key={booking.id} className="bg-white p-3 rounded mt-2">
-                      <p className="text-sm">
-                        <strong>{slot.date}</strong> | {slot.time} | {slot.location}
-                      </p>
-                    </div>
-                  ) : null;
-                })}
-            </div>
+      {/* Page Header Box */}
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-blue-600">
+          Pilih Slot Pengambilan
+        </h1>
+        <p className="text-gray-500 mt-1">
+          Sila pilih slot yang sesuai untuk pengambilan
+        </p>
+      </div>
+
+      {/* Selected Slot */}
+      {userBookings.some(b => b.status === "approved") && (
+        <div className="bg-green-50 border border-green-200 rounded-2xl p-5 mb-6">
+          <p className="font-semibold text-green-700 mb-2">
+            Slot Dipilih
+          </p>
+          {userBookings
+            .filter(b => b.status === "approved")
+            .map(booking => {
+              const slot = slots.find(s => s.id === booking.slotId);
+              return slot ? (
+                <div key={booking.id} className="text-sm text-gray-700">
+                  {slot.date} | {slot.time} | {slot.location}
+                </div>
+              ) : null;
+            })}
+        </div>
+      )}
+
+      {/* Main Content Box */}
+      <div className="bg-white rounded-2xl shadow-md border border-gray-200 p-6">
+        <h2 className="text-lg font-semibold text-gray-700 mb-6">
+          Slot Tersedia
+        </h2>
+
+        {slots.length === 0 ? (
+          <div className="text-center text-gray-500 py-10">
+            Tiada slot tersedia
           </div>
-        )}
+        ) : (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {slots.map((slot) => {
+              const full = isSlotFull(slot);
+              const booked = isSlotBooked(slot.id);
+              const percent =
+                (slot.currentBookings / slot.maxStudents) * 100;
 
-        <div className="bg-white shadow-lg rounded-lg p-6">
-          <h2 className="text-lg font-semibold mb-4">Slot Tersedia</h2>
-          
-          {slots.length === 0 ? (
-            <p className="text-gray-600">Tiada slot tersedia pada masa ini.</p>
-          ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {slots.map((slot) => (
+              return (
                 <div
                   key={slot.id}
-                  className={`border rounded-lg p-4 ${
-                    isSlotBooked(slot.id)
-                      ? "border-gray-300 bg-gray-50"
-                      : isSlotFull(slot)
-                      ? "border-red-300 bg-red-50"
-                      : "border-blue-300 bg-blue-50 hover:bg-blue-100"
-                  }`}
+                  className="rounded-xl border border-gray-200 bg-gray-50 p-5 hover:shadow-md transition"
                 >
-                  <div className="flex justify-between items-start mb-2">
-                    <h3 className="font-semibold text-gray-800">{slot.location}</h3>
+                  {/* Header */}
+                  <div className="flex justify-between mb-3">
+                    <h3 className="font-semibold text-gray-800">
+                      {slot.location}
+                    </h3>
                     <span
-                      className={`px-2 py-1 text-xs rounded-full ${
-                        isSlotFull(slot)
-                          ? "bg-red-100 text-red-800"
-                          : isSlotBooked(slot.id)
-                          ? "bg-gray-100 text-gray-800"
-                          : "bg-green-100 text-green-800"
+                      className={`text-xs px-3 py-1 rounded-full ${
+                        full
+                          ? "bg-red-100 text-red-600"
+                          : booked
+                          ? "bg-gray-200 text-gray-600"
+                          : "bg-green-100 text-green-600"
                       }`}
                     >
-                      {isSlotFull(slot)
-                        ? "Penuh"
-                        : isSlotBooked(slot.id)
-                        ? "Dipilih"
-                        : "Tersedia"}
+                      {full ? "Penuh" : booked ? "Dipilih" : "Tersedia"}
                     </span>
                   </div>
-                  
-                  <div className="text-sm text-gray-600 space-y-1">
-                    <p><strong>Tarikh:</strong> {slot.date}</p>
-                    <p><strong>Masa:</strong> {slot.time}</p>
-                    <p><strong>Kapasiti:</strong> {slot.currentBookings}/{slot.maxStudents} pelajar</p>
+
+                  {/* Info */}
+                  <div className="text-sm text-gray-600 space-y-1 mb-4">
+                    <p>Tarikh: {slot.date}</p>
+                    <p>Masa: {slot.time}</p>
                   </div>
 
+                  {/* Capacity Bar */}
+                  <div className="mb-4">
+                    <div className="flex justify-between text-xs text-gray-500 mb-1">
+                      <span>Kapasiti</span>
+                      <span>
+                        {slot.currentBookings}/{slot.maxStudents}
+                      </span>
+                    </div>
+
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div
+                        className="h-2 rounded-full bg-blue-600"
+                        style={{ width: `${percent}%` }}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Button */}
                   <button
                     onClick={() => handleBookSlot(slot.id)}
-                    disabled={isSlotBooked(slot.id) || isSlotFull(slot) || booking === slot.id}
-                    className={`mt-3 w-full py-2 px-4 rounded text-sm font-medium transition-colors ${
-                      isSlotBooked(slot.id) || isSlotFull(slot)
-                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                    disabled={booked || full || booking === slot.id}
+                    className={`w-full py-2.5 rounded-lg font-medium ${
+                      booked || full
+                        ? "bg-gray-200 text-gray-400 cursor-not-allowed"
                         : booking === slot.id
                         ? "bg-yellow-500 text-white"
                         : "bg-blue-600 text-white hover:bg-blue-700"
@@ -211,18 +241,19 @@ export default function PilihSlotPengambilan() {
                   >
                     {booking === slot.id
                       ? "Memproses..."
-                      : isSlotBooked(slot.id)
+                      : booked
                       ? "Sudah Dipilih"
-                      : isSlotFull(slot)
+                      : full
                       ? "Penuh"
                       : "Pilih Slot"}
                   </button>
                 </div>
-              ))}
-            </div>
-          )}
-        </div>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
-  );
+  </div>
+);
 }

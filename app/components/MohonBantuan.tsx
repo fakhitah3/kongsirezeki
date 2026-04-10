@@ -131,7 +131,7 @@ export default function MohonBantuan() {
                 name="jenisBantuan"
                 value={form.jenisBantuan}
                 onChange={handleChange}
-                className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:border-blue-500 focus:outline-none transition-colors"
+                className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-500 focus:border-blue-500 focus:outline-none transition-colors"
                 required
               >
                 <option value="">Pilih jenis bantuan</option>
@@ -160,7 +160,7 @@ export default function MohonBantuan() {
                     value={form.fakulti}
                     onChange={handleChange}
                     placeholder="Contoh: Fakulti Sains Komputer"
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-red-500 focus:outline-none transition-colors"
                     required
                   />
                 </div>
@@ -173,7 +173,7 @@ export default function MohonBantuan() {
                     name="semester"
                     value={form.semester}
                     onChange={handleChange}
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-red-500 focus:outline-none transition-colors"
+                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-red-500 focus:outline-none transition-colors"
                     required
                   />
                 </div>
@@ -192,7 +192,7 @@ export default function MohonBantuan() {
                 name="statusKewangan"
                 value={form.statusKewangan}
                 onChange={handleChange}
-                className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:border-purple-500 focus:outline-none transition-colors"
+                className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-500 focus:border-blue-600 focus:outline-none transition-colors"
                 required
               >
                 <option value="">Pilih status kewangan</option>
@@ -217,7 +217,7 @@ export default function MohonBantuan() {
                 onChange={handleChange}
                 rows={5}
                 placeholder="Sila terangkan mengapa anda memerlukan bantuan ini dan keadaan kewangan anda secara terperinci..."
-                className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors resize-none"
+                className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-blue-500 focus:outline-none transition-colors resize-none"
                 required
               />
             </div>

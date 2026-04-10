@@ -116,8 +116,7 @@ export default function Profile() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-red-50 py-10 px-4">
-        <div className="flex items-center justify-center min-h-[400px]">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 py-10 px-4">        <div className="flex items-center justify-center min-h-[400px]">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
         </div>
       </div>
@@ -157,13 +156,9 @@ export default function Profile() {
         )}
 
         {/* Profile Card */}
-        <div className="bg-white shadow-xl rounded-2xl p-8">
-          {/* Profile Header */}
+<div className="bg-white border border-gray-100 shadow-sm rounded-2xl p-8 hover:shadow-md transition">          {/* Profile Header */}
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-2xl font-bold text-gray-800 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7.707 3.293a1 1 0 00-1.414 1.414L8.586 8.586a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-              </svg>
               Maklumat Peribadi
             </h2>
             
@@ -173,9 +168,6 @@ export default function Profile() {
                 className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700  transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <span className="flex items-center">
-                  <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M13.586 3.586a1 1 0 00-1.414 1.414L10.586 8.586a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                  </svg>
                   Edit 
                 </span>
               </button>
@@ -187,8 +179,7 @@ export default function Profile() {
             {editMode ? (
               <>
                 {/* Personal Information */}
-                <div className="bg-gray-50 p-6 rounded-xl">
-                  <label className="block text-lg font-semibold text-gray-800 mb-4">
+<div className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition">                  <label className="block text-lg font-semibold text-gray-800 mb-4">
                     <span className="flex items-center">
                       <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7.707 3.293a1 1 0 00-1.414 1.414L8.586 8.586a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
@@ -245,7 +236,7 @@ export default function Profile() {
                 </div>
 
                 {/* Academic Information */}
-                <div className="bg-gray-50 p-6 rounded-xl">
+                <div className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
                   <label className="block text-lg font-semibold text-gray-800 mb-4">
                     <span className="flex items-center">
                       <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
@@ -412,9 +403,6 @@ export default function Profile() {
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <label className="block text-lg font-semibold text-gray-800 mb-4">
                     <span className="flex items-center">
-                      <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7.707 3.293a1 1 0 00-1.414 1.414L8.586 8.586a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                      </svg>
                       Maklumat Peribadi
                     </span>
                   </label>
@@ -448,9 +436,6 @@ export default function Profile() {
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <label className="block text-lg font-semibold text-gray-800 mb-4">
                     <span className="flex items-center">
-                      <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3a1 1 0 001.414 0z" clipRule="evenodd" />
-                      </svg>
                       Maklumat Akademik
                     </span>
                   </label>
@@ -473,9 +458,6 @@ export default function Profile() {
                   <div className="bg-gray-50 p-6 rounded-xl">
                     <label className="block text-lg font-semibold text-gray-800 mb-4">
                       <span className="flex items-center">
-                        <svg className="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                        </svg>
                         Jenis Penyumbang
                       </span>
                     </label>
@@ -494,9 +476,6 @@ export default function Profile() {
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <label className="block text-lg font-semibold text-gray-800 mb-4">
                     <span className="flex items-center">
-                      <svg className="w-5 h-5 mr-2 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5 9V7a5 5 0 00-5 5H2a5 5 0 005 5v2a1 1 0 011.414 1.414L9 10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                      </svg>
                       Alamat
                     </span>
                   </label>
@@ -508,9 +487,6 @@ export default function Profile() {
                   <div className="bg-gray-50 p-6 rounded-xl">
                     <label className="block text-lg font-semibold text-gray-800 mb-4">
                       <span className="flex items-center">
-                        <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1h8a1 1 0 011 1v1H7a1 1 0 00-1 1V3z" clipRule="evenodd" />
-                        </svg>
                         Tarikh Daftar
                       </span>
                     </label>

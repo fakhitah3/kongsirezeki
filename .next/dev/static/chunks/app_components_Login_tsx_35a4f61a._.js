@@ -183,7 +183,7 @@ function LoginPage() {
                                         value: password,
                                         onChange: (e_1)=>setPassword(e_1.target.value),
                                         placeholder: "Masukkan kata laluan",
-                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:border-purple-500 focus:outline-none transition-colors",
+                                        className: "w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:border-blue-600 focus:outline-none transition-colors",
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/Login.tsx",

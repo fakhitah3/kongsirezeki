@@ -1,133 +1,292 @@
-[00:00:01.953] Server  LOG     ✓ Ready in 1821ms
-[00:00:52.181] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:49.754] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:09.232] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:09:55.205] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:12:42.606] Server  LOG     ✓ Compiled in 63ms
-[00:14:40.498] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[00:14:40.730] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[00:14:47.892] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[00:14:48.136] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[00:16:57.665] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:18:18.164] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:53:11.757] Browser WARN    [2026-04-09T02:25:55.501Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34ae transport errored. Name: undefined Message: undefined
-[00:53:11.758] Browser WARN    [2026-04-09T02:25:55.514Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34af transport errored. Name: undefined Message: undefined
-[00:53:12.889] Browser WARN    [2026-04-09T02:25:56.645Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34b0 transport errored. Name: undefined Message: undefined
-[00:53:14.207] Browser WARN    [2026-04-09T02:25:57.961Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34b1 transport errored. Name: undefined Message: undefined
-[01:10:11.131] Browser WARN    [2026-04-09T02:42:54.883Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34b2 transport errored. Name: undefined Message: undefined
-[01:10:14.180] Browser WARN    [2026-04-09T02:42:57.929Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34b3 transport errored. Name: undefined Message: undefined
-[03:38:26.653] Browser WARN    [2026-04-09T05:11:10.303Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34b4 transport errored. Name: undefined Message: undefined
-[03:38:26.653] Browser WARN    [2026-04-09T05:11:10.387Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34b5 transport errored. Name: undefined Message: undefined
-[03:56:17.721] Browser WARN    [2026-04-09T05:29:01.418Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34b6 transport errored. Name: undefined Message: undefined
-[03:56:17.721] Browser WARN    [2026-04-09T05:29:01.456Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34b7 transport errored. Name: undefined Message: undefined
-[04:09:59.987] Browser WARN    [2026-04-09T05:42:43.706Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34b9 transport errored. Name: undefined Message: undefined
-[04:09:59.987] Browser WARN    [2026-04-09T05:42:43.722Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34ba transport errored. Name: undefined Message: undefined
-[04:10:01.250] Browser WARN    [2026-04-09T05:42:44.987Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34bb transport errored. Name: undefined Message: undefined
-[04:10:03.033] Browser WARN    [2026-04-09T05:42:46.769Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34bc transport errored. Name: undefined Message: undefined
-[04:10:05.033] Browser WARN    [2026-04-09T05:42:48.769Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34bd transport errored. Name: undefined Message: undefined
-[04:10:09.847] Browser WARN    [2026-04-09T05:42:53.584Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34be transport errored. Name: undefined Message: undefined
-[04:10:58.961] Browser WARN    [2026-04-09T05:43:42.698Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34bf transport errored. Name: undefined Message: undefined
-[04:13:43.811] Browser WARN    [2026-04-09T05:46:27.425Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c0 transport errored. Name: undefined Message: undefined
-[04:13:43.811] Browser WARN    [2026-04-09T05:46:27.476Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c1 transport errored. Name: undefined Message: undefined
-[04:13:43.811] Browser WARN    [2026-04-09T05:46:27.542Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c2 transport errored. Name: undefined Message: undefined
-[04:13:43.811] Browser WARN    [2026-04-09T05:46:27.545Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c3 transport errored. Name: undefined Message: undefined
-[04:13:44.904] Browser WARN    [2026-04-09T05:46:28.640Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c4 transport errored. Name: undefined Message: undefined
-[04:13:46.558] Browser WARN    [2026-04-09T05:46:30.295Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c5 transport errored. Name: undefined Message: undefined
-[04:13:47.991] Browser WARN    [2026-04-09T05:46:31.727Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c6 transport errored. Name: undefined Message: undefined
-[04:13:50.725] Browser WARN    [2026-04-09T05:46:34.460Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c7 transport errored. Name: undefined Message: undefined
-[04:13:53.400] Browser WARN    [2026-04-09T05:46:37.137Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c8 transport errored. Name: undefined Message: undefined
-[04:13:57.299] Browser WARN    [2026-04-09T05:46:41.035Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34c9 transport errored. Name: undefined Message: undefined
-[04:28:40.795] Browser WARN    [2026-04-09T06:01:24.481Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34cc transport errored. Name: undefined Message: undefined
-[04:28:40.795] Browser WARN    [2026-04-09T06:01:24.531Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34cd transport errored. Name: undefined Message: undefined
-[04:28:41.690] Browser WARN    [2026-04-09T06:01:25.426Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34ce transport errored. Name: undefined Message: undefined
-[04:28:43.111] Browser WARN    [2026-04-09T06:01:26.848Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34cf transport errored. Name: undefined Message: undefined
-[04:28:46.453] Browser WARN    [2026-04-09T06:01:30.190Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34d0 transport errored. Name: undefined Message: undefined
-[04:28:50.116] Browser WARN    [2026-04-09T06:01:33.852Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34d1 transport errored. Name: undefined Message: undefined
-[04:28:57.576] Browser WARN    [2026-04-09T06:01:41.312Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34d2 transport errored. Name: undefined Message: undefined
-[04:29:02.715] Browser WARN    [2026-04-09T06:01:46.452Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34d3 transport errored. Name: undefined Message: undefined
-[04:29:12.291] Browser WARN    [2026-04-09T06:01:56.028Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34d4 transport errored. Name: undefined Message: undefined
-[04:29:28.142] Browser WARN    [2026-04-09T06:02:11.878Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34d5 transport errored. Name: undefined Message: undefined
-[04:29:46.295] Browser WARN    [2026-04-09T06:02:30.033Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x69bd34d6 transport errored. Name: undefined Message: undefined
-[04:37:52.413] Server  LOG     ✓ Compiled in 118ms
-[04:39:05.273] Server  LOG     ✓ Compiled in 50ms
-[04:40:19.597] Server  LOG     ✓ Compiled in 60ms
-[04:44:36.029] Server  LOG     ✓ Compiled in 54ms
-[04:45:28.293] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[04:45:28.293] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[05:14:54.741] Server  LOG     ✓ Compiled in 62ms
-[05:15:04.247] Server  LOG     ✓ Compiled in 28ms
-[05:15:41.982] Server  LOG     ✓ Compiled in 46ms
-[05:16:05.276] Server  LOG     ✓ Compiled in 48ms
-[05:16:36.405] Server  LOG     ✓ Compiled in 61ms
-[05:17:06.656] Server  LOG     ✓ Compiled in 53ms
-[05:17:22.418] Server  LOG     ✓ Compiled in 50ms
-[05:20:34.987] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[05:20:34.987] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[05:28:55.156] Server  LOG     ✓ Compiled in 134ms
-[05:29:21.998] Server  LOG     ✓ Compiled in 89ms
-[05:29:30.513] Server  LOG     ✓ Compiled in 54ms
-[05:31:43.328] Server  LOG     ✓ Compiled in 108ms
-[05:33:54.644] Server  LOG     ✓ Compiled in 83ms
-[05:36:43.680] Server  LOG     ✓ Compiled in 88ms
-[05:37:11.129] Server  LOG     ✓ Compiled in 95ms
-[05:38:47.687] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[05:40:15.905] Server  LOG     ✓ Compiled in 105ms
-[05:40:31.993] Server  LOG     ✓ Compiled in 82ms
-[05:40:41.574] Server  LOG     ✓ Compiled in 92ms
-[05:42:12.202] Server  LOG     ✓ Compiled in 70ms
-[05:43:36.228] Server  LOG     ✓ Compiled in 82ms
-[05:47:38.324] Server  LOG     ✓ Compiled in 53ms
-[05:47:38.430] Browser ERROR   ./app/components/StatusPermohonan.tsx:138:25
+[00:00:00.857] Server  LOG     ✓ Ready in 665ms
+[00:00:10.154] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:02:24.118] Server  LOG     ✓ Compiled in 316ms
+[00:02:42.175] Server  LOG     ✓ Compiled in 63ms
+[00:03:04.897] Server  LOG     ✓ Compiled in 56ms
+[00:03:21.425] Server  LOG     ✓ Compiled in 56ms
+[00:05:27.726] Server  LOG     ✓ Compiled in 95ms
+[00:15:44.423] Server  LOG     ✓ Compiled in 131ms
+[00:16:40.616] Server  LOG     ✓ Compiled in 96ms
+[00:19:49.798] Server  LOG     ✓ Compiled in 52ms
+[00:20:08.036] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[00:20:08.036] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[00:22:32.408] Server  LOG     ✓ Compiled in 59ms
+[00:22:42.355] Server  LOG     ✓ Compiled in 43ms
+[00:22:50.138] Server  LOG     ✓ Compiled in 39ms
+[00:23:22.022] Server  LOG     ✓ Compiled in 50ms
+[00:25:29.642] Server  LOG     ✓ Compiled in 87ms
+[00:25:33.789] Server  LOG     ✓ Compiled in 13ms
+[00:26:24.603] Server  LOG     ✓ Compiled in 43ms
+[00:27:06.462] Server  LOG     ✓ Compiled in 75ms
+[00:27:46.365] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:27:50.976] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:14:25.864] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:14:58.242] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:15:01.636] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:15:03.867] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:15:13.575] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:15:15.945] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:16:38.256] Server  LOG     ✓ Compiled in 178ms
+[06:17:02.793] Server  LOG     ✓ Compiled in 20ms
+[06:17:15.307] Server  LOG     ✓ Compiled in 45ms
+[06:18:35.986] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[06:18:35.986] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[06:18:37.643] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[06:18:43.659] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[06:18:43.659] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[06:21:55.795] Server  LOG     ✓ Compiled in 43ms
+[06:22:24.515] Server  LOG     ✓ Compiled in 65ms
+[06:22:35.567] Server  LOG     ✓ Compiled in 54ms
+[06:22:55.873] Server  LOG     ✓ Compiled in 44ms
+[06:23:23.118] Server  LOG     ✓ Compiled in 59ms
+[06:23:54.769] Server  LOG     ✓ Compiled in 86ms
+[06:24:08.611] Server  LOG     ✓ Compiled in 49ms
+[06:24:48.707] Server  LOG     ✓ Compiled in 82ms
+[06:25:00.253] Server  LOG     ✓ Compiled in 52ms
+[06:25:12.196] Server  LOG     ✓ Compiled in 47ms
+[06:28:40.619] Server  LOG     ✓ Compiled in 82ms
+[06:38:58.276] Server  LOG     ✓ Compiled in 117ms
+[06:40:30.668] Server  LOG     ✓ Compiled in 34ms
+[06:40:31.152] Browser ERROR   ./app/components/Profile.tsx:518:9
 Parsing ecmascript source code failed
-  136 |                 {app.createdAt?.toDate()?.toLocaleDateString("ms-MY")}
-  137 |               </p>
-> 138 |                     </p>
-      |                         ^
-> 139 |                   </div>
-      | ^^^^^^^^^^^^^^^^^^^
-  140 |                 </div>
-  141 |
-  142 |                 {app.justifikasi && (
+  516 |             )}
+  517 |           </form>
+> 518 |         </div>
+      |         ^
+  519 |       </div>
+  520 |     </div>
+  521 |   );
 
-Expected '</', got 'jsx text'
+Expression expected
 
 Import trace:
   Server Component:
-    ./app/components/StatusPermohonan.tsx
-    ./app/status/page.tsx
-[05:49:11.602] Server  LOG     ✓ Compiled in 92ms
-[05:56:00.612] Server  LOG     ✓ Compiled in 79ms
-[05:56:41.595] Server  LOG     ✓ Compiled in 78ms
-[05:57:27.539] Server  LOG     ✓ Compiled in 125ms
-[06:14:57.882] Browser WARN    [2026-04-09T07:47:41.254Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c923f9 transport errored. Name: undefined Message: undefined
-[06:14:57.882] Browser WARN    [2026-04-09T07:47:41.296Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c923fa transport errored. Name: undefined Message: undefined
-[06:14:59.034] Browser WARN    [2026-04-09T07:47:42.451Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c923fb transport errored. Name: undefined Message: undefined
-[06:15:00.454] Browser WARN    [2026-04-09T07:47:43.872Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c923fc transport errored. Name: undefined Message: undefined
-[06:15:01.965] Browser WARN    [2026-04-09T07:47:45.385Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c923fd transport errored. Name: undefined Message: undefined
-[06:15:33.800] Browser WARN    [2026-04-09T07:48:17.223Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c923fe transport errored. Name: undefined Message: undefined
-[06:33:01.989] Browser WARN    [2026-04-09T08:05:44.740Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92401 transport errored. Name: undefined Message: undefined
-[06:33:01.990] Browser WARN    [2026-04-09T08:05:44.752Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92402 transport errored. Name: undefined Message: undefined
-[06:33:03.987] Browser WARN    [2026-04-09T08:05:46.483Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92403 transport errored. Name: undefined Message: undefined
-[06:33:06.985] Browser WARN    [2026-04-09T08:05:49.482Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92404 transport errored. Name: undefined Message: undefined
-[06:33:08.985] Browser WARN    [2026-04-09T08:05:51.481Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92405 transport errored. Name: undefined Message: undefined
-[06:50:16.468] Browser WARN    [2026-04-09T08:22:59.111Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92408 transport errored. Name: undefined Message: undefined
-[06:50:16.468] Browser WARN    [2026-04-09T08:22:59.125Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92409 transport errored. Name: undefined Message: undefined
-[06:50:18.466] Browser WARN    [2026-04-09T08:23:00.961Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c9240a transport errored. Name: undefined Message: undefined
-[06:52:32.785] Browser WARN    [2026-04-09T08:23:02.965Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c9240b transport errored. Name: undefined Message: undefined
-[06:52:35.784] Browser WARN    [2026-04-09T08:25:18.282Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c9240c transport errored. Name: undefined Message: undefined
-[07:08:21.508] Browser WARN    [2026-04-09T08:41:04.194Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c9240d transport errored. Name: undefined Message: undefined
-[07:23:50.388] Browser WARN    [2026-04-09T08:56:33.795Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c9240e transport errored. Name: undefined Message: undefined
-[07:55:21.054] Browser WARN    [2026-04-09T09:28:03.952Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c9240f transport errored. Name: undefined Message: undefined
-[08:26:24.840] Browser WARN    [2026-04-09T09:59:08.222Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92410 transport errored. Name: undefined Message: undefined
-[08:50:35.954] Browser WARN    [2026-04-09T10:23:19.315Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92411 transport errored. Name: undefined Message: undefined
-[09:06:18.235] Browser WARN    [2026-04-09T10:39:01.378Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92412 transport errored. Name: undefined Message: undefined
-[09:22:02.013] Browser WARN    [2026-04-09T10:54:45.549Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92413 transport errored. Name: undefined Message: undefined
-[09:36:40.137] Browser WARN    [2026-04-09T11:09:23.796Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92414 transport errored. Name: undefined Message: undefined
-[10:08:08.658] Browser WARN    [2026-04-09T11:40:51.555Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92415 transport errored. Name: undefined Message: undefined
-[10:17:48.447] Browser WARN    [2026-04-09T11:50:31.485Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92416 transport errored. Name: undefined Message: undefined
-[11:57:48.245] Browser WARN    [2026-04-09T13:30:31.899Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92417 transport errored. Name: undefined Message: undefined
-[14:21:31.362] Browser WARN    [2026-04-09T15:54:15.044Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92418 transport errored. Name: undefined Message: undefined
-[16:35:28.379] Browser WARN    [2026-04-09T18:08:11.996Z]  @firebase/firestore: Firestore (12.11.0): WebChannelConnection RPC 'Listen' stream 0x45c92419 transport errored. Name: undefined Message: undefined
-[17:42:11.425] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[17:42:11.683] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
-[17:42:54.008] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:40:31.152] Browser ERROR   ./app/components/Profile.tsx:516:14
+Parsing ecmascript source code failed
+  514 |                 )}
+  515 |               </div>
+> 516 |             )}
+      |              ^
+  517 |           </form>
+  518 |         </div>
+  519 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:40:31.152] Browser ERROR   ./app/components/Profile.tsx:518:10
+Parsing ecmascript source code failed
+  516 |             )}
+  517 |           </form>
+> 518 |         </div>
+      |          ^^^^^
+  519 |       </div>
+  520 |     </div>
+  521 |   );
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:40:55.311] Browser ERROR   ./app/components/Profile.tsx:516:14
+Parsing ecmascript source code failed
+  514 |                 )}
+  515 |               </div>
+> 516 |             )}
+      |              ^
+  517 |           </form>
+  518 |         </div>
+  519 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:41:43.988] Browser ERROR   ./app/components/Profile.tsx:514:14
+Parsing ecmascript source code failed
+  512 |                 )}
+  513 |               </div>
+> 514 |             )}
+      |              ^
+  515 |           </form>
+  516 |         </div>
+  517 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:43:33.322] Browser ERROR   ./app/components/Profile.tsx:507:9
+Parsing ecmascript source code failed
+  505 |             )}
+  506 |           </form>
+> 507 |         </div>
+      |         ^
+  508 |       </div>
+  509 |     </div>
+  510 |   );
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:43:33.322] Browser ERROR   ./app/components/Profile.tsx:505:14
+Parsing ecmascript source code failed
+  503 |                 )}
+  504 |               </div>
+> 505 |             )}
+      |              ^
+  506 |           </form>
+  507 |         </div>
+  508 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:43:33.322] Browser ERROR   ./app/components/Profile.tsx:507:10
+Parsing ecmascript source code failed
+  505 |             )}
+  506 |           </form>
+> 507 |         </div>
+      |          ^^^^^
+  508 |       </div>
+  509 |     </div>
+  510 |   );
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:44:15.317] Browser ERROR   ./app/components/Profile.tsx:507:9
+Parsing ecmascript source code failed
+  505 |             )}
+  506 |           </form>
+> 507 |         </div>
+      |         ^
+  508 |       </div>
+  509 |     </div>
+  510 |   );
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:44:15.317] Browser ERROR   ./app/components/Profile.tsx:505:14
+Parsing ecmascript source code failed
+  503 |                 )}
+  504 |               </div>
+> 505 |             )}
+      |              ^
+  506 |           </form>
+  507 |         </div>
+  508 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:44:15.317] Browser ERROR   ./app/components/Profile.tsx:507:10
+Parsing ecmascript source code failed
+  505 |             )}
+  506 |           </form>
+> 507 |         </div>
+      |          ^^^^^
+  508 |       </div>
+  509 |     </div>
+  510 |   );
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:44:23.316] Browser ERROR   ./app/components/Profile.tsx:507:9
+Parsing ecmascript source code failed
+  505 |             )}
+  506 |           </form>
+> 507 |         </div>
+      |         ^
+  508 |       </div>
+  509 |     </div>
+  510 |   );
+
+Expression expected
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:44:23.316] Browser ERROR   ./app/components/Profile.tsx:505:14
+Parsing ecmascript source code failed
+  503 |                 )}
+  504 |               </div>
+> 505 |             )}
+      |              ^
+  506 |           </form>
+  507 |         </div>
+  508 |       </div>
+
+Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[06:44:23.316] Browser ERROR   ./app/components/Profile.tsx:507:10
+Parsing ecmascript source code failed
+  505 |             )}
+  506 |           </form>
+> 507 |         </div>
+      |          ^^^^^
+  508 |       </div>
+  509 |     </div>
+  510 |   );
+
+Unterminated regexp literal
+
+Import trace:
+  Server Component:
+    ./app/components/Profile.tsx
+    ./app/profile/page.tsx
+[19:01:12.252] Server  LOG     ✓ Compiled in 156ms
+[19:03:03.556] Server  LOG     ✓ Compiled in 60ms
+[19:03:44.937] Server  LOG     ✓ Compiled in 66ms
+[19:03:56.293] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[19:04:26.775] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[19:04:27.062] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[19:05:18.625] Server  LOG     ✓ Compiled in 56ms
+[19:05:39.906] Server  LOG     ✓ Compiled in 76ms
+[19:06:58.447] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[19:07:01.723] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[19:07:09.857] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[19:07:10.234] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[19:12:52.554] Server  LOG     ✓ Compiled in 191ms
+[19:15:14.144] Server  LOG     ✓ Compiled in 131ms
+[19:17:45.040] Server  LOG     ✓ Compiled in 134ms
+[19:18:29.168] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[19:18:29.168] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[19:24:35.967] Server  LOG     ✓ Compiled in 70ms
+[19:24:54.589] Server  LOG     ✓ Compiled in 36ms

@@ -13,11 +13,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 function SukarelawanInfo() {
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(25);
-    if ($[0] !== "15062f972df8c7a8a6af77d6b8b9874154cb817aea6a7a5cd53a8ddc7476bf09") {
+    if ($[0] !== "1e576169fe79629efa0f800cba67a4a92ac17b5df1ce0ac55aa499f0f2f57884") {
         for(let $i = 0; $i < 25; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "15062f972df8c7a8a6af77d6b8b9874154cb817aea6a7a5cd53a8ddc7476bf09";
+        $[0] = "1e576169fe79629efa0f800cba67a4a92ac17b5df1ce0ac55aa499f0f2f57884";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -97,7 +97,7 @@ function SukarelawanInfo() {
                     columnNumber: 61
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-lg font-semibold mb-2",
+                    className: "text-lg font-semibold mb-2 text-black",
                     children: "Bantu Komuniti"
                 }, void 0, false, {
                     fileName: "[project]/app/sukarelawan/page.tsx",
@@ -105,12 +105,12 @@ function SukarelawanInfo() {
                     columnNumber: 453
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-gray-600",
+                    className: "text-gray-900",
                     children: "Langsungkan impian anda untuk membantu pelajar yang memerlukan bantuan makanan dan keperluan asas."
                 }, void 0, false, {
                     fileName: "[project]/app/sukarelawan/page.tsx",
                     lineNumber: 28,
-                    columnNumber: 515
+                    columnNumber: 526
                 }, this)
             ]
         }, void 0, true, {
@@ -155,7 +155,7 @@ function SukarelawanInfo() {
                     columnNumber: 61
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                    className: "text-lg font-semibold mb-2",
+                    className: "text-lg font-semibold mb-2 text-black",
                     children: "Tambah Pengalaman"
                 }, void 0, false, {
                     fileName: "[project]/app/sukarelawan/page.tsx",
@@ -168,7 +168,7 @@ function SukarelawanInfo() {
                 }, void 0, false, {
                     fileName: "[project]/app/sukarelawan/page.tsx",
                     lineNumber: 35,
-                    columnNumber: 639
+                    columnNumber: 650
                 }, this)
             ]
         }, void 0, true, {
@@ -222,7 +222,7 @@ function SukarelawanInfo() {
                                     columnNumber: 143
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                    className: "text-lg font-semibold mb-2",
+                                    className: "text-lg font-semibold mb-2 text-black",
                                     children: "Jaringan Baharu"
                                 }, void 0, false, {
                                     fileName: "[project]/app/sukarelawan/page.tsx",
@@ -235,7 +235,7 @@ function SukarelawanInfo() {
                                 }, void 0, false, {
                                     fileName: "[project]/app/sukarelawan/page.tsx",
                                     lineNumber: 42,
-                                    columnNumber: 741
+                                    columnNumber: 752
                                 }, this)
                             ]
                         }, void 0, true, {

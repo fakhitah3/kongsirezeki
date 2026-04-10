@@ -22,11 +22,11 @@ var _s = __turbopack_context__.k.signature();
 function PilihSlotPengambilan() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(24);
-    if ($[0] !== "f9562980c4ac0b512f0c4ac9f141c0e600303980c58f86f42d8823ba38fcd092") {
+    if ($[0] !== "81aabe82aab6c0b3ddbdfbce94198f109805c2e00c49188f11c019505287489c") {
         for(let $i = 0; $i < 24; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "f9562980c4ac0b512f0c4ac9f141c0e600303980c58f86f42d8823ba38fcd092";
+        $[0] = "81aabe82aab6c0b3ddbdfbce94198f109805c2e00c49188f11c019505287489c";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -206,10 +206,27 @@ function PilihSlotPengambilan() {
     }
     let t6;
     if ($[11] === Symbol.for("react.memo_cache_sentinel")) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-            className: "text-2xl font-bold text-blue-700 mb-6",
-            children: "Pilih Slot Pengambilan"
-        }, void 0, false, {
+        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "mb-8",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                    className: "text-3xl font-bold text-blue-600",
+                    children: "Pilih Slot Pengambilan"
+                }, void 0, false, {
+                    fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
+                    lineNumber: 179,
+                    columnNumber: 32
+                }, this),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                    className: "text-gray-500 mt-1",
+                    children: "Sila pilih slot yang sesuai untuk pengambilan"
+                }, void 0, false, {
+                    fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
+                    lineNumber: 179,
+                    columnNumber: 108
+                }, this)
+            ]
+        }, void 0, true, {
             fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
             lineNumber: 179,
             columnNumber: 10
@@ -221,57 +238,37 @@ function PilihSlotPengambilan() {
     let t7;
     if ($[12] !== slots || $[13] !== userBookings) {
         t7 = userBookings.some(_PilihSlotPengambilanUserBookingsSome) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded mb-6",
+            className: "bg-green-50 border border-green-200 rounded-2xl p-5 mb-6",
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "font-medium",
-                    children: "Slot yang dipilih:"
+                    className: "font-semibold text-green-700 mb-2",
+                    children: "Slot Dipilih"
                 }, void 0, false, {
                     fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
                     lineNumber: 186,
-                    columnNumber: 159
+                    columnNumber: 144
                 }, this),
-                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "mt-2",
-                    children: userBookings.filter(_PilihSlotPengambilanUserBookingsFilter).map({
-                        "PilihSlotPengambilan[(anonymous)()]": (booking_2)=>{
-                            const slot_1 = slots.find({
-                                "PilihSlotPengambilan[(anonymous)() > slots.find()]": (s_0)=>s_0.id === booking_2.slotId
-                            }["PilihSlotPengambilan[(anonymous)() > slots.find()]"]);
-                            return slot_1 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "bg-white p-3 rounded mt-2",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                    className: "text-sm",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                            children: slot_1.date
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                            lineNumber: 191,
-                                            columnNumber: 114
-                                        }, this),
-                                        " | ",
-                                        slot_1.time,
-                                        " | ",
-                                        slot_1.location
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                    lineNumber: 191,
-                                    columnNumber: 91
-                                }, this)
-                            }, booking_2.id, false, {
-                                fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                lineNumber: 191,
-                                columnNumber: 29
-                            }, this) : null;
-                        }
-                    }["PilihSlotPengambilan[(anonymous)()]"])
-                }, void 0, false, {
-                    fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                    lineNumber: 186,
-                    columnNumber: 208
-                }, this)
+                userBookings.filter(_PilihSlotPengambilanUserBookingsFilter).map({
+                    "PilihSlotPengambilan[(anonymous)()]": (booking_2)=>{
+                        const slot_1 = slots.find({
+                            "PilihSlotPengambilan[(anonymous)() > slots.find()]": (s_0)=>s_0.id === booking_2.slotId
+                        }["PilihSlotPengambilan[(anonymous)() > slots.find()]"]);
+                        return slot_1 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "text-sm text-gray-700",
+                            children: [
+                                slot_1.date,
+                                " | ",
+                                slot_1.time,
+                                " | ",
+                                slot_1.location
+                            ]
+                        }, booking_2.id, true, {
+                            fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
+                            lineNumber: 191,
+                            columnNumber: 27
+                        }, this) : null;
+                    }
+                }["PilihSlotPengambilan[(anonymous)()]"])
             ]
         }, void 0, true, {
             fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
@@ -287,7 +284,7 @@ function PilihSlotPengambilan() {
     let t8;
     if ($[15] === Symbol.for("react.memo_cache_sentinel")) {
         t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-            className: "text-lg font-semibold mb-4",
+            className: "text-lg font-semibold text-gray-700 mb-6",
             children: "Slot Tersedia"
         }, void 0, false, {
             fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
@@ -301,133 +298,157 @@ function PilihSlotPengambilan() {
     let t9;
     if ($[16] !== booking || $[17] !== handleBookSlot || $[18] !== isSlotBooked || $[19] !== slots) {
         t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "bg-white shadow-lg rounded-lg p-6",
+            className: "bg-white rounded-2xl shadow-md border border-gray-200 p-6",
             children: [
                 t8,
-                slots.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                    className: "text-gray-600",
-                    children: "Tiada slot tersedia pada masa ini."
+                slots.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "text-center text-gray-500 py-10",
+                    children: "Tiada slot tersedia"
                 }, void 0, false, {
                     fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
                     lineNumber: 209,
-                    columnNumber: 87
+                    columnNumber: 111
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                    className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4",
+                    className: "grid sm:grid-cols-2 lg:grid-cols-3 gap-6",
                     children: slots.map({
-                        "PilihSlotPengambilan[slots.map()]": (slot_2)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: `border rounded-lg p-4 ${isSlotBooked(slot_2.id) ? "border-gray-300 bg-gray-50" : isSlotFull(slot_2) ? "border-red-300 bg-red-50" : "border-blue-300 bg-blue-50 hover:bg-blue-100"}`,
+                        "PilihSlotPengambilan[slots.map()]": (slot_2)=>{
+                            const full = isSlotFull(slot_2);
+                            const booked = isSlotBooked(slot_2.id);
+                            const percent = slot_2.currentBookings / slot_2.maxStudents * 100;
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "rounded-xl border border-gray-200 bg-gray-50 p-5 hover:shadow-md transition",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex justify-between items-start mb-2",
+                                        className: "flex justify-between mb-3",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                                 className: "font-semibold text-gray-800",
                                                 children: slot_2.location
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                                lineNumber: 210,
-                                                columnNumber: 327
+                                                lineNumber: 214,
+                                                columnNumber: 172
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: `px-2 py-1 text-xs rounded-full ${isSlotFull(slot_2) ? "bg-red-100 text-red-800" : isSlotBooked(slot_2.id) ? "bg-gray-100 text-gray-800" : "bg-green-100 text-green-800"}`,
-                                                children: isSlotFull(slot_2) ? "Penuh" : isSlotBooked(slot_2.id) ? "Dipilih" : "Tersedia"
+                                                className: `text-xs px-3 py-1 rounded-full ${full ? "bg-red-100 text-red-600" : booked ? "bg-gray-200 text-gray-600" : "bg-green-100 text-green-600"}`,
+                                                children: full ? "Penuh" : booked ? "Dipilih" : "Tersedia"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                                lineNumber: 210,
-                                                columnNumber: 393
+                                                lineNumber: 214,
+                                                columnNumber: 238
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                        lineNumber: 210,
-                                        columnNumber: 272
+                                        lineNumber: 214,
+                                        columnNumber: 129
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-sm text-gray-600 space-y-1",
+                                        className: "text-sm text-gray-600 space-y-1 mb-4",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                        children: "Tarikh:"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                                        lineNumber: 210,
-                                                        columnNumber: 728
-                                                    }, this),
-                                                    " ",
+                                                    "Tarikh: ",
                                                     slot_2.date
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                                lineNumber: 210,
-                                                columnNumber: 725
+                                                lineNumber: 214,
+                                                columnNumber: 513
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                        children: "Masa:"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                                        lineNumber: 210,
-                                                        columnNumber: 773
-                                                    }, this),
-                                                    " ",
+                                                    "Masa: ",
                                                     slot_2.time
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                                lineNumber: 210,
-                                                columnNumber: 770
-                                            }, this),
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                children: [
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
-                                                        children: "Kapasiti:"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                                        lineNumber: 210,
-                                                        columnNumber: 816
-                                                    }, this),
-                                                    " ",
-                                                    slot_2.currentBookings,
-                                                    "/",
-                                                    slot_2.maxStudents,
-                                                    " pelajar"
-                                                ]
-                                            }, void 0, true, {
-                                                fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                                lineNumber: 210,
-                                                columnNumber: 813
+                                                lineNumber: 214,
+                                                columnNumber: 541
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                        lineNumber: 210,
-                                        columnNumber: 676
+                                        lineNumber: 214,
+                                        columnNumber: 459
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex justify-between text-xs text-gray-500 mb-1",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        children: "Kapasiti"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
+                                                        lineNumber: 214,
+                                                        columnNumber: 660
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        children: [
+                                                            slot_2.currentBookings,
+                                                            "/",
+                                                            slot_2.maxStudents
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
+                                                        lineNumber: 214,
+                                                        columnNumber: 681
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
+                                                lineNumber: 214,
+                                                columnNumber: 595
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-full bg-gray-200 rounded-full h-2",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "h-2 rounded-full bg-blue-600",
+                                                    style: {
+                                                        width: `${percent}%`
+                                                    }
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
+                                                    lineNumber: 214,
+                                                    columnNumber: 798
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
+                                                lineNumber: 214,
+                                                columnNumber: 745
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
+                                        lineNumber: 214,
+                                        columnNumber: 573
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: {
                                             "PilihSlotPengambilan[slots.map() > <button>.onClick]": ()=>handleBookSlot(slot_2.id)
                                         }["PilihSlotPengambilan[slots.map() > <button>.onClick]"],
-                                        disabled: isSlotBooked(slot_2.id) || isSlotFull(slot_2) || booking === slot_2.id,
-                                        className: `mt-3 w-full py-2 px-4 rounded text-sm font-medium transition-colors ${isSlotBooked(slot_2.id) || isSlotFull(slot_2) ? "bg-gray-300 text-gray-500 cursor-not-allowed" : booking === slot_2.id ? "bg-yellow-500 text-white" : "bg-blue-600 text-white hover:bg-blue-700"}`,
-                                        children: booking === slot_2.id ? "Memproses..." : isSlotBooked(slot_2.id) ? "Sudah Dipilih" : isSlotFull(slot_2) ? "Penuh" : "Pilih Slot"
+                                        disabled: booked || full || booking === slot_2.id,
+                                        className: `w-full py-2.5 rounded-lg font-medium ${booked || full ? "bg-gray-200 text-gray-400 cursor-not-allowed" : booking === slot_2.id ? "bg-yellow-500 text-white" : "bg-blue-600 text-white hover:bg-blue-700"}`,
+                                        children: booking === slot_2.id ? "Memproses..." : booked ? "Sudah Dipilih" : full ? "Penuh" : "Pilih Slot"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                        lineNumber: 210,
-                                        columnNumber: 906
+                                        lineNumber: 216,
+                                        columnNumber: 36
                                     }, this)
                                 ]
                             }, slot_2.id, true, {
                                 fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                                lineNumber: 210,
-                                columnNumber: 58
-                            }, this)
+                                lineNumber: 214,
+                                columnNumber: 20
+                            }, this);
+                        }
                     }["PilihSlotPengambilan[slots.map()]"])
                 }, void 0, false, {
                     fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
                     lineNumber: 209,
-                    columnNumber: 157
+                    columnNumber: 188
                 }, this)
             ]
         }, void 0, true, {
@@ -446,9 +467,9 @@ function PilihSlotPengambilan() {
     let t10;
     if ($[21] !== t7 || $[22] !== t9) {
         t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-            className: "min-h-screen bg-gray-50 py-10 px-4",
+            className: "min-h-screen bg-gray-100 py-10 px-4",
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "max-w-4xl mx-auto",
+                className: "max-w-6xl mx-auto",
                 children: [
                     t6,
                     t7,
@@ -456,12 +477,12 @@ function PilihSlotPengambilan() {
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-                lineNumber: 224,
-                columnNumber: 63
+                lineNumber: 231,
+                columnNumber: 64
             }, this)
         }, void 0, false, {
             fileName: "[project]/app/components/PilihSlotPengambilan.tsx",
-            lineNumber: 224,
+            lineNumber: 231,
             columnNumber: 11
         }, this);
         $[21] = t7;
