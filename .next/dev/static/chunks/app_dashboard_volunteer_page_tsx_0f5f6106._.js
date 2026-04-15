@@ -161,16 +161,16 @@ function VolunteerDashboard() {
                     className: "text-center mb-8",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                            className: "text-3xl font-bold text-blue-700 mb-3",
-                            children: "Dashboard Sukarelawan"
+                            className: "text-4xl font-bold text-blue-700 mb-4",
+                            children: "Selamat Datang, Sukarelawan"
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
                             lineNumber: 144,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-gray-600 max-w-2xl mx-auto",
-                            children: "Pengurusan tugasan, status kehadiran, dan jadual pengagihan."
+                            className: "text-gray-700 max-w-2xl mx-auto text-lg",
+                            children: "Terima kasih kerana menjadi sebahagian daripada komuniti kami. Di sini anda boleh mengurus tugasan, semak status kehadiran, dan lihat jadual pengagihan."
                         }, void 0, false, {
                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
                             lineNumber: 147,
@@ -186,32 +186,12 @@ function VolunteerDashboard() {
                     className: "grid grid-cols-1 lg:grid-cols-3 gap-6",
                     children: [
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-white shadow-xl rounded-2xl p-6",
+                            className: "bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-xl font-bold text-gray-800 mb-6 flex items-center",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                            className: "w-6 h-6 mr-2 text-blue-600",
-                                            fill: "currentColor",
-                                            viewBox: "0 0 20 20",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                fillRule: "evenodd",
-                                                d: "M6 2a1 1 0 00-1 1h8a1 1 0 011 1v1H7a1 1 0 00-1 1V3z",
-                                                clipRule: "evenodd"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                lineNumber: 157,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                            lineNumber: 156,
-                                            columnNumber: 15
-                                        }, this),
-                                        "Tugasan Aktif"
-                                    ]
-                                }, void 0, true, {
+                                    className: "text-xl font-bold text-blue-700 mb-6",
+                                    children: "Tugasan Aktif"
+                                }, void 0, false, {
                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
                                     lineNumber: 155,
                                     columnNumber: 13
@@ -219,92 +199,146 @@ function VolunteerDashboard() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "space-y-4",
                                     children: activeTasks.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-center py-8 text-gray-500",
+                                        className: "text-center py-8 bg-blue-50 rounded-lg",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                className: "w-12 h-12 mx-auto mb-4 text-gray-400",
-                                                fill: "currentColor",
-                                                viewBox: "0 0 20 20",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                    fillRule: "evenodd",
-                                                    d: "M9 2a1 1 0 000-2h2a1 1 0 000 2v2a1 1 0 001.414 1.414L10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                    clipRule: "evenodd"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "text-lg mb-3 text-blue-500 font-medium",
+                                                children: "Tiada tugasan"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                lineNumber: 161,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-gray-600 font-medium",
+                                                children: "Tiada tugasan aktif buat masa ini"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                lineNumber: 162,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-sm text-gray-500 mt-1",
+                                                children: "Rehat seketika, tugasan baharu akan datang!"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                lineNumber: 163,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                        lineNumber: 160,
+                                        columnNumber: 43
+                                    }, this) : activeTasks.map((task)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "bg-blue-50 rounded-lg p-4 hover:bg-blue-100 transition-colors",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "font-bold text-gray-900 mb-2 text-lg",
+                                                    children: task.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
                                                     lineNumber: 165,
                                                     columnNumber: 21
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                lineNumber: 164,
-                                                columnNumber: 19
-                                            }, this),
-                                            "Tiada tugasan aktif"
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                        lineNumber: 163,
-                                        columnNumber: 43
-                                    }, this) : activeTasks.map((task)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "border-l-4 border-blue-600 pl-4 py-3",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "font-semibold text-gray-800 mb-1",
-                                                    children: task.title
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                    lineNumber: 169,
-                                                    columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-sm text-gray-600 mb-2",
+                                                    className: "text-gray-700 mb-3",
                                                     children: task.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                    lineNumber: 170,
+                                                    lineNumber: 166,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex items-center justify-between",
+                                                    className: "space-y-2",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "text-sm text-gray-500",
+                                                            className: "text-sm text-gray-600",
                                                             children: [
-                                                                "📍 ",
-                                                                task.location,
-                                                                " • 📅 ",
-                                                                formatDate(task.date),
-                                                                " • 🕐 ",
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "font-medium",
+                                                                    children: "Lokasi:"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                                    lineNumber: 169,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                " ",
+                                                                task.location
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                            lineNumber: 168,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "text-sm text-gray-600",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "font-medium",
+                                                                    children: "Tarikh:"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                                    lineNumber: 172,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                " ",
+                                                                formatDate(task.date)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                            lineNumber: 171,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "text-sm text-gray-600",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "font-medium",
+                                                                    children: "Masa:"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                                    lineNumber: 175,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                " ",
                                                                 task.time
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                            lineNumber: 172,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: `px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(task.status)}`,
-                                                            children: getStatusText(task.status)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                            lineNumber: 175,
+                                                            lineNumber: 174,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                    lineNumber: 171,
+                                                    lineNumber: 167,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "mt-3",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: `px-3 py-1 text-sm font-semibold rounded-full ${getStatusColor(task.status)}`,
+                                                        children: getStatusText(task.status)
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                        lineNumber: 179,
+                                                        columnNumber: 23
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                    lineNumber: 178,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, task.id, true, {
                                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                            lineNumber: 168,
+                                            lineNumber: 164,
                                             columnNumber: 50
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                    lineNumber: 162,
+                                    lineNumber: 159,
                                     columnNumber: 13
                                 }, this)
                             ]
@@ -314,73 +348,58 @@ function VolunteerDashboard() {
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-white shadow-xl rounded-2xl p-6",
+                            className: "bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-xl font-bold text-gray-800 mb-6 flex items-center",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                            className: "w-6 h-6 mr-2 text-green-600",
-                                            fill: "currentColor",
-                                            viewBox: "0 0 20 20",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                fillRule: "evenodd",
-                                                d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                clipRule: "evenodd"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                lineNumber: 187,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                            lineNumber: 186,
-                                            columnNumber: 15
-                                        }, this),
-                                        "Status Kehadiran"
-                                    ]
-                                }, void 0, true, {
+                                    className: "text-xl font-bold text-green-700 mb-6",
+                                    children: "Status Kehadiran"
+                                }, void 0, false, {
                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 189,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "space-y-3",
                                     children: attendance.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-center py-8 text-gray-500",
+                                        className: "text-center py-8 bg-green-50 rounded-lg",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                className: "w-12 h-12 mx-auto mb-4 text-gray-400",
-                                                fill: "currentColor",
-                                                viewBox: "0 0 20 20",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                    fillRule: "evenodd",
-                                                    d: "M9 2a1 1 0 000-2h2a1 1 0 000 2v2a1 1 0 001.414 1.414L10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                    clipRule: "evenodd"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                    lineNumber: 195,
-                                                    columnNumber: 21
-                                                }, this)
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "text-lg mb-3 text-green-500 font-medium",
+                                                children: "Tiada rekod"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                lineNumber: 194,
+                                                lineNumber: 195,
                                                 columnNumber: 19
                                             }, this),
-                                            "Tiada rekod kehadiran"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-gray-600 font-medium",
+                                                children: "Belum ada rekod kehadiran"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                lineNumber: 196,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-sm text-gray-500 mt-1",
+                                                children: "Rekod akan dipaparkan di sini"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                lineNumber: 197,
+                                                columnNumber: 19
+                                            }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                        lineNumber: 193,
+                                        lineNumber: 194,
                                         columnNumber: 42
                                     }, this) : attendance.map((record)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "border-l-4 border-green-600 pl-4 py-3",
+                                            className: "bg-green-50 rounded-lg p-4 hover:bg-green-100 transition-colors",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex items-center justify-between mb-2",
+                                                    className: "flex items-center justify-between mb-3",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "font-semibold text-gray-800",
+                                                            className: "font-bold text-gray-900",
                                                             children: record.taskId
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
@@ -388,7 +407,7 @@ function VolunteerDashboard() {
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: `px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(record.status)}`,
+                                                            className: `px-3 py-1 text-sm font-semibold rounded-full ${getStatusColor(record.status)}`,
                                                             children: getStatusText(record.status)
                                                         }, void 0, false, {
                                                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
@@ -402,27 +421,70 @@ function VolunteerDashboard() {
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-sm text-gray-600",
+                                                    className: "space-y-1",
                                                     children: [
-                                                        "📅 ",
-                                                        formatDate(record.date),
-                                                        record.checkInTime && ` • 🕐 ${record.checkInTime}`
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "text-sm text-gray-600",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "font-medium",
+                                                                    children: "Tarikh:"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                                    lineNumber: 207,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                " ",
+                                                                formatDate(record.date)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                            lineNumber: 206,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        record.checkInTime && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "text-sm text-gray-600",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "font-medium",
+                                                                    children: "Masa Check-in:"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                                    lineNumber: 210,
+                                                                    columnNumber: 27
+                                                                }, this),
+                                                                " ",
+                                                                record.checkInTime
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                            lineNumber: 209,
+                                                            columnNumber: 46
+                                                        }, this),
+                                                        record.notes && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "text-sm text-gray-600",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "font-medium",
+                                                                    children: "Catatan:"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                                    lineNumber: 213,
+                                                                    columnNumber: 27
+                                                                }, this),
+                                                                " ",
+                                                                record.notes
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                            lineNumber: 212,
+                                                            columnNumber: 40
+                                                        }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
                                                     lineNumber: 205,
                                                     columnNumber: 21
-                                                }, this),
-                                                record.notes && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-sm text-gray-500 mt-1",
-                                                    children: [
-                                                        "📝 ",
-                                                        record.notes
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                    lineNumber: 209,
-                                                    columnNumber: 38
                                                 }, this)
                                             ]
                                         }, record.id, true, {
@@ -432,163 +494,190 @@ function VolunteerDashboard() {
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                    lineNumber: 192,
+                                    lineNumber: 193,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                            lineNumber: 184,
+                            lineNumber: 188,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-white shadow-xl rounded-2xl p-6",
+                            className: "bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                    className: "text-xl font-bold text-gray-800 mb-6 flex items-center",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                            className: "w-6 h-6 mr-2 text-purple-600",
-                                            fill: "currentColor",
-                                            viewBox: "0 0 20 20",
-                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                fillRule: "evenodd",
-                                                d: "M6 2a1 1 0 00-1 1h8a1 1 0 011 1v1H7a1 1 0 00-1 1V3z",
-                                                clipRule: "evenodd"
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                lineNumber: 218,
-                                                columnNumber: 17
-                                            }, this)
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                            lineNumber: 217,
-                                            columnNumber: 15
-                                        }, this),
-                                        "Jadual Pengagihan"
-                                    ]
-                                }, void 0, true, {
+                                    className: "text-xl font-bold text-purple-700 mb-6",
+                                    children: "Jadual Pengagihan"
+                                }, void 0, false, {
                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                    lineNumber: 216,
+                                    lineNumber: 222,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "space-y-4",
                                     children: schedule.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-center py-8 text-gray-500",
+                                        className: "text-center py-8 bg-purple-50 rounded-lg",
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                className: "w-12 h-12 mx-auto mb-4 text-gray-400",
-                                                fill: "currentColor",
-                                                viewBox: "0 0 20 20",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                    fillRule: "evenodd",
-                                                    d: "M9 2a1 1 0 000-2h2a1 1 0 000 2v2a1 1 0 001.414 1.414L10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                    clipRule: "evenodd"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                    lineNumber: 226,
-                                                    columnNumber: 21
-                                                }, this)
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "text-lg mb-3 text-purple-500 font-medium",
+                                                children: "Tiada jadual"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                lineNumber: 225,
+                                                lineNumber: 228,
                                                 columnNumber: 19
                                             }, this),
-                                            "Tiada jadual pengagihan"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-gray-600 font-medium",
+                                                children: "Tiada jadual pengagihan"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                lineNumber: 229,
+                                                columnNumber: 19
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-sm text-gray-500 mt-1",
+                                                children: "Jadual akan dikemaskini dari masa ke semasa"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                lineNumber: 230,
+                                                columnNumber: 19
+                                            }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                        lineNumber: 224,
+                                        lineNumber: 227,
                                         columnNumber: 40
                                     }, this) : schedule.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "border-l-4 border-purple-600 pl-4 py-3",
+                                            className: "bg-purple-50 rounded-lg p-4 hover:bg-purple-100 transition-colors",
                                             children: [
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "font-semibold text-gray-800 mb-1",
+                                                    className: "font-bold text-gray-900 mb-2 text-lg",
                                                     children: item.title
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                    lineNumber: 230,
+                                                    lineNumber: 232,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-sm text-gray-600 mb-2",
+                                                    className: "text-gray-700 mb-3",
                                                     children: item.description
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                    lineNumber: 231,
+                                                    lineNumber: 233,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex items-center justify-between",
+                                                    className: "space-y-2 mb-3",
                                                     children: [
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "text-sm text-gray-500",
+                                                            className: "text-sm text-gray-600",
                                                             children: [
-                                                                "📍 ",
-                                                                item.location,
-                                                                " • 📅 ",
-                                                                formatDate(item.date),
-                                                                " • 🕐 ",
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "font-medium",
+                                                                    children: "Lokasi:"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                                    lineNumber: 236,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                " ",
+                                                                item.location
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                            lineNumber: 235,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "text-sm text-gray-600",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "font-medium",
+                                                                    children: "Tarikh:"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                                    lineNumber: 239,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                " ",
+                                                                formatDate(item.date)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                            lineNumber: 238,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                            className: "text-sm text-gray-600",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "font-medium",
+                                                                    children: "Masa:"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                                    lineNumber: 242,
+                                                                    columnNumber: 25
+                                                                }, this),
+                                                                " ",
                                                                 item.time
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                            lineNumber: 233,
-                                                            columnNumber: 23
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                            className: "flex items-center space-x-2",
-                                                            children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: `px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(item.status)}`,
-                                                                    children: getStatusText(item.status)
-                                                                }, void 0, false, {
-                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                                    lineNumber: 237,
-                                                                    columnNumber: 25
-                                                                }, this),
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                                    className: "text-xs text-gray-500",
-                                                                    children: [
-                                                                        item.volunteers.length,
-                                                                        "/",
-                                                                        item.maxVolunteers,
-                                                                        " sukarelawan"
-                                                                    ]
-                                                                }, void 0, true, {
-                                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                                    lineNumber: 240,
-                                                                    columnNumber: 25
-                                                                }, this)
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                            lineNumber: 236,
+                                                            lineNumber: 241,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                                    lineNumber: 232,
+                                                    lineNumber: 234,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "flex items-center justify-between",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: `px-3 py-1 text-sm font-semibold rounded-full ${getStatusColor(item.status)}`,
+                                                            children: getStatusText(item.status)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                            lineNumber: 246,
+                                                            columnNumber: 23
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-sm text-gray-600 font-medium",
+                                                            children: [
+                                                                item.volunteers.length,
+                                                                "/",
+                                                                item.maxVolunteers,
+                                                                " sukarelawan"
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                            lineNumber: 249,
+                                                            columnNumber: 23
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/app/dashboard/volunteer/page.tsx",
+                                                    lineNumber: 245,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, item.id, true, {
                                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                            lineNumber: 229,
+                                            lineNumber: 231,
                                             columnNumber: 47
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                                    lineNumber: 223,
+                                    lineNumber: 226,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/dashboard/volunteer/page.tsx",
-                            lineNumber: 215,
+                            lineNumber: 221,
                             columnNumber: 11
                         }, this)
                     ]

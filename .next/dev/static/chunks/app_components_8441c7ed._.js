@@ -17,11 +17,11 @@ var _s = __turbopack_context__.k.signature();
 function HeroSection() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(20);
-    if ($[0] !== "04151c6ae46ba4220e1653c6764fa002b69911f2362b2cc2b39fb17be2308c6f") {
+    if ($[0] !== "1c433e367826d1237f18a49253b191b90f10f724e4962ec081ae7698a0dd67e4") {
         for(let $i = 0; $i < 20; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "04151c6ae46ba4220e1653c6764fa002b69911f2362b2cc2b39fb17be2308c6f";
+        $[0] = "1c433e367826d1237f18a49253b191b90f10f724e4962ec081ae7698a0dd67e4";
     }
     const [currentSlide, setCurrentSlide] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
     let t0;
@@ -362,37 +362,17 @@ function _HeroSectionSlidesMap(slide) {
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "bg-white rounded-lg p-6 inline-block",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-48 h-48 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-4",
-                                children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                        className: "w-24 h-24 text-gray-400",
-                                        fill: "currentColor",
-                                        viewBox: "0 0 24 24",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                            d: "M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 13h2v2h-2zM15 15h2v2h-2zM13 17h2v2h-2zM17 17h2v2h-2zM19 19h2v2h-2zM15 19h2v2h-2zM17 13h2v2h-2zM19 15h2v2h-2z"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/components/HeroSection.tsx",
-                                            lineNumber: 161,
-                                            columnNumber: 383
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/HeroSection.tsx",
-                                        lineNumber: 161,
-                                        columnNumber: 302
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600 text-sm",
-                                        children: [
-                                            "QR Code ",
-                                            slide.subtitle
-                                        ]
-                                    }, void 0, true, {
-                                        fileName: "[project]/app/components/HeroSection.tsx",
-                                        lineNumber: 161,
-                                        columnNumber: 599
-                                    }, this)
-                                ]
-                            }, void 0, true, {
+                                className: "w-48 h-48 bg-white rounded-lg overflow-hidden mx-auto mb-4",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                    src: "/duitnow-qr.png",
+                                    alt: "DuitNow QR Code",
+                                    className: "w-full h-full object-contain"
+                                }, void 0, false, {
+                                    fileName: "[project]/app/components/HeroSection.tsx",
+                                    lineNumber: 161,
+                                    columnNumber: 282
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/app/components/HeroSection.tsx",
                                 lineNumber: 161,
                                 columnNumber: 206
@@ -411,7 +391,7 @@ function _HeroSectionSlidesMap(slide) {
                         }, void 0, true, {
                             fileName: "[project]/app/components/HeroSection.tsx",
                             lineNumber: 161,
-                            columnNumber: 676
+                            columnNumber: 386
                         }, this)
                     ]
                 }, void 0, true, {
@@ -428,7 +408,7 @@ function _HeroSectionSlidesMap(slide) {
                         }, void 0, false, {
                             fileName: "[project]/app/components/HeroSection.tsx",
                             lineNumber: 161,
-                            columnNumber: 852
+                            columnNumber: 562
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
                             className: "text-lg mb-4 text-blue-200",
@@ -436,7 +416,7 @@ function _HeroSectionSlidesMap(slide) {
                         }, void 0, false, {
                             fileName: "[project]/app/components/HeroSection.tsx",
                             lineNumber: 161,
-                            columnNumber: 910
+                            columnNumber: 620
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                             className: "text-base mb-6 opacity-90 leading-relaxed",
@@ -444,7 +424,7 @@ function _HeroSectionSlidesMap(slide) {
                         }, void 0, false, {
                             fileName: "[project]/app/components/HeroSection.tsx",
                             lineNumber: 161,
-                            columnNumber: 974
+                            columnNumber: 684
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                             onClick: {
@@ -455,13 +435,13 @@ function _HeroSectionSlidesMap(slide) {
                         }, void 0, false, {
                             fileName: "[project]/app/components/HeroSection.tsx",
                             lineNumber: 161,
-                            columnNumber: 1054
+                            columnNumber: 764
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/components/HeroSection.tsx",
                     lineNumber: 161,
-                    columnNumber: 810
+                    columnNumber: 520
                 }, this)
             ]
         }, void 0, true, {
@@ -647,11 +627,11 @@ var _s = __turbopack_context__.k.signature();
 function SenaraiKempen() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(33);
-    if ($[0] !== "e65ce179da49a89f938ead8bb90227b83e482d9b930123c354246a51043db5df") {
+    if ($[0] !== "f9be6bedf5251d7d747d5fa4023a9b56b543c0b2516d889cef8c02c76a746427") {
         for(let $i = 0; $i < 33; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "e65ce179da49a89f938ead8bb90227b83e482d9b930123c354246a51043db5df";
+        $[0] = "f9be6bedf5251d7d747d5fa4023a9b56b543c0b2516d889cef8c02c76a746427";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -803,122 +783,128 @@ function SenaraiKempen() {
                         const daysRemaining = getDaysRemaining(campaign_0.tarikhAkhir);
                         const progressPercentage = getProgressPercentage(campaign_0.terkumpul, campaign_0.sasaran);
                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow",
+                            className: "group relative rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden",
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "p-6",
+                                className: "p-6 flex flex-col h-full",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "flex justify-between items-start mb-4",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "flex-1",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "text-lg font-semibold text-gray-900 mb-2",
-                                                    children: campaign_0.tajuk
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/CampaignSection.tsx",
-                                                    lineNumber: 140,
-                                                    columnNumber: 237
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: `px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(campaign_0.status)}`,
-                                                    children: getStatusText(campaign_0.status)
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/CampaignSection.tsx",
-                                                    lineNumber: 140,
-                                                    columnNumber: 317
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/app/components/CampaignSection.tsx",
-                                            lineNumber: 140,
-                                            columnNumber: 213
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/CampaignSection.tsx",
-                                        lineNumber: 140,
-                                        columnNumber: 158
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "mb-4",
-                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded",
-                                            children: [
-                                                campaign_0.jenisKempen === "makanan" && "Makanan",
-                                                campaign_0.jenisKempen === "wang" && "Wang",
-                                                campaign_0.jenisKempen === "kedua-duanya" && "Makanan & Wang"
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/app/components/CampaignSection.tsx",
-                                            lineNumber: 140,
-                                            columnNumber: 516
-                                        }, this)
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/CampaignSection.tsx",
-                                        lineNumber: 140,
-                                        columnNumber: 494
-                                    }, this),
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-gray-600 text-sm mb-4 line-clamp-3",
-                                        children: campaign_0.penerangan
-                                    }, void 0, false, {
-                                        fileName: "[project]/app/components/CampaignSection.tsx",
-                                        lineNumber: 140,
-                                        columnNumber: 771
-                                    }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: "mb-4",
                                         children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: "text-lg font-semibold text-gray-900 leading-snug",
+                                                children: campaign_0.tajuk
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/CampaignSection.tsx",
+                                                lineNumber: 140,
+                                                columnNumber: 271
+                                            }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "flex justify-between text-sm text-gray-700 mb-2",
+                                                className: "flex items-center justify-between mt-2",
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        children: "Kemajuan"
+                                                        className: `text-xs font-semibold px-3 py-1 rounded-full border ${getStatusColor(campaign_0.status)}`,
+                                                        children: getStatusText(campaign_0.status)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/CampaignSection.tsx",
                                                         lineNumber: 140,
-                                                        columnNumber: 940
+                                                        columnNumber: 415
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        className: "font-medium",
+                                                        className: "text-xs font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full",
                                                         children: [
-                                                            campaign_0.terkumpul.toLocaleString(),
-                                                            " / ",
-                                                            campaign_0.sasaran.toLocaleString()
+                                                            campaign_0.jenisKempen === "makanan" && "Makanan",
+                                                            campaign_0.jenisKempen === "wang" && "Wang",
+                                                            campaign_0.jenisKempen === "kedua-duanya" && "Makanan & Wang"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/components/CampaignSection.tsx",
                                                         lineNumber: 140,
-                                                        columnNumber: 961
+                                                        columnNumber: 565
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/CampaignSection.tsx",
                                                 lineNumber: 140,
-                                                columnNumber: 875
+                                                columnNumber: 359
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/CampaignSection.tsx",
+                                        lineNumber: 140,
+                                        columnNumber: 249
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-gray-600 mb-4 line-clamp-2",
+                                        children: campaign_0.penerangan
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/CampaignSection.tsx",
+                                        lineNumber: 140,
+                                        columnNumber: 829
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xs text-gray-500",
+                                                children: "Jumlah Terkumpul"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/CampaignSection.tsx",
+                                                lineNumber: 140,
+                                                columnNumber: 933
                                             }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xl font-bold text-blue-700",
+                                                children: [
+                                                    "RM ",
+                                                    campaign_0.terkumpul.toLocaleString()
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/components/CampaignSection.tsx",
+                                                lineNumber: 140,
+                                                columnNumber: 990
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xs text-gray-500",
+                                                children: [
+                                                    "Sasaran: RM ",
+                                                    campaign_0.sasaran.toLocaleString()
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/components/CampaignSection.tsx",
+                                                lineNumber: 140,
+                                                columnNumber: 1083
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/CampaignSection.tsx",
+                                        lineNumber: 140,
+                                        columnNumber: 911
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-4",
+                                        children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "w-full bg-gray-200 rounded-full h-3",
+                                                className: "w-full bg-gray-200 rounded-full h-2 overflow-hidden",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-300",
+                                                    className: "bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full transition-all duration-500",
                                                     style: {
                                                         width: `${progressPercentage}%`
                                                     }
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/CampaignSection.tsx",
                                                     lineNumber: 140,
-                                                    columnNumber: 1136
+                                                    columnNumber: 1270
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/app/components/CampaignSection.tsx",
                                                 lineNumber: 140,
-                                                columnNumber: 1083
+                                                columnNumber: 1201
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                className: "text-right text-sm text-gray-600 mt-1",
+                                                className: "text-right text-xs text-gray-500 mt-1",
                                                 children: [
                                                     progressPercentage.toFixed(1),
-                                                    "% complete"
+                                                    "%"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/CampaignSection.tsx",
@@ -929,54 +915,59 @@ function SenaraiKempen() {
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/CampaignSection.tsx",
                                         lineNumber: 140,
-                                        columnNumber: 853
+                                        columnNumber: 1179
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "text-sm text-gray-600 mb-4",
+                                        className: "text-xs text-gray-500 mb-4 space-y-1",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: [
-                                                    "📅 ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "font-medium text-gray-700",
+                                                        children: "Tempoh:"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/components/CampaignSection.tsx",
+                                                        lineNumber: 142,
+                                                        columnNumber: 188
+                                                    }, this),
+                                                    " ",
                                                     campaign_0.tarikhMula,
-                                                    " - ",
+                                                    " → ",
                                                     campaign_0.tarikhAkhir
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/components/CampaignSection.tsx",
                                                 lineNumber: 142,
-                                                columnNumber: 184
+                                                columnNumber: 185
                                             }, this),
                                             campaign_0.status === "aktif" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                className: `font-medium ${daysRemaining <= 7 ? "text-red-600" : "text-green-600"}`,
-                                                children: [
-                                                    "⏰ ",
-                                                    daysRemaining > 0 ? `${daysRemaining} hari lagi` : "Tamat"
-                                                ]
-                                            }, void 0, true, {
+                                                className: `font-semibold ${daysRemaining <= 7 ? "text-red-600" : "text-green-600"}`,
+                                                children: daysRemaining > 0 ? `${daysRemaining} hari lagi` : "Tamat"
+                                            }, void 0, false, {
                                                 fileName: "[project]/app/components/CampaignSection.tsx",
                                                 lineNumber: 142,
-                                                columnNumber: 278
+                                                columnNumber: 339
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/components/CampaignSection.tsx",
                                         lineNumber: 142,
-                                        columnNumber: 140
+                                        columnNumber: 131
                                     }, this),
                                     campaign_0.status === "aktif" && daysRemaining > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                         onClick: _SenaraiKempenFilteredCampaignsMapButtonOnClick,
-                                        className: "w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors",
+                                        className: "mt-auto w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium py-2.5 rounded-lg hover:opacity-90 transition",
                                         children: "Sumbang Sekarang"
                                     }, void 0, false, {
                                         fileName: "[project]/app/components/CampaignSection.tsx",
                                         lineNumber: 142,
-                                        columnNumber: 493
+                                        columnNumber: 554
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/components/CampaignSection.tsx",
                                 lineNumber: 140,
-                                columnNumber: 137
+                                columnNumber: 207
                             }, this)
                         }, campaign_0.id, false, {
                             fileName: "[project]/app/components/CampaignSection.tsx",

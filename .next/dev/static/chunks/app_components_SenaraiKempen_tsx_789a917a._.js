@@ -22,11 +22,11 @@ var _s = __turbopack_context__.k.signature();
 function SenaraiKempen() {
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(70);
-    if ($[0] !== "9e93a71f5784ec1bb4dc64b68aa5495b54cbd7dc75d6bb20d9cb9ee4a2174d60") {
+    if ($[0] !== "9cec6107e1a87be1153b0c44f8ab148f1634026395f6b41594363edc902b2074") {
         for(let $i = 0; $i < 70; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "9e93a71f5784ec1bb4dc64b68aa5495b54cbd7dc75d6bb20d9cb9ee4a2174d60";
+        $[0] = "9cec6107e1a87be1153b0c44f8ab148f1634026395f6b41594363edc902b2074";
     }
     let t0;
     if ($[1] === Symbol.for("react.memo_cache_sentinel")) {
@@ -577,202 +577,193 @@ function SenaraiKempen() {
                         const daysRemaining = getDaysRemaining(campaign_0.tarikhAkhir);
                         const progressPercentage = getProgressPercentage(campaign_0.terkumpul, campaign_0.sasaran);
                         return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "group relative rounded-2xl bg-white/70 backdrop-blur-md border border-gray-200 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden",
-                            children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 opacity-40 group-hover:opacity-60 transition"
-                                }, void 0, false, {
-                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                    lineNumber: 299,
-                                    columnNumber: 228
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "relative p-6 flex flex-col h-full",
-                                    children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mb-4",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                                    className: "text-lg font-semibold text-gray-900 leading-snug",
-                                                    children: campaign_0.tajuk
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                    lineNumber: 299,
-                                                    columnNumber: 427
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "flex items-center justify-between mt-2",
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: `text-xs font-semibold px-3 py-1 rounded-full border ${getStatusColor(campaign_0.status)}`,
-                                                            children: getStatusText(campaign_0.status)
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                            lineNumber: 299,
-                                                            columnNumber: 571
-                                                        }, this),
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "text-xs font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full",
-                                                            children: [
-                                                                campaign_0.jenisKempen === "makanan" && "Makanan",
-                                                                campaign_0.jenisKempen === "wang" && "Wang",
-                                                                campaign_0.jenisKempen === "kedua-duanya" && "Makanan & Wang"
-                                                            ]
-                                                        }, void 0, true, {
-                                                            fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                            lineNumber: 299,
-                                                            columnNumber: 721
-                                                        }, this)
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                    lineNumber: 299,
-                                                    columnNumber: 515
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                            lineNumber: 299,
-                                            columnNumber: 405
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                            className: "text-sm text-gray-600 mb-4 line-clamp-2",
-                                            children: campaign_0.penerangan
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                            lineNumber: 299,
-                                            columnNumber: 985
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mb-4",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-xs text-gray-500",
-                                                    children: "Jumlah Terkumpul"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                    lineNumber: 299,
-                                                    columnNumber: 1089
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-xl font-bold text-blue-700",
-                                                    children: [
-                                                        "RM ",
-                                                        campaign_0.terkumpul.toLocaleString()
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                    lineNumber: 299,
-                                                    columnNumber: 1146
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: "text-xs text-gray-500",
-                                                    children: [
-                                                        "Sasaran: RM ",
-                                                        campaign_0.sasaran.toLocaleString()
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                    lineNumber: 299,
-                                                    columnNumber: 1239
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                            lineNumber: 299,
-                                            columnNumber: 1067
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "mb-4",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "w-full bg-gray-200 rounded-full h-2 overflow-hidden",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full transition-all duration-500",
-                                                        style: {
-                                                            width: `${progressPercentage}%`
-                                                        }
+                            className: "group relative rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "p-6 flex flex-col h-full",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                className: "text-lg font-semibold text-gray-900 leading-snug",
+                                                children: campaign_0.tajuk
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                lineNumber: 299,
+                                                columnNumber: 271
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex items-center justify-between mt-2",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: `text-xs font-semibold px-3 py-1 rounded-full border ${getStatusColor(campaign_0.status)}`,
+                                                        children: getStatusText(campaign_0.status)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/components/SenaraiKempen.tsx",
                                                         lineNumber: 299,
-                                                        columnNumber: 1426
+                                                        columnNumber: 415
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "text-xs font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full",
+                                                        children: [
+                                                            campaign_0.jenisKempen === "makanan" && "Makanan",
+                                                            campaign_0.jenisKempen === "wang" && "Wang",
+                                                            campaign_0.jenisKempen === "kedua-duanya" && "Makanan & Wang"
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                        lineNumber: 299,
+                                                        columnNumber: 565
                                                     }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                lineNumber: 299,
+                                                columnNumber: 359
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                        lineNumber: 299,
+                                        columnNumber: 249
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-sm text-gray-600 mb-4 line-clamp-2",
+                                        children: campaign_0.penerangan
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                        lineNumber: 299,
+                                        columnNumber: 829
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xs text-gray-500",
+                                                children: "Jumlah Terkumpul"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                lineNumber: 299,
+                                                columnNumber: 933
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xl font-bold text-blue-700",
+                                                children: [
+                                                    "RM ",
+                                                    campaign_0.terkumpul.toLocaleString()
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                lineNumber: 299,
+                                                columnNumber: 990
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xs text-gray-500",
+                                                children: [
+                                                    "Sasaran: RM ",
+                                                    campaign_0.sasaran.toLocaleString()
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                lineNumber: 299,
+                                                columnNumber: 1083
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                        lineNumber: 299,
+                                        columnNumber: 911
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "mb-4",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-full bg-gray-200 rounded-full h-2 overflow-hidden",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full transition-all duration-500",
+                                                    style: {
+                                                        width: `${progressPercentage}%`
+                                                    }
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/components/SenaraiKempen.tsx",
                                                     lineNumber: 299,
-                                                    columnNumber: 1357
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                    className: "text-right text-xs text-gray-500 mt-1",
-                                                    children: [
-                                                        progressPercentage.toFixed(1),
-                                                        "%"
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                    lineNumber: 301,
-                                                    columnNumber: 32
+                                                    columnNumber: 1270
                                                 }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                            lineNumber: 299,
-                                            columnNumber: 1335
-                                        }, this),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                            className: "text-xs text-gray-500 mb-4 space-y-1",
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    children: [
-                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                            className: "font-medium text-gray-700",
-                                                            children: "Tempoh:"
-                                                        }, void 0, false, {
-                                                            fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                            lineNumber: 301,
-                                                            columnNumber: 188
-                                                        }, this),
-                                                        " ",
-                                                        campaign_0.tarikhMula,
-                                                        " → ",
-                                                        campaign_0.tarikhAkhir
-                                                    ]
-                                                }, void 0, true, {
-                                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                    lineNumber: 301,
-                                                    columnNumber: 185
-                                                }, this),
-                                                campaign_0.status === "aktif" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                                    className: `font-semibold ${daysRemaining <= 7 ? "text-red-600" : "text-green-600"}`,
-                                                    children: daysRemaining > 0 ? `${daysRemaining} hari lagi` : "Tamat"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                                    lineNumber: 301,
-                                                    columnNumber: 339
-                                                }, this)
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                            lineNumber: 301,
-                                            columnNumber: 131
-                                        }, this),
-                                        campaign_0.status === "aktif" && daysRemaining > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: _SenaraiKempenFilteredCampaignsMapButtonOnClick,
-                                            className: "mt-auto w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium py-2.5 rounded-lg hover:opacity-90 transition",
-                                            children: "Sumbang Sekarang"
-                                        }, void 0, false, {
-                                            fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                            lineNumber: 301,
-                                            columnNumber: 554
-                                        }, this)
-                                    ]
-                                }, void 0, true, {
-                                    fileName: "[project]/app/components/SenaraiKempen.tsx",
-                                    lineNumber: 299,
-                                    columnNumber: 354
-                                }, this)
-                            ]
-                        }, campaign_0.id, true, {
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                lineNumber: 299,
+                                                columnNumber: 1201
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "text-right text-xs text-gray-500 mt-1",
+                                                children: [
+                                                    progressPercentage.toFixed(1),
+                                                    "%"
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                lineNumber: 301,
+                                                columnNumber: 32
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                        lineNumber: 299,
+                                        columnNumber: 1179
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "text-xs text-gray-500 mb-4 space-y-1",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                        className: "font-medium text-gray-700",
+                                                        children: "Tempoh:"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                        lineNumber: 301,
+                                                        columnNumber: 188
+                                                    }, this),
+                                                    " ",
+                                                    campaign_0.tarikhMula,
+                                                    " → ",
+                                                    campaign_0.tarikhAkhir
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                lineNumber: 301,
+                                                columnNumber: 185
+                                            }, this),
+                                            campaign_0.status === "aktif" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: `font-semibold ${daysRemaining <= 7 ? "text-red-600" : "text-green-600"}`,
+                                                children: daysRemaining > 0 ? `${daysRemaining} hari lagi` : "Tamat"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                                lineNumber: 301,
+                                                columnNumber: 339
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                        lineNumber: 301,
+                                        columnNumber: 131
+                                    }, this),
+                                    campaign_0.status === "aktif" && daysRemaining > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: _SenaraiKempenFilteredCampaignsMapButtonOnClick,
+                                        className: "mt-auto w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium py-2.5 rounded-lg hover:opacity-90 transition",
+                                        children: "Sumbang Sekarang"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                        lineNumber: 301,
+                                        columnNumber: 554
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/components/SenaraiKempen.tsx",
+                                lineNumber: 299,
+                                columnNumber: 207
+                            }, this)
+                        }, campaign_0.id, false, {
                             fileName: "[project]/app/components/SenaraiKempen.tsx",
                             lineNumber: 299,
                             columnNumber: 20

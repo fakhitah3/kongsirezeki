@@ -60,11 +60,12 @@ export default function HeroSection() {
                     {/* QR Code Section */}
                     <div className="text-center">
                       <div className="bg-white rounded-lg p-6 inline-block">
-                        <div className="w-48 h-48 bg-gray-200 rounded-lg flex items-center justify-center mx-auto mb-4">
-                          <svg className="w-24 h-24 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M3 11h8V3H3v8zm2-6h4v4H5V5zM3 21h8v-8H3v8zm2-6h4v4H5v-4zM13 3v8h8V3h-8zm6 6h-4V5h4v4zM13 13h2v2h-2zM15 15h2v2h-2zM13 17h2v2h-2zM17 17h2v2h-2zM19 19h2v2h-2zM15 19h2v2h-2zM17 13h2v2h-2zM19 15h2v2h-2z"/>
-                          </svg>
-                          <p className="text-gray-600 text-sm">QR Code {slide.subtitle}</p>
+                        <div className="w-48 h-48 bg-white rounded-lg overflow-hidden mx-auto mb-4">
+                          <img 
+                            src="/duitnow-qr.png" 
+                            alt="DuitNow QR Code" 
+                            className="w-full h-full object-contain"
+                          />
                         </div>
                       </div>
                       <p className="text-sm mt-4 opacity-80">

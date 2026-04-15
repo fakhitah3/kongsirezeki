@@ -174,42 +174,46 @@ export default function VolunteerDashboard() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-blue-700 mb-3">
-            Dashboard Sukarelawan
+          <h1 className="text-4xl font-bold text-blue-700 mb-4">
+            Selamat Datang, Sukarelawan
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Pengurusan tugasan, status kehadiran, dan jadual pengagihan.
+          <p className="text-gray-700 max-w-2xl mx-auto text-lg">
+            Terima kasih kerana menjadi sebahagian daripada komuniti kami. Di sini anda boleh mengurus tugasan, semak status kehadiran, dan lihat jadual pengagihan.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Tugasan Aktif */}
-          <div className="bg-white shadow-xl rounded-2xl p-6">
-            <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1h8a1 1 0 011 1v1H7a1 1 0 00-1 1V3z" clipRule="evenodd" />
-              </svg>
+          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+            <h2 className="text-xl font-bold text-blue-700 mb-6">
               Tugasan Aktif
             </h2>
             
             <div className="space-y-4">
               {activeTasks.length === 0 ? (
-                <div className="text-center py-8 text-gray-500">
-                  <svg className="w-12 h-12 mx-auto mb-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M9 2a1 1 0 000-2h2a1 1 0 000 2v2a1 1 0 001.414 1.414L10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Tiada tugasan aktif
+                <div className="text-center py-8 bg-blue-50 rounded-lg">
+                  <div className="text-lg mb-3 text-blue-500 font-medium">Tiada tugasan</div>
+                  <p className="text-gray-600 font-medium">Tiada tugasan aktif buat masa ini</p>
+                  <p className="text-sm text-gray-500 mt-1">Rehat seketika, tugasan baharu akan datang!</p>
                 </div>
               ) : (
                 activeTasks.map((task) => (
-                  <div key={task.id} className="border-l-4 border-blue-600 pl-4 py-3">
-                    <div className="font-semibold text-gray-800 mb-1">{task.title}</div>
-                    <div className="text-sm text-gray-600 mb-2">{task.description}</div>
-                    <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-500">
-                        📍 {task.location} • 📅 {formatDate(task.date)} • 🕐 {task.time}
+                  <div key={task.id} className="bg-blue-50 rounded-lg p-4 hover:bg-blue-100 transition-colors">
+                    <div className="font-bold text-gray-900 mb-2 text-lg">{task.title}</div>
+                    <div className="text-gray-700 mb-3">{task.description}</div>
+                    <div className="space-y-2">
+                      <div className="text-sm text-gray-600">
+                        <span className="font-medium">Lokasi:</span> {task.location}
                       </div>
-                      <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(task.status)}`}>
+                      <div className="text-sm text-gray-600">
+                        <span className="font-medium">Tarikh:</span> {formatDate(task.date)}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        <span className="font-medium">Masa:</span> {task.time}
+                      </div>
+                    </div>
+                    <div className="mt-3">
+                      <span className={`px-3 py-1 text-sm font-semibold rounded-full ${getStatusColor(task.status)}`}>
                         {getStatusText(task.status)}
                       </span>
                     </div>
@@ -220,38 +224,42 @@ export default function VolunteerDashboard() {
           </div>
 
           {/* Status Kehadiran */}
-          <div className="bg-white shadow-xl rounded-2xl p-6">
-            <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-              </svg>
+          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+            <h2 className="text-xl font-bold text-green-700 mb-6">
               Status Kehadiran
             </h2>
             
             <div className="space-y-3">
               {attendance.length === 0 ? (
-                <div className="text-center py-8 text-gray-500">
-                  <svg className="w-12 h-12 mx-auto mb-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M9 2a1 1 0 000-2h2a1 1 0 000 2v2a1 1 0 001.414 1.414L10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Tiada rekod kehadiran
+                <div className="text-center py-8 bg-green-50 rounded-lg">
+                  <div className="text-lg mb-3 text-green-500 font-medium">Tiada rekod</div>
+                  <p className="text-gray-600 font-medium">Belum ada rekod kehadiran</p>
+                  <p className="text-sm text-gray-500 mt-1">Rekod akan dipaparkan di sini</p>
                 </div>
               ) : (
                 attendance.map((record) => (
-                  <div key={record.id} className="border-l-4 border-green-600 pl-4 py-3">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="font-semibold text-gray-800">{record.taskId}</div>
-                      <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(record.status)}`}>
+                  <div key={record.id} className="bg-green-50 rounded-lg p-4 hover:bg-green-100 transition-colors">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="font-bold text-gray-900">{record.taskId}</div>
+                      <span className={`px-3 py-1 text-sm font-semibold rounded-full ${getStatusColor(record.status)}`}>
                         {getStatusText(record.status)}
                       </span>
                     </div>
-                    <div className="text-sm text-gray-600">
-                      📅 {formatDate(record.date)}
-                      {record.checkInTime && ` • 🕐 ${record.checkInTime}`}
+                    <div className="space-y-1">
+                      <div className="text-sm text-gray-600">
+                        <span className="font-medium">Tarikh:</span> {formatDate(record.date)}
+                      </div>
+                      {record.checkInTime && (
+                        <div className="text-sm text-gray-600">
+                          <span className="font-medium">Masa Check-in:</span> {record.checkInTime}
+                        </div>
+                      )}
+                      {record.notes && (
+                        <div className="text-sm text-gray-600">
+                          <span className="font-medium">Catatan:</span> {record.notes}
+                        </div>
+                      )}
                     </div>
-                    {record.notes && (
-                      <div className="text-sm text-gray-500 mt-1">📝 {record.notes}</div>
-                    )}
                   </div>
                 ))
               )}
@@ -259,39 +267,41 @@ export default function VolunteerDashboard() {
           </div>
 
           {/* Jadual Pengagihan */}
-          <div className="bg-white shadow-xl rounded-2xl p-6">
-            <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1h8a1 1 0 011 1v1H7a1 1 0 00-1 1V3z" clipRule="evenodd" />
-              </svg>
+          <div className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6">
+            <h2 className="text-xl font-bold text-purple-700 mb-6">
               Jadual Pengagihan
             </h2>
             
             <div className="space-y-4">
               {schedule.length === 0 ? (
-                <div className="text-center py-8 text-gray-500">
-                  <svg className="w-12 h-12 mx-auto mb-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M9 2a1 1 0 000-2h2a1 1 0 000 2v2a1 1 0 001.414 1.414L10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                  </svg>
-                  Tiada jadual pengagihan
+                <div className="text-center py-8 bg-purple-50 rounded-lg">
+                  <div className="text-lg mb-3 text-purple-500 font-medium">Tiada jadual</div>
+                  <p className="text-gray-600 font-medium">Tiada jadual pengagihan</p>
+                  <p className="text-sm text-gray-500 mt-1">Jadual akan dikemaskini dari masa ke semasa</p>
                 </div>
               ) : (
                 schedule.map((item) => (
-                  <div key={item.id} className="border-l-4 border-purple-600 pl-4 py-3">
-                    <div className="font-semibold text-gray-800 mb-1">{item.title}</div>
-                    <div className="text-sm text-gray-600 mb-2">{item.description}</div>
+                  <div key={item.id} className="bg-purple-50 rounded-lg p-4 hover:bg-purple-100 transition-colors">
+                    <div className="font-bold text-gray-900 mb-2 text-lg">{item.title}</div>
+                    <div className="text-gray-700 mb-3">{item.description}</div>
+                    <div className="space-y-2 mb-3">
+                      <div className="text-sm text-gray-600">
+                        <span className="font-medium">Lokasi:</span> {item.location}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        <span className="font-medium">Tarikh:</span> {formatDate(item.date)}
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        <span className="font-medium">Masa:</span> {item.time}
+                      </div>
+                    </div>
                     <div className="flex items-center justify-between">
-                      <div className="text-sm text-gray-500">
-                        📍 {item.location} • 📅 {formatDate(item.date)} • 🕐 {item.time}
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <span className={`px-2 py-1 text-xs font-semibold rounded-full ${getStatusColor(item.status)}`}>
-                          {getStatusText(item.status)}
-                        </span>
-                        <span className="text-xs text-gray-500">
-                          {item.volunteers.length}/{item.maxVolunteers} sukarelawan
-                        </span>
-                      </div>
+                      <span className={`px-3 py-1 text-sm font-semibold rounded-full ${getStatusColor(item.status)}`}>
+                        {getStatusText(item.status)}
+                      </span>
+                      <span className="text-sm text-gray-600 font-medium">
+                        {item.volunteers.length}/{item.maxVolunteers} sukarelawan
+                      </span>
                     </div>
                   </div>
                 ))

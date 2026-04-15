@@ -217,28 +217,8 @@ function TasksPage() {
                 }, this),
                 !user && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "bg-yellow-50 border border-yellow-200 text-yellow-800 px-6 py-4 rounded-lg mb-8 text-center",
-                    children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                            className: "w-5 h-5 inline mr-2",
-                            fill: "currentColor",
-                            viewBox: "0 0 20 20",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                fillRule: "evenodd",
-                                d: "M18 10a8 8 0 11-16 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0z",
-                                clipRule: "evenodd"
-                            }, void 0, false, {
-                                fileName: "[project]/app/tasks/page.tsx",
-                                lineNumber: 181,
-                                columnNumber: 15
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/app/tasks/page.tsx",
-                            lineNumber: 180,
-                            columnNumber: 13
-                        }, this),
-                        "Sila log masuk untuk memohon tugasan"
-                    ]
-                }, void 0, true, {
+                    children: "Sila log masuk untuk memohon tugasan"
+                }, void 0, false, {
                     fileName: "[project]/app/tasks/page.tsx",
                     lineNumber: 179,
                     columnNumber: 19
@@ -252,31 +232,11 @@ function TasksPage() {
                                 className: "bg-white shadow-xl rounded-2xl p-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-xl font-bold text-gray-800 mb-6 flex items-center",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                className: "w-6 h-6 mr-2 text-blue-600",
-                                                fill: "currentColor",
-                                                viewBox: "0 0 20 20",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                    fillRule: "evenodd",
-                                                    d: "M6 2a1 1 0 00-1 1h8a1 1 0 011 1v1H7a1 1 0 00-1 1V3z",
-                                                    clipRule: "evenodd"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/tasks/page.tsx",
-                                                    lineNumber: 192,
-                                                    columnNumber: 19
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/tasks/page.tsx",
-                                                lineNumber: 191,
-                                                columnNumber: 17
-                                            }, this),
-                                            "Tugasan Tersedia"
-                                        ]
-                                    }, void 0, true, {
+                                        className: "text-xl font-bold text-gray-800 mb-6",
+                                        children: "Tugasan Tersedia"
+                                    }, void 0, false, {
                                         fileName: "[project]/app/tasks/page.tsx",
-                                        lineNumber: 190,
+                                        lineNumber: 187,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -284,29 +244,34 @@ function TasksPage() {
                                         children: tasks.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "col-span-full text-center py-12 text-gray-500",
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                    className: "w-16 h-16 mx-auto mb-4 text-gray-400",
-                                                    fill: "currentColor",
-                                                    viewBox: "0 0 20 20",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        fillRule: "evenodd",
-                                                        d: "M9 2a1 1 0 000-2h2a1 1 0 000 2v2a1 1 0 001.414 1.414L10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                        clipRule: "evenodd"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/tasks/page.tsx",
-                                                        lineNumber: 200,
-                                                        columnNumber: 23
-                                                    }, this)
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "text-4xl mb-4 text-gray-400",
+                                                    children: "—"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/tasks/page.tsx",
-                                                    lineNumber: 199,
+                                                    lineNumber: 193,
                                                     columnNumber: 21
                                                 }, this),
-                                                "Tiada tugasan tersedia pada masa ini"
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-lg font-medium",
+                                                    children: "Tiada tugasan tersedia"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/tasks/page.tsx",
+                                                    lineNumber: 194,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-sm text-gray-400 mt-1",
+                                                    children: "Semak semula kemudian"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/tasks/page.tsx",
+                                                    lineNumber: 195,
+                                                    columnNumber: 21
+                                                }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/tasks/page.tsx",
-                                            lineNumber: 198,
+                                            lineNumber: 192,
                                             columnNumber: 39
                                         }, this) : tasks.map((task)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "border border-gray-200 rounded-lg p-4 hover:shadow-lg transition-shadow",
@@ -319,7 +284,7 @@ function TasksPage() {
                                                                 children: task.title
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 205,
+                                                                lineNumber: 198,
                                                                 columnNumber: 25
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -327,7 +292,108 @@ function TasksPage() {
                                                                 children: getStatusText(task.status)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/tasks/page.tsx",
+                                                                lineNumber: 199,
+                                                                columnNumber: 25
+                                                            }, this)
+                                                        ]
+                                                    }, void 0, true, {
+                                                        fileName: "[project]/app/tasks/page.tsx",
+                                                        lineNumber: 197,
+                                                        columnNumber: 23
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        className: "space-y-2 text-sm text-gray-600 mb-4",
+                                                        children: [
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: "font-medium",
+                                                                        children: "Lokasi:"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/tasks/page.tsx",
+                                                                        lineNumber: 205,
+                                                                        columnNumber: 30
+                                                                    }, this),
+                                                                    " ",
+                                                                    task.location
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/app/tasks/page.tsx",
+                                                                lineNumber: 205,
+                                                                columnNumber: 25
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: "font-medium",
+                                                                        children: "Tarikh:"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/tasks/page.tsx",
+                                                                        lineNumber: 206,
+                                                                        columnNumber: 30
+                                                                    }, this),
+                                                                    " ",
+                                                                    formatDate(task.date)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/app/tasks/page.tsx",
                                                                 lineNumber: 206,
+                                                                columnNumber: 25
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: "font-medium",
+                                                                        children: "Masa:"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/tasks/page.tsx",
+                                                                        lineNumber: 207,
+                                                                        columnNumber: 30
+                                                                    }, this),
+                                                                    " ",
+                                                                    task.time
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/app/tasks/page.tsx",
+                                                                lineNumber: 207,
+                                                                columnNumber: 25
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: "font-medium",
+                                                                        children: "Tempoh:"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/tasks/page.tsx",
+                                                                        lineNumber: 208,
+                                                                        columnNumber: 30
+                                                                    }, this),
+                                                                    " ",
+                                                                    task.duration
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/app/tasks/page.tsx",
+                                                                lineNumber: 208,
+                                                                columnNumber: 25
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        className: "font-medium",
+                                                                        children: "Sukarelawan:"
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/tasks/page.tsx",
+                                                                        lineNumber: 209,
+                                                                        columnNumber: 30
+                                                                    }, this),
+                                                                    " ",
+                                                                    task.currentVolunteers,
+                                                                    "/",
+                                                                    task.maxVolunteers
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/app/tasks/page.tsx",
+                                                                lineNumber: 209,
                                                                 columnNumber: 25
                                                             }, this)
                                                         ]
@@ -336,74 +402,12 @@ function TasksPage() {
                                                         lineNumber: 204,
                                                         columnNumber: 23
                                                     }, this),
-                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                        className: "space-y-2 text-sm text-gray-600 mb-4",
-                                                        children: [
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                children: [
-                                                                    "📍 ",
-                                                                    task.location
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 212,
-                                                                columnNumber: 25
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                children: [
-                                                                    "📅 ",
-                                                                    formatDate(task.date)
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 213,
-                                                                columnNumber: 25
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                children: [
-                                                                    "🕐 ",
-                                                                    task.time
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 214,
-                                                                columnNumber: 25
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                children: [
-                                                                    "⏱️ ",
-                                                                    task.duration
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 215,
-                                                                columnNumber: 25
-                                                            }, this),
-                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                                children: [
-                                                                    "👥 ",
-                                                                    task.currentVolunteers,
-                                                                    "/",
-                                                                    task.maxVolunteers,
-                                                                    " sukarelawan"
-                                                                ]
-                                                            }, void 0, true, {
-                                                                fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 216,
-                                                                columnNumber: 25
-                                                            }, this)
-                                                        ]
-                                                    }, void 0, true, {
-                                                        fileName: "[project]/app/tasks/page.tsx",
-                                                        lineNumber: 211,
-                                                        columnNumber: 23
-                                                    }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                         className: "text-gray-700 mb-4",
                                                         children: task.description
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/tasks/page.tsx",
-                                                        lineNumber: 219,
+                                                        lineNumber: 212,
                                                         columnNumber: 23
                                                     }, this),
                                                     task.requirements && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -414,7 +418,7 @@ function TasksPage() {
                                                                 children: "Keperluan:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 222,
+                                                                lineNumber: 215,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -422,13 +426,13 @@ function TasksPage() {
                                                                 children: task.requirements
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 223,
+                                                                lineNumber: 216,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/tasks/page.tsx",
-                                                        lineNumber: 221,
+                                                        lineNumber: 214,
                                                         columnNumber: 45
                                                     }, this),
                                                     user && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -438,151 +442,96 @@ function TasksPage() {
                                                         children: applying === task.id ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "flex items-center justify-center",
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                                    className: "animate-spin -ml-1 mr-3 h-5 w-5 text-white",
-                                                                    fill: "none",
-                                                                    viewBox: "0 0 24 24",
-                                                                    children: [
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("circle", {
-                                                                            className: "opacity-25",
-                                                                            cx: "12",
-                                                                            cy: "12",
-                                                                            r: "10",
-                                                                            stroke: "currentColor",
-                                                                            strokeWidth: "4"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/app/tasks/page.tsx",
-                                                                            lineNumber: 229,
-                                                                            columnNumber: 33
-                                                                        }, this),
-                                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                                            className: "opacity-75",
-                                                                            fill: "currentColor",
-                                                                            d: "M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                                                                        }, void 0, false, {
-                                                                            fileName: "[project]/app/tasks/page.tsx",
-                                                                            lineNumber: 230,
-                                                                            columnNumber: 33
-                                                                        }, this)
-                                                                    ]
-                                                                }, void 0, true, {
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                    className: "animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent mr-2"
+                                                                }, void 0, false, {
                                                                     fileName: "[project]/app/tasks/page.tsx",
-                                                                    lineNumber: 228,
+                                                                    lineNumber: 221,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 "Memohon..."
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/tasks/page.tsx",
-                                                            lineNumber: 227,
+                                                            lineNumber: 220,
                                                             columnNumber: 51
                                                         }, this) : hasApplied(task.id) ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "flex items-center justify-center",
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                                    className: "w-5 h-5 mr-2",
-                                                                    fill: "currentColor",
-                                                                    viewBox: "0 0 20 20",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                                        fillRule: "evenodd",
-                                                                        d: "M16.707 5.293a1 1 0 010-1.414l-8-8a1 1 0 00-1.414 0L8.586 4.293a1 1 0 101.414 1.414L10 6.586l7.293 7.293a1 1 0 001.414 0z",
-                                                                        clipRule: "evenodd"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/app/tasks/page.tsx",
-                                                                        lineNumber: 235,
-                                                                        columnNumber: 33
-                                                                    }, this)
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "mr-2",
+                                                                    children: "✓"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/tasks/page.tsx",
-                                                                    lineNumber: 234,
+                                                                    lineNumber: 224,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 "Telah Dipohon"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/tasks/page.tsx",
-                                                            lineNumber: 233,
+                                                            lineNumber: 223,
                                                             columnNumber: 61
                                                         }, this) : task.status !== "open" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "flex items-center justify-center",
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                                    className: "w-5 h-5 mr-2",
-                                                                    fill: "currentColor",
-                                                                    viewBox: "0 0 20 20",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                                        fillRule: "evenodd",
-                                                                        d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                                        clipRule: "evenodd"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/app/tasks/page.tsx",
-                                                                        lineNumber: 240,
-                                                                        columnNumber: 33
-                                                                    }, this)
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "mr-2",
+                                                                    children: "×"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/tasks/page.tsx",
-                                                                    lineNumber: 239,
+                                                                    lineNumber: 227,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 "Tugasan Ditutup"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/tasks/page.tsx",
-                                                            lineNumber: 238,
+                                                            lineNumber: 226,
                                                             columnNumber: 64
                                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "flex items-center justify-center",
                                                             children: [
-                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                                    className: "w-5 h-5 mr-2",
-                                                                    fill: "currentColor",
-                                                                    viewBox: "0 0 20 20",
-                                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                                        fillRule: "evenodd",
-                                                                        d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                                        clipRule: "evenodd"
-                                                                    }, void 0, false, {
-                                                                        fileName: "[project]/app/tasks/page.tsx",
-                                                                        lineNumber: 245,
-                                                                        columnNumber: 33
-                                                                    }, this)
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "mr-2",
+                                                                    children: "+"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/app/tasks/page.tsx",
-                                                                    lineNumber: 244,
+                                                                    lineNumber: 230,
                                                                     columnNumber: 31
                                                                 }, this),
                                                                 "Mohon Sekarang"
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/app/tasks/page.tsx",
-                                                            lineNumber: 243,
+                                                            lineNumber: 229,
                                                             columnNumber: 39
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/tasks/page.tsx",
-                                                        lineNumber: 226,
+                                                        lineNumber: 219,
                                                         columnNumber: 32
                                                     }, this)
                                                 ]
                                             }, task.id, true, {
                                                 fileName: "[project]/app/tasks/page.tsx",
-                                                lineNumber: 203,
+                                                lineNumber: 196,
                                                 columnNumber: 46
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/tasks/page.tsx",
-                                        lineNumber: 197,
+                                        lineNumber: 191,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/tasks/page.tsx",
-                                lineNumber: 189,
+                                lineNumber: 186,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/tasks/page.tsx",
-                            lineNumber: 188,
+                            lineNumber: 185,
                             columnNumber: 11
                         }, this),
                         user && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -591,31 +540,11 @@ function TasksPage() {
                                 className: "bg-white shadow-xl rounded-2xl p-6",
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
-                                        className: "text-xl font-bold text-gray-800 mb-6 flex items-center",
-                                        children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                className: "w-6 h-6 mr-2 text-purple-600",
-                                                fill: "currentColor",
-                                                viewBox: "0 0 20 20",
-                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                    fillRule: "evenodd",
-                                                    d: "M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                    clipRule: "evenodd"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/app/tasks/page.tsx",
-                                                    lineNumber: 260,
-                                                    columnNumber: 21
-                                                }, this)
-                                            }, void 0, false, {
-                                                fileName: "[project]/app/tasks/page.tsx",
-                                                lineNumber: 259,
-                                                columnNumber: 19
-                                            }, this),
-                                            "Permohonan Saya"
-                                        ]
-                                    }, void 0, true, {
+                                        className: "text-xl font-bold text-gray-800 mb-6",
+                                        children: "Permohonan Saya"
+                                    }, void 0, false, {
                                         fileName: "[project]/app/tasks/page.tsx",
-                                        lineNumber: 258,
+                                        lineNumber: 242,
                                         columnNumber: 17
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -623,29 +552,34 @@ function TasksPage() {
                                         children: userApplications.length === 0 ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                             className: "text-center py-8 text-gray-500",
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
-                                                    className: "w-12 h-12 mx-auto mb-4 text-gray-400",
-                                                    fill: "currentColor",
-                                                    viewBox: "0 0 20 20",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
-                                                        fillRule: "evenodd",
-                                                        d: "M9 2a1 1 0 000-2h2a1 1 0 000 2v2a1 1 0 001.414 1.414L10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z",
-                                                        clipRule: "evenodd"
-                                                    }, void 0, false, {
-                                                        fileName: "[project]/app/tasks/page.tsx",
-                                                        lineNumber: 268,
-                                                        columnNumber: 25
-                                                    }, this)
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                    className: "text-3xl mb-3 text-gray-400",
+                                                    children: "—"
                                                 }, void 0, false, {
                                                     fileName: "[project]/app/tasks/page.tsx",
-                                                    lineNumber: 267,
+                                                    lineNumber: 248,
                                                     columnNumber: 23
                                                 }, this),
-                                                "Belum memohon sebarang tugasan"
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "font-medium",
+                                                    children: "Belum memohon tugasan"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/tasks/page.tsx",
+                                                    lineNumber: 249,
+                                                    columnNumber: 23
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-sm text-gray-400 mt-1",
+                                                    children: "Pilih tugasan di atas untuk memohon"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/tasks/page.tsx",
+                                                    lineNumber: 250,
+                                                    columnNumber: 23
+                                                }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/app/tasks/page.tsx",
-                                            lineNumber: 266,
+                                            lineNumber: 247,
                                             columnNumber: 52
                                         }, this) : userApplications.map((application)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "border-l-4 border-purple-600 pl-4 py-3",
@@ -661,7 +595,7 @@ function TasksPage() {
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 273,
+                                                                lineNumber: 253,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -669,52 +603,52 @@ function TasksPage() {
                                                                 children: getStatusText(application.status)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/tasks/page.tsx",
-                                                                lineNumber: 274,
+                                                                lineNumber: 254,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/tasks/page.tsx",
-                                                        lineNumber: 272,
+                                                        lineNumber: 252,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                         className: "text-sm text-gray-500",
                                                         children: [
-                                                            "📅 Dipohon pada: ",
+                                                            "Dipohon pada: ",
                                                             application.appliedAt?.toDate?.() ? application.appliedAt.toDate().toLocaleDateString("ms-MY") : new Date(application.appliedAt).toLocaleDateString("ms-MY")
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/tasks/page.tsx",
-                                                        lineNumber: 278,
+                                                        lineNumber: 258,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, application.id, true, {
                                                 fileName: "[project]/app/tasks/page.tsx",
-                                                lineNumber: 271,
+                                                lineNumber: 251,
                                                 columnNumber: 66
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/app/tasks/page.tsx",
-                                        lineNumber: 265,
+                                        lineNumber: 246,
                                         columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/tasks/page.tsx",
-                                lineNumber: 257,
+                                lineNumber: 241,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/app/tasks/page.tsx",
-                            lineNumber: 256,
+                            lineNumber: 240,
                             columnNumber: 20
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/app/tasks/page.tsx",
-                    lineNumber: 186,
+                    lineNumber: 183,
                     columnNumber: 9
                 }, this)
             ]

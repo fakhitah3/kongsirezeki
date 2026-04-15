@@ -114,70 +114,89 @@ export default function SenaraiKempen() {
             const progressPercentage = getProgressPercentage(campaign.terkumpul, campaign.sasaran);
             
             return (
-              <div key={campaign.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="p-6">
+              <div
+                key={campaign.id}
+                className="group relative rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+              >
+                <div className="p-6 flex flex-col h-full">
+                  
                   {/* Header */}
-                  <div className="flex justify-between items-start mb-4">
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-2">{campaign.tajuk}</h3>
+                  <div className="mb-4">
+                    <h3 className="text-lg font-semibold text-gray-900 leading-snug">
+                      {campaign.tajuk}
+                    </h3>
+
+                    <div className="flex items-center justify-between mt-2">
                       <span
-                        className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(
+                        className={`text-xs font-semibold px-3 py-1 rounded-full border ${getStatusColor(
                           campaign.status
                         )}`}
                       >
                         {getStatusText(campaign.status)}
                       </span>
-                    </div>
-                  </div>
 
-                  {/* Campaign Type */}
-                  <div className="mb-4">
-                    <span className="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
-                      {campaign.jenisKempen === "makanan" && "Makanan"}
-                      {campaign.jenisKempen === "wang" && "Wang"}
-                      {campaign.jenisKempen === "kedua-duanya" && "Makanan & Wang"}
-                    </span>
+                      <span className="text-xs font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                        {campaign.jenisKempen === "makanan" && "Makanan"}
+                        {campaign.jenisKempen === "wang" && "Wang"}
+                        {campaign.jenisKempen === "kedua-duanya" && "Makanan & Wang"}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Description */}
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+                  <p className="text-sm text-gray-600 mb-4 line-clamp-2">
                     {campaign.penerangan}
                   </p>
 
+                  {/* Highlight Numbers */}
+                  <div className="mb-4">
+                    <p className="text-xs text-gray-500">Jumlah Terkumpul</p>
+                    <p className="text-xl font-bold text-blue-700">
+                      RM {campaign.terkumpul.toLocaleString()}
+                    </p>
+                    <p className="text-xs text-gray-500">
+                      Sasaran: RM {campaign.sasaran.toLocaleString()}
+                    </p>
+                  </div>
+
                   {/* Progress */}
                   <div className="mb-4">
-                    <div className="flex justify-between text-sm text-gray-700 mb-2">
-                      <span>Kemajuan</span>
-                      <span className="font-medium">
-                        {campaign.terkumpul.toLocaleString()} / {campaign.sasaran.toLocaleString()}
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
+                    <div className="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
                       <div
-                        className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-300"
+                        className="bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full transition-all duration-500"
                         style={{ width: `${progressPercentage}%` }}
                       ></div>
                     </div>
-                    <div className="text-right text-sm text-gray-600 mt-1">
-                      {progressPercentage.toFixed(1)}% complete
+                    <div className="text-right text-xs text-gray-500 mt-1">
+                      {progressPercentage.toFixed(1)}%
                     </div>
                   </div>
 
-                  {/* Date Info */}
-                  <div className="text-sm text-gray-600 mb-4">
-                    <p>📅 {campaign.tarikhMula} - {campaign.tarikhAkhir}</p>
+                  {/* Date */}
+                  <div className="text-xs text-gray-500 mb-4 space-y-1">
+                    <p>
+                      <span className="font-medium text-gray-700">Tempoh:</span>{" "}
+                      {campaign.tarikhMula} → {campaign.tarikhAkhir}
+                    </p>
+
                     {campaign.status === "aktif" && (
-                      <p className={`font-medium ${daysRemaining <= 7 ? "text-red-600" : "text-green-600"}`}>
-                        ⏰ {daysRemaining > 0 ? `${daysRemaining} hari lagi` : "Tamat"}
+                      <p
+                        className={`font-semibold ${
+                          daysRemaining <= 7 ? "text-red-600" : "text-green-600"
+                        }`}
+                      >
+                        {daysRemaining > 0
+                          ? `${daysRemaining} hari lagi`
+                          : "Tamat"}
                       </p>
                     )}
                   </div>
 
-                  {/* Donate Button */}
+                  {/* Button */}
                   {campaign.status === "aktif" && daysRemaining > 0 && (
                     <button
-                      onClick={() => window.location.href = '/donate'}
-                      className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors"
+                      onClick={() => (window.location.href = "/donate")}
+                      className="mt-auto w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-medium py-2.5 rounded-lg hover:opacity-90 transition"
                     >
                       Sumbang Sekarang
                     </button>

@@ -165,12 +165,10 @@ export default function SenaraiKempen() {
             return (
               <div
                 key={campaign.id}
-                className="group relative rounded-2xl bg-white/70 backdrop-blur-md border border-gray-200 shadow-sm hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                className="group relative rounded-2xl bg-white border border-gray-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
-                {/* Gradient Glow Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-100 opacity-40 group-hover:opacity-60 transition"></div>
 
-                <div className="relative p-6 flex flex-col h-full">
+                <div className="p-6 flex flex-col h-full">
                   
                   {/* Header */}
                   <div className="mb-4">
