@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
+import { useState, useEffect } from "react";
+import { addDoc, collection, serverTimestamp, doc, getDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 
@@ -14,10 +14,37 @@ export default function MohonBantuan() {
     justifikasi: "",
   });
   const [loading, setLoading] = useState(false);
+  const [checkingProfile, setCheckingProfile] = useState(true);
+  const [profileIncomplete, setProfileIncomplete] = useState(false);
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
   const [showSuccessPopup, setShowSuccessPopup] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    const checkProfile = async () => {
+      const user = auth.currentUser;
+      if (!user) {
+        router.push("/login");
+        return;
+      }
+      try {
+        const snap = await getDoc(doc(db, "users", user.uid));
+        if (snap.exists()) {
+          const data = snap.data();
+          if (data.role === "pelajar") {
+            const incomplete = !data.phone || !data.faculty || !data.semester;
+            setProfileIncomplete(incomplete);
+          }
+        }
+      } catch (e) {
+        console.error("Error checking profile:", e);
+      } finally {
+        setCheckingProfile(false);
+      }
+    };
+    checkProfile();
+  }, [router]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -84,6 +111,52 @@ export default function MohonBantuan() {
       setLoading(false);
     }
   };
+
+  if (checkingProfile) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-red-50 py-10 px-4">
+        <div className="flex items-center justify-center min-h-[400px]">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+        </div>
+      </div>
+    );
+  }
+
+  if (profileIncomplete) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-red-50 py-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl font-bold text-blue-700 mb-3">
+              Permohonan Bantuan Pelajar
+            </h1>
+          </div>
+          <div className="bg-white shadow-xl rounded-2xl p-10 text-center">
+            <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-5">
+              <svg className="w-8 h-8 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold text-gray-800 mb-3">
+              Profil Belum Lengkap
+            </h2>
+            <p className="text-gray-600 mb-2 max-w-md mx-auto">
+              Anda perlu melengkapkan profil anda sebelum boleh membuat permohonan bantuan.
+            </p>
+            <p className="text-sm text-gray-500 mb-8 max-w-md mx-auto">
+              Sila pastikan maklumat berikut telah diisi: <span className="font-medium text-gray-700">No Telefon, Fakulti, dan Semester</span>.
+            </p>
+            <button
+              onClick={() => router.push("/profile")}
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              Kemaskini Profil Sekarang
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-red-50 py-10 px-4">
