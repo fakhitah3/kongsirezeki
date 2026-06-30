@@ -13,7 +13,6 @@ interface UserProfile {
   address?: string;
   faculty?: string;
   semester?: string;
-  jenisPenyumbang?: string;
   createdAt?: any;
 }
 
@@ -251,15 +250,25 @@ export default function Profile() {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Fakulti <span className="text-red-500">*</span>
                       </label>
-                      <input
-                        type="text"
+                      <select
                         name="faculty"
                         value={formData.faculty || ""}
                         onChange={handleChange}
-                        placeholder="Contoh: Fakulti Sains Komputer"
                         className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none transition-colors"
                         required
-                      />
+                      >
+                        <option value="">Pilih fakulti</option>
+                        <option value="Fakulti Industri Asas Tani (FIAT)">Fakulti Industri Asas Tani (FIAT)</option>
+                        <option value="Fakulti Sains Bumi (FSB)">Fakulti Sains Bumi (FSB)</option>
+                        <option value="Fakulti Bio-Kejuruteraan dan Teknologi (FBKT)">Fakulti Bio-Kejuruteraan dan Teknologi (FBKT)</option>
+                        <option value="Fakulti Keusahawanan dan Perniagaan (FKP)">Fakulti Keusahawanan dan Perniagaan (FKP)</option>
+                        <option value="Fakulti Perubatan Veterinar (FPV)">Fakulti Perubatan Veterinar (FPV)</option>
+                        <option value="Fakulti Hospitaliti, Pelancongan dan Kesejahteraan (FHPK)">Fakulti Hospitaliti, Pelancongan dan Kesejahteraan (FHPK)</option>
+                        <option value="Fakulti Sains Data dan Komputeran (FSDK)">Fakulti Sains Data dan Komputeran (FSDK)</option>
+                        <option value="Fakulti Teknologi Kreatif dan Warisan (FTKW)">Fakulti Teknologi Kreatif dan Warisan (FTKW)</option>
+                        <option value="Fakulti Pengajian Bahasa dan Pembangunan Insan (FBI)">Fakulti Pengajian Bahasa dan Pembangunan Insan (FBI)</option>
+                        <option value="Fakulti Senibina dan Ekistik (FSE)">Fakulti Senibina dan Ekistik (FSE)</option>
+                      </select>
                     </div>
                     
                     <div>
@@ -335,32 +344,6 @@ export default function Profile() {
                   </div>
                 </div>
 
-                {/* Student Type (for students) */}
-                {formData.role === "pelajar" && (
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <label className="block text-lg font-semibold text-gray-800 mb-4">
-                      <span className="flex items-center">
-                        <svg className="w-5 h-5 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                        </svg>
-                        Jenis Penyumbang
-                      </span>
-                    </label>
-                    <select
-                      name="jenisPenyumbang"
-                      value={formData.jenisPenyumbang || ""}
-                      onChange={handleChange}
-                      className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-green-500 focus:outline-none transition-colors"
-                    >
-                      <option value="">Pilih jenis penyumbang</option>
-                      <option value="pelajar">Pelajar</option>
-                      <option value="pensyarah">Pensyarah</option>
-                      <option value="staf_universiti">Staf Universiti</option>
-                      <option value="alumni">Alumni</option>
-                      <option value="ngo">NGO</option>
-                    </select>
-                  </div>
-                )}
 
                 {/* Action Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -453,24 +436,6 @@ export default function Profile() {
                   </div>
                 </div>
 
-                {/* Student Type */}
-                {profile.role === "pelajar" && (
-                  <div className="bg-gray-50 p-6 rounded-xl">
-                    <label className="block text-lg font-semibold text-gray-800 mb-4">
-                      <span className="flex items-center">
-                        Jenis Penyumbang
-                      </span>
-                    </label>
-                    <p className="text-gray-900">
-                      {profile.jenisPenyumbang === "pelajar" && "Pelajar"}
-                      {profile.jenisPenyumbang === "pensyarah" && "Pensyarah"}
-                      {profile.jenisPenyumbang === "staf_universiti" && "Staf Universiti"}
-                      {profile.jenisPenyumbang === "alumni" && "Alumni"}
-                      {profile.jenisPenyumbang === "ngo" && "NGO"}
-                      {!profile.jenisPenyumbang && "Tidak diisi"}
-                    </p>
-                  </div>
-                )}
 
                 {/* Address */}
                 <div className="bg-gray-50 p-6 rounded-xl">
