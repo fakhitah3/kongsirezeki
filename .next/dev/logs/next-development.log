@@ -1,4 +1,6 @@
-[00:00:00.737] Server  LOG     ✓ Ready in 593ms
-[00:00:09.045] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:02:31.221] Server  LOG     ✓ Compiled in 436ms
-[00:07:13.181] Server  LOG     ✓ Compiled in 160ms
+[00:00:00.849] Server  LOG     ✓ Ready in 635ms
+[00:00:05.936] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:19.040] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[00:00:19.040] Browser ERROR   Error fetching dashboard data: {"code":"failed-precondition","name":"FirebaseError"}
+[00:03:35.461] Server  LOG     ✓ Compiled in 134ms
+[00:16:33.139] Server  LOG     ✓ Compiled in 231ms
