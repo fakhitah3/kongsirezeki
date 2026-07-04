@@ -1,23 +1,30 @@
 "use client";
 
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import MohonBantuan from "../components/MohonBantuan";
-
-const isProfileIncomplete = () => {
-  // Check if the user has missing information
-  const missingInformation = [
-    !localStorage.getItem("phoneNumber"),
-    !localStorage.getItem("faculty"),
-    !localStorage.getItem("semester")
-  ];
-
-  return missingInformation.some(Boolean);
-};
 
 export default function ApplyPage() {
   const router = useRouter();
+  const [isProfileIncomplete, setIsProfileIncomplete] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
-  if (isProfileIncomplete()) {
+  useEffect(() => {
+    // Check if the user has missing information
+    const missingInformation = [
+      !localStorage.getItem("phoneNumber"),
+      !localStorage.getItem("faculty"),
+      !localStorage.getItem("semester")
+    ];
+    setIsProfileIncomplete(missingInformation.some(Boolean));
+    setIsLoaded(true);
+  }, []);
+
+  if (!isLoaded) {
+    return null;
+  }
+
+  if (isProfileIncomplete) {
     return (
       <div className="max-w-7xl mx-auto py-16 px-6">
         <h3 className="text-2xl font-bold mb-6 text-gray-800">
