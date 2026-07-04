@@ -9,7 +9,7 @@ interface UserProfile {
   name?: string;
   email?: string;
   role?: string;
-  phone?: string;
+  phoneNumber?: string;
   address?: string;
   faculty?: string;
   semester?: string;
@@ -209,8 +209,8 @@ export default function Profile() {
                       </label>
                       <input
                         type="tel"
-                        name="phone"
-                        value={formData.phone || ""}
+                        name="phoneNumber"
+                        value={formData.phoneNumber || ""}
                         onChange={handleChange}
                         placeholder="Contoh: 012-3456789"
                         className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-blue-500 focus:outline-none transition-colors"
@@ -388,7 +388,7 @@ export default function Profile() {
                     
                     <div>
                       <p className="text-sm font-medium text-gray-700 mb-2">No Telefon</p>
-                      <p className="text-gray-900">{profile.phone || "Tidak diisi"}</p>
+                      <p className="text-gray-900">{profile.phoneNumber || "Tidak diisi"}</p>
                     </div>
                   </div>
 
