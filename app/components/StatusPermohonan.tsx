@@ -3,28 +3,29 @@
 import { useState, useEffect } from "react";
 import { collection, query, where, onSnapshot, orderBy } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
+import { useRouter } from "next/navigation";
 
 interface Application {
   id: string;
   jenisBantuan: string;
-  fakulti: string;
-  semester: string;
-  statusKewangan: string;
   justifikasi: string;
   status: string;
+  userEmail: string;
   createdAt: any;
 }
 
 export default function StatusPermohonan() {
   const [applications, setApplications] = useState<Application[]>([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     if (!auth.currentUser) return;
 
     const q = query(
       collection(db, "applications"),
-      where("userId", "==", auth.currentUser.uid)
+      where("userEmail", "==", auth.currentUser.email),
+      orderBy("createdAt", "desc")
     );
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -112,30 +113,31 @@ export default function StatusPermohonan() {
                     <h3 className="text-xl font-bold text-gray-900">
                       {getJenisBantuanText(app.jenisBantuan)}
                     </h3>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Fakulti: {app.fakulti} | Semester: {app.semester}
-                    </p>
                   </div>
-                  <span
-                    className={`px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(
-                      app.status
-                    )}`}
-                  >
-                    {getStatusText(app.status)}
-                  </span>
+                  <div className="flex items-center gap-2">
+                    <span
+                      className={`px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(
+                        app.status
+                      )}`}
+                    >
+                      {getStatusText(app.status)}
+                    </span>
+                    {app.status === "approved" && (
+                      <button
+                        onClick={() => router.push("/slots")}
+                        className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-700"
+                      >
+                        Pilih Slot
+                      </button>
+                    )}
+                  </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm bg-gray-50 p-4 rounded-xl">
-                  <div>
-                    <p className="text-xs text-gray-400 uppercase">Status Kewangan</p>
-                    <p className="text-gray-800 font-medium">{app.statusKewangan}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs text-gray-400 uppercase">Dihantar pada</p>
-                    <p className="text-gray-800 font-medium">
-                      {app.createdAt?.toDate()?.toLocaleDateString("ms-MY")}
-                    </p>
-                  </div>
+                <div className="text-sm bg-gray-50 p-4 rounded-xl">
+                  <p className="text-xs text-gray-400 uppercase">Dihantar pada</p>
+                  <p className="text-gray-800 font-medium">
+                    {app.createdAt?.toDate()?.toLocaleDateString("ms-MY")}
+                  </p>
                 </div>
 
                 {app.justifikasi && (

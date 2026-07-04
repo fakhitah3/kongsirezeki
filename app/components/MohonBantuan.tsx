@@ -46,10 +46,7 @@ export default function MohonBantuan() {
     try {
       const applicationData = {
         ...form,
-        userId: auth.currentUser.uid,
         userEmail: auth.currentUser.email,
-        userName: auth.currentUser.displayName || "Pelajar",
-        userRole: "pelajar",
         status: "pending",
         createdAt: serverTimestamp(),
       };

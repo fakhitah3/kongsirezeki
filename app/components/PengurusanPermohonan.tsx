@@ -1,37 +1,55 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { collection, query, onSnapshot, orderBy, doc, updateDoc } from "firebase/firestore";
+import { collection, query, onSnapshot, orderBy, doc, updateDoc, getDoc, getDocs } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
 
 interface Application {
   id: string;
   jenisBantuan: string;
-  fakulti: string;
-  semester: string;
-  statusKewangan: string;
   justifikasi: string;
   status: string;
-  userId: string;
   userEmail: string;
   createdAt: any;
+  userName?: string;
 }
 
 export default function PengurusanPermohonan() {
   const [applications, setApplications] = useState<Application[]>([]);
   const [loading, setLoading] = useState(true);
   const [updating, setUpdating] = useState<string | null>(null);
+  const [filterStatus, setFilterStatus] = useState<string>("");
+  const [filterJenis, setFilterJenis] = useState<string>("");
+  const [filterTindakan, setFilterTindakan] = useState<string>("");
 
   useEffect(() => {
     const q = query(
-      collection(db, "applications")
+      collection(db, "applications"),
+      orderBy("createdAt", "desc")
     );
 
-    const unsubscribe = onSnapshot(q, (snapshot) => {
+    const unsubscribe = onSnapshot(q, async (snapshot) => {
       const apps: Application[] = [];
-      snapshot.forEach((doc) => {
-        apps.push({ id: doc.id, ...doc.data() } as Application);
-      });
+      for (const docSnapshot of snapshot.docs) {
+        const appData = { id: docSnapshot.id, ...docSnapshot.data() } as Application;
+        
+        // Fetch user name from users collection based on email
+        if (appData.userEmail) {
+          try {
+            // Query users by email field
+            const usersQuery = query(collection(db, "users"));
+            const usersSnapshot = await getDocs(usersQuery);
+            const userDoc = usersSnapshot.docs.find((d: any) => d.data().email === appData.userEmail);
+            if (userDoc) {
+              appData.userName = userDoc.data().name;
+            }
+          } catch (error) {
+            console.error("Error fetching user name:", error);
+          }
+        }
+        
+        apps.push(appData);
+      }
       setApplications(apps);
       setLoading(false);
     });
@@ -109,6 +127,50 @@ export default function PengurusanPermohonan() {
       <div className="max-w-6xl mx-auto">
         <h1 className="text-2xl font-bold text-blue-700 mb-6">Pengurusan Permohonan</h1>
 
+        {/* Filters */}
+        <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Status</label>
+              <select
+                value={filterStatus}
+                onChange={(e) => setFilterStatus(e.target.value)}
+                className="w-full border-2 border-gray-200 rounded-lg px-4 py-2 focus:border-blue-500 focus:outline-none"
+              >
+                <option value="">Semua</option>
+                <option value="pending">Menunggu</option>
+                <option value="approved">Diluluskan</option>
+                <option value="rejected">Ditolak</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Jenis Bantuan</label>
+              <select
+                value={filterJenis}
+                onChange={(e) => setFilterJenis(e.target.value)}
+                className="w-full border-2 border-gray-200 rounded-lg px-4 py-2 focus:border-blue-500 focus:outline-none"
+              >
+                <option value="">Semua</option>
+                <option value="makanan_asas">Bantuan makanan asas</option>
+                <option value="food_pack">Food pack mingguan</option>
+                <option value="kecemasan">Bantuan kecemasan</option>
+              </select>
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Tindakan</label>
+              <select
+                value={filterTindakan}
+                onChange={(e) => setFilterTindakan(e.target.value)}
+                className="w-full border-2 border-gray-200 rounded-lg px-4 py-2 focus:border-blue-500 focus:outline-none"
+              >
+                <option value="">Semua</option>
+                <option value="pending">Belum diproses</option>
+                <option value="processed">Sudah diproses</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
         {applications.length === 0 ? (
           <div className="bg-white shadow-lg rounded-lg p-8 text-center">
             <p className="text-gray-600">Tiada permohonan dijumpai.</p>
@@ -132,9 +194,6 @@ export default function PengurusanPermohonan() {
                       Jenis Bantuan
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Fakulti
-                    </th>
-                    <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Status
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -143,22 +202,27 @@ export default function PengurusanPermohonan() {
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {applications.map((app) => (
+                  {applications
+                    .filter((app) => {
+                      if (filterStatus && app.status !== filterStatus) return false;
+                      if (filterJenis && app.jenisBantuan !== filterJenis) return false;
+                      if (filterTindakan === "pending" && app.status !== "pending") return false;
+                      if (filterTindakan === "processed" && app.status === "pending") return false;
+                      return true;
+                    })
+                    .map((app) => (
                     <tr key={app.id} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {app.createdAt?.toDate()?.toLocaleDateString("ms-MY")}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                        {app.userEmail?.split("@")[0]}
+                        {app.userName || app.userEmail?.split("@")[0]}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                         {app.userEmail}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-900">
                         {getJenisBantuanText(app.jenisBantuan)}
-                      </td>
-                      <td className="px-6 py-4 text-sm text-gray-900">
-                        {app.fakulti}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span
