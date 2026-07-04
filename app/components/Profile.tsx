@@ -250,25 +250,15 @@ export default function Profile() {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Fakulti <span className="text-red-500">*</span>
                       </label>
-                      <select
+                      <input
+                        type="text"
                         name="faculty"
                         value={formData.faculty || ""}
                         onChange={handleChange}
+                        placeholder="Contoh: Fakulti Sains Komputer"
                         className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none transition-colors"
                         required
-                      >
-                        <option value="">Pilih fakulti</option>
-                        <option value="Fakulti Industri Asas Tani (FIAT)">Fakulti Industri Asas Tani (FIAT)</option>
-                        <option value="Fakulti Sains Bumi (FSB)">Fakulti Sains Bumi (FSB)</option>
-                        <option value="Fakulti Bio-Kejuruteraan dan Teknologi (FBKT)">Fakulti Bio-Kejuruteraan dan Teknologi (FBKT)</option>
-                        <option value="Fakulti Keusahawanan dan Perniagaan (FKP)">Fakulti Keusahawanan dan Perniagaan (FKP)</option>
-                        <option value="Fakulti Perubatan Veterinar (FPV)">Fakulti Perubatan Veterinar (FPV)</option>
-                        <option value="Fakulti Hospitaliti, Pelancongan dan Kesejahteraan (FHPK)">Fakulti Hospitaliti, Pelancongan dan Kesejahteraan (FHPK)</option>
-                        <option value="Fakulti Sains Data dan Komputeran (FSDK)">Fakulti Sains Data dan Komputeran (FSDK)</option>
-                        <option value="Fakulti Teknologi Kreatif dan Warisan (FTKW)">Fakulti Teknologi Kreatif dan Warisan (FTKW)</option>
-                        <option value="Fakulti Pengajian Bahasa dan Pembangunan Insan (FBI)">Fakulti Pengajian Bahasa dan Pembangunan Insan (FBI)</option>
-                        <option value="Fakulti Senibina dan Ekistik (FSE)">Fakulti Senibina dan Ekistik (FSE)</option>
-                      </select>
+                      />
                     </div>
                     
                     <div>

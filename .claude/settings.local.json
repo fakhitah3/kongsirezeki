@@ -10,7 +10,12 @@
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
-      "Bash(git revert *)"
+      "Bash(git revert *)",
+      "Bash(gh repo *)",
+      "Bash(gh api *)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "WebFetch(domain:support.bolt.new)"
     ]
   }
 }
