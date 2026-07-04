@@ -68,6 +68,11 @@ export default function Profile() {
         updatedAt: serverTimestamp()
       });
 
+      // Save to localStorage for Apply page validation
+      if (formData.phoneNumber) localStorage.setItem("phoneNumber", formData.phoneNumber);
+      if (formData.faculty) localStorage.setItem("faculty", formData.faculty);
+      if (formData.semester) localStorage.setItem("semester", formData.semester);
+
       setProfile(formData);
       setEditMode(false);
       setMessage("Profil berjaya dikemaskini!");
@@ -179,12 +184,7 @@ export default function Profile() {
               <>
                 {/* Personal Information */}
 <div className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition">                  <label className="block text-lg font-semibold text-gray-800 mb-4">
-                    <span className="flex items-center">
-                      <svg className="w-5 h-5 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7.707 3.293a1 1 0 00-1.414 1.414L8.586 8.586a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Maklumat Peribadi
-                    </span>
+                    Maklumat Peribadi
                   </label>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -237,12 +237,7 @@ export default function Profile() {
                 {/* Academic Information */}
                 <div className="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition">
                   <label className="block text-lg font-semibold text-gray-800 mb-4">
-                    <span className="flex items-center">
-                      <svg className="w-5 h-5 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3a1 1 0 001.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Maklumat Akademik
-                    </span>
+                    Maklumat Akademik
                   </label>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -250,15 +245,26 @@ export default function Profile() {
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Fakulti <span className="text-red-500">*</span>
                       </label>
-                      <input
-                        type="text"
+                      <select
                         name="faculty"
                         value={formData.faculty || ""}
                         onChange={handleChange}
-                        placeholder="Contoh: Fakulti Sains Komputer"
                         className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 focus:border-purple-500 focus:outline-none transition-colors"
                         required
-                      />
+                      >
+                        <option value="">Pilih fakulti</option>
+                        <option value="Fakulti Keusahawanan dan Perniagaan (FKP)">Fakulti Keusahawanan dan Perniagaan (FKP)</option>
+                        <option value="Fakulti Teknologi Kreatif dan Warisan (FTKW)">Fakulti Teknologi Kreatif dan Warisan (FTKW)</option>
+                        <option value="Fakulti Hospitaliti, Pelancongan dan Kesejahteraan (FHPK)">Fakulti Hospitaliti, Pelancongan dan Kesejahteraan (FHPK)</option>
+                        <option value="Fakulti Sains Data dan Komputeran (FSDK)">Fakulti Sains Data dan Komputeran (FSDK)</option>
+                        <option value="Fakulti Pengajian Bahasa dan Pembangunan Insaniah (FBI)">Fakulti Pengajian Bahasa dan Pembangunan Insaniah (FBI)</option>
+                        <option value="Fakulti Senibina dan Ekistik (FSE)">Fakulti Senibina dan Ekistik (FSE)</option>
+                        <option value="Fakulti Sains Bumi (FSB)">Fakulti Sains Bumi (FSB)</option>
+                        <option value="Fakulti Industri Asas Tani (FIAT)">Fakulti Industri Asas Tani (FIAT)</option>
+                        <option value="Fakulti Biokejuruteraan dan Teknologi (FBKT)">Fakulti Biokejuruteraan dan Teknologi (FBKT)</option>
+                        <option value="Fakulti Perubatan Veterinar (FPV)">Fakulti Perubatan Veterinar (FPV)</option>
+                        <option value="Pusat Asasi">Pusat Asasi</option>
+                      </select>
                     </div>
                     
                     <div>
@@ -289,12 +295,7 @@ export default function Profile() {
                 {/* Account Information */}
                 <div className="bg-gray-50 p-6 rounded-xl">
                   <label className="block text-lg font-semibold text-gray-800 mb-4">
-                    <span className="flex items-center">
-                      <svg className="w-5 h-5 mr-2 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M5 9V7a5 5 0 00-5 5H2a5 5 0 005 5v2a1 1 0 011.414 1.414L9 10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                      </svg>
-                      Maklumat Akaun
-                    </span>
+                    Maklumat Akaun
                   </label>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -340,7 +341,7 @@ export default function Profile() {
                   <button
                     type="submit"
                     disabled={saving}
-                    className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
+                    className="flex-1 bg-blue-600 text-white py-4 px-6 rounded-lg font-semibold hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-lg hover:shadow-xl"
                   >
                     {saving ? (
                       <span className="flex items-center justify-center">
@@ -351,12 +352,7 @@ export default function Profile() {
                         Menyimpan...
                       </span>
                     ) : (
-                      <span className="flex items-center justify-center">
-                        <svg className="w-5 h-5 mr-2 transition-colors hover:text-blue-700" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010-1.414l-8-8a1 1 0 00-1.414 0L8.586 4.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-                        </svg>
-                        Simpan
-                      </span>
+                      <span>Simpan</span>
                     )}
                   </button>
                   

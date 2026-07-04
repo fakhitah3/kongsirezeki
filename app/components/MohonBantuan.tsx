@@ -8,8 +8,6 @@ import { useRouter } from "next/navigation";
 export default function MohonBantuan() {
   const [form, setForm] = useState({
     jenisBantuan: "",
-    fakulti: "",
-    statusKewangan: "",
     justifikasi: "",
   });
   const [loading, setLoading] = useState(false);
@@ -27,8 +25,6 @@ export default function MohonBantuan() {
   const handleClearForm = () => {
     setForm({
       jenisBantuan: "",
-      fakulti: "",
-      statusKewangan: "",
       justifikasi: "",
     });
     setError("");
@@ -69,8 +65,6 @@ export default function MohonBantuan() {
       // Reset form
       setForm({
         jenisBantuan: "",
-        fakulti: "",
-        statusKewangan: "",
         justifikasi: "",
       });
 
@@ -135,53 +129,6 @@ export default function MohonBantuan() {
                 <option value="makanan_asas">Bantuan makanan asas</option>
                 <option value="food_pack">Food pack mingguan</option>
                 <option value="kecemasan">Bantuan kecemasan</option>
-              </select>
-            </div>
-
-            {/* Maklumat Akademik */}
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <label className="block text-lg font-semibold text-gray-800 mb-3">
-                <span className="flex items-center">
-
-                  Maklumat Akademik
-                </span>
-              </label>
-              
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Fakulti <span className="text-red-500">*</span>
-                </label>
-                <input
-                  name="fakulti"
-                  value={form.fakulti}
-                  onChange={handleChange}
-                  placeholder="Contoh: Fakulti Sains Komputer"
-                  className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-red-500 focus:outline-none transition-colors"
-                  required
-                />
-              </div>
-            </div>
-
-            {/* Status Kewangan */}
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <label className="block text-lg font-semibold text-gray-800 mb-3">
-                <span className="flex items-center">
-  
-                  Status Kewangan
-                </span>
-              </label>
-              <select
-                name="statusKewangan"
-                value={form.statusKewangan}
-                onChange={handleChange}
-                className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-gray-500 focus:border-blue-600 focus:outline-none transition-colors"
-                required
-              >
-                <option value="">Pilih status kewangan</option>
-                <option value="b40">B40</option>
-                <option value="tiada_bantuan">Tiada bantuan tetap</option>
-                <option value="kehilangan_pendapatan">Kehilangan pendapatan</option>
-                <option value="masalah_kewangan">Masalah kewangan lain</option>
               </select>
             </div>
 
