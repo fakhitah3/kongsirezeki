@@ -9,7 +9,6 @@ export default function MohonBantuan() {
   const [form, setForm] = useState({
     jenisBantuan: "",
     fakulti: "",
-    semester: "",
     statusKewangan: "",
     justifikasi: "",
   });
@@ -29,7 +28,6 @@ export default function MohonBantuan() {
     setForm({
       jenisBantuan: "",
       fakulti: "",
-      semester: "",
       statusKewangan: "",
       justifikasi: "",
     });
@@ -72,7 +70,6 @@ export default function MohonBantuan() {
       setForm({
         jenisBantuan: "",
         fakulti: "",
-        semester: "",
         statusKewangan: "",
         justifikasi: "",
       });
@@ -150,33 +147,18 @@ export default function MohonBantuan() {
                 </span>
               </label>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Fakulti <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    name="fakulti"
-                    value={form.fakulti}
-                    onChange={handleChange}
-                    placeholder="Contoh: Fakulti Sains Komputer"
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-red-500 focus:outline-none transition-colors"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    Semester <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    name="semester"
-                    value={form.semester}
-                    onChange={handleChange}
-                    className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-red-500 focus:outline-none transition-colors"
-                    required
-                  />
-                </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Fakulti <span className="text-red-500">*</span>
+                </label>
+                <input
+                  name="fakulti"
+                  value={form.fakulti}
+                  onChange={handleChange}
+                  placeholder="Contoh: Fakulti Sains Komputer"
+                  className="w-full border-2 border-gray-200 rounded-lg px-4 py-3 text-black focus:border-red-500 focus:outline-none transition-colors"
+                  required
+                />
               </div>
             </div>
 
