@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { collection, query, where, onSnapshot, doc, updateDoc, addDoc, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
+import { QRCodeCanvas } from "qrcode.react";
 
 interface Slot {
   id: string;
@@ -26,11 +27,26 @@ interface Booking {
 export default function PilihSlotPengambilan() {
   const [slots, setSlots] = useState<Slot[]>([]);
   const [userBookings, setUserBookings] = useState<Booking[]>([]);
+  const [hasApprovedApplication, setHasApprovedApplication] = useState(false);
   const [loading, setLoading] = useState(true);
   const [booking, setBooking] = useState<string | null>(null);
+  const [showQRCode, setShowQRCode] = useState(false);
+  const [selectedSlot, setSelectedSlot] = useState<Slot | null>(null);
+  const qrRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!auth.currentUser) return;
+
+    // Fetch user's approved applications
+    const applicationsQuery = query(
+      collection(db, "applications"),
+      where("userEmail", "==", auth.currentUser.email),
+      where("status", "==", "approved")
+    );
+
+    const unsubscribeApplications = onSnapshot(applicationsQuery, (snapshot) => {
+      setHasApprovedApplication(!snapshot.empty);
+    });
 
     // Fetch available slots
     const slotsQuery = query(
@@ -62,6 +78,7 @@ export default function PilihSlotPengambilan() {
     });
 
     return () => {
+      unsubscribeApplications();
       unsubscribeSlots();
       unsubscribeBookings();
     };
@@ -71,23 +88,28 @@ export default function PilihSlotPengambilan() {
     if (!auth.currentUser) return;
 
     // Check if user already has a booking
-    const hasBooking = userBookings.some(booking => 
-      booking.status === "approved" && booking.slotId === slotId
+    const existingBooking = userBookings.find(booking => 
+      booking.status === "approved" || booking.status === "pending"
     );
 
-    if (hasBooking) {
-      alert("Anda sudah memilih slot ini.");
+    if (existingBooking) {
+      // Show QR code for existing booking instead of alerting
+      const bookedSlot = slots.find(s => s.id === existingBooking.slotId);
+      if (bookedSlot) {
+        setSelectedSlot(bookedSlot);
+        setShowQRCode(true);
+      }
       return;
     }
 
     setBooking(slotId);
     try {
       // Add booking
-      await addDoc(collection(db, "bookings"), {
+      const bookingRef = await addDoc(collection(db, "bookings"), {
         slotId,
         userId: auth.currentUser.uid,
         userEmail: auth.currentUser.email,
-        status: "pending",
+        status: "approved",
         createdAt: serverTimestamp()
       });
 
@@ -98,14 +120,26 @@ export default function PilihSlotPengambilan() {
         await updateDoc(slotRef, {
           currentBookings: slot.currentBookings + 1
         });
+        setSelectedSlot(slot);
+        setShowQRCode(true);
       }
 
-      alert("Slot berjaya dipilih! Menunggu pengesahan.");
       setBooking(null);
     } catch (error) {
       console.error("Error booking slot:", error);
       alert("Gagal memilih slot. Sila cuba lagi.");
       setBooking(null);
+    }
+  };
+
+  const downloadQRCode = () => {
+    const canvas = qrRef.current?.querySelector("canvas");
+    if (canvas) {
+      const url = canvas.toDataURL("image/png");
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `qr-code-${selectedSlot?.date}-${selectedSlot?.time}.png`;
+      link.click();
     }
   };
 
@@ -125,6 +159,67 @@ export default function PilihSlotPengambilan() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl font-bold text-blue-700 mb-6">Pilih Slot Pengambilan</h1>
           <p className="text-gray-600">Memuatkan...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (!hasApprovedApplication) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-2xl font-bold text-blue-700 mb-6">Pilih Slot Pengambilan</h1>
+          <div className="bg-white shadow-lg rounded-lg p-8 text-center">
+            <p className="text-gray-600">Tiada permohonan yang telah lulus.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Check if user already has a booking
+  const existingBooking = userBookings.find(b => b.status === "approved" || b.status === "pending");
+  if (existingBooking && !showQRCode) {
+    const bookedSlot = slots.find(s => s.id === existingBooking.slotId);
+    if (bookedSlot) {
+      setSelectedSlot(bookedSlot);
+      setShowQRCode(true);
+    }
+  }
+
+  if (showQRCode && selectedSlot) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-10 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-2xl font-bold text-blue-700 mb-6">Pilih Slot Pengambilan</h1>
+          <div className="bg-white shadow-lg rounded-lg p-8 text-center">
+            <div className="mb-6">
+              <div ref={qrRef} className="flex justify-center mb-4">
+                <QRCodeCanvas 
+                  value={`BOOKING:${auth.currentUser?.email}:${selectedSlot.id}:${selectedSlot.date}:${selectedSlot.time}:${selectedSlot.location}`}
+                  size={200}
+                  level="H"
+                />
+              </div>
+              <button
+                onClick={downloadQRCode}
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 mb-6"
+              >
+                Muat Turun Kod QR
+              </button>
+            </div>
+            <div className="bg-gray-50 rounded-lg p-6 text-left">
+              <h2 className="text-lg font-semibold text-gray-800 mb-4">Butiran Pengambilan</h2>
+              <div className="space-y-2">
+                <p className="text-gray-700"><span className="font-medium">Tarikh:</span> {selectedSlot.date}</p>
+                <p className="text-gray-700"><span className="font-medium">Masa:</span> {selectedSlot.time}</p>
+                <p className="text-gray-700"><span className="font-medium">Lokasi:</span> {selectedSlot.location}</p>
+              </div>
+            </div>
+            <p className="text-sm text-gray-500 mt-4">
+              Sila tunjukkan kod QR ini semasa pengambilan.
+            </p>
+          </div>
         </div>
       </div>
     );

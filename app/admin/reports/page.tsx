@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { collection, query, orderBy, getDocs, where } from "firebase/firestore";
 import { db } from "@/lib/firebase";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import jsPDF from "jspdf";
 
 interface ReportStats {
   totalApplications: number;
@@ -14,17 +16,12 @@ interface ReportStats {
   totalMoneyDistributed: number;
   averageProcessingTime: number;
   successRate: number;
+  makananAsasCount: number;
+  foodPackCount: number;
+  bantuanKecemasanCount: number;
   monthlyTrend: {
     month: string;
     applications: number;
-    approved: number;
-    distributed: number;
-  }[];
-  impactByFaculty: {
-    faculty: string;
-    students: number;
-    foodReceived: number;
-    moneyReceived: number;
   }[];
 }
 
@@ -39,8 +36,10 @@ export default function AdminReports() {
     totalMoneyDistributed: 0,
     averageProcessingTime: 0,
     successRate: 0,
+    makananAsasCount: 0,
+    foodPackCount: 0,
+    bantuanKecemasanCount: 0,
     monthlyTrend: [],
-    impactByFaculty: [],
   });
   const [loading, setLoading] = useState(true);
   const [selectedPeriod, setSelectedPeriod] = useState("all");
@@ -71,28 +70,17 @@ export default function AdminReports() {
         
         const successRate = applications.length > 0 ? (approved / applications.length) * 100 : 0;
         
-        // Calculate faculty impact
-        const facultyMap = new Map();
-        applications.forEach(app => {
-          const faculty = app.fakulti || "Tidak Diketahui";
-          if (!facultyMap.has(faculty)) {
-            facultyMap.set(faculty, {
-              faculty,
-              students: 0,
-              foodReceived: 0,
-              moneyReceived: 0
-            });
-          }
-          const facultyData = facultyMap.get(faculty);
-          facultyData.students++;
-        });
+        // Calculate by jenis bantuan
+        const makananAsasCount = applications.filter(app => app.jenisBantuan === "makanan_asas").length;
+        const foodPackCount = applications.filter(app => app.jenisBantuan === "food_pack").length;
+        const bantuanKecemasanCount = applications.filter(app => app.jenisBantuan === "kecemasan").length;
 
         // Calculate monthly trend (last 6 months)
         const monthlyTrend = [];
         const now = new Date();
         for (let i = 5; i >= 0; i--) {
           const monthDate = new Date(now.getFullYear(), now.getMonth() - i, 1);
-          const monthName = monthDate.toLocaleDateString('ms-MY', { month: 'long', year: 'numeric' });
+          const monthName = monthDate.toLocaleDateString('ms-MY', { month: 'long' });
           
           const monthApps = applications.filter(app => {
             const appDate = app.createdAt?.toDate ? app.createdAt.toDate() : new Date(app.createdAt);
@@ -100,13 +88,9 @@ export default function AdminReports() {
                    appDate.getFullYear() === monthDate.getFullYear();
           });
           
-          const monthApproved = monthApps.filter(app => app.status === "approved").length;
-          
           monthlyTrend.push({
             month: monthName,
-            applications: monthApps.length,
-            approved: monthApproved,
-            distributed: Math.floor(monthApproved * 0.8) // Estimated distribution
+            applications: monthApps.length
           });
         }
 
@@ -118,10 +102,12 @@ export default function AdminReports() {
           totalStudentsHelped: approved,
           totalFoodDistributed: distributedStock.length,
           totalMoneyDistributed: distributedStock.reduce((sum, item) => sum + (item.estimatedValue || 0), 0),
-          averageProcessingTime: 2.5, // Mock data - would calculate from timestamps
+          averageProcessingTime: 2.5,
           successRate,
+          makananAsasCount,
+          foodPackCount,
+          bantuanKecemasanCount,
           monthlyTrend,
-          impactByFaculty: Array.from(facultyMap.values())
         });
       } catch (error) {
         console.error("Error fetching report data:", error);
@@ -133,82 +119,87 @@ export default function AdminReports() {
     fetchReportData();
   }, []);
 
-  const exportToCSV = () => {
-    const csvContent = [
-      ["Statistik Bantuan KongsiRezeki"],
-      ["Tarikh", new Date().toLocaleDateString('ms-MY')],
-      ["", ""],
-      ["Statistik Utama"],
-      ["Jumlah Permohonan", stats.totalApplications],
-      ["Diluluskan", stats.approvedApplications],
-      ["Ditolak", stats.rejectedApplications],
-      ["Menunggu", stats.pendingApplications],
-      ["Kadar Kejayaan (%)", stats.successRate.toFixed(2)],
-      ["", ""],
-      ["Impak & Outcome"],
-      ["Pelajar Dibantu", stats.totalStudentsHelped],
-      ["Makanan Diedarkan", stats.totalFoodDistributed],
-      ["Nilai Wang Diedarkan (RM)", stats.totalMoneyDistributed],
-      ["Masa Prosesan Purata (Hari)", stats.averageProcessingTime],
-      ["", ""],
-      ["Trend Bulanan"],
-      ...stats.monthlyTrend.map(t => [t.month, t.applications, t.approved, t.distributed]),
-      ["", ""],
-      ["Impak Mengikut Fakulti"],
-      ...stats.impactByFaculty.map(f => [f.faculty, f.students, f.foodReceived, f.moneyReceived])
-    ].map(row => row.join(",")).join("\n");
-
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const link = document.createElement("a");
-    const url = URL.createObjectURL(blob);
-    link.setAttribute("href", url);
-    link.setAttribute("download", `laporan-kongsirezeki-${new Date().toISOString().split('T')[0]}.csv`);
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   const exportToPDF = () => {
-    // This would require a PDF library like jsPDF
-    // For now, we'll create a simple text export
-    const reportText = `
-LAPORAN STATISTIK BANTUAN KONGSIREZEKI
-Tarikh: ${new Date().toLocaleDateString('ms-MY')}
-
-STATISTIK UTAMA
-==================
-Jumlah Permohonan: ${stats.totalApplications}
-Diluluskan: ${stats.approvedApplications}
-Ditolak: ${stats.rejectedApplications}
-Menunggu: ${stats.pendingApplications}
-Kadar Kejayaan: ${stats.successRate.toFixed(2)}%
-
-IMPAK & OUTCOME
-==================
-Pelajar Dibantu: ${stats.totalStudentsHelped}
-Makanan Diedarkan: ${stats.totalFoodDistributed}
-Nilai Wang Diedarkan: RM${stats.totalMoneyDistributed}
-Masa Prosesan Purata: ${stats.averageProcessingTime} hari
-
-TREND BULANAN
-===============
-${stats.monthlyTrend.map(t => `${t.month}: ${t.applications} permohonan, ${t.approved} diluluskan`).join('\n')}
-
-IMPAK MENGIKUT FAKULTI
-=========================
-${stats.impactByFaculty.map(f => `${f.faculty}: ${f.students} pelajar`).join('\n')}
-    `;
-
-    const blob = new Blob([reportText], { type: 'text/plain;charset=utf-8;' });
-    const link = document.createElement("a");
-    const url = URL.createObjectURL(blob);
-    link.setAttribute("href", url);
-    link.setAttribute("download", `laporan-kongsirezeki-${new Date().toISOString().split('T')[0]}.txt`);
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const doc = new jsPDF();
+    
+    // Title
+    doc.setFontSize(20);
+    doc.setTextColor(59, 130, 246);
+    doc.text("Laporan Statistik Bantuan KongsiRezeki", 105, 20, { align: "center" });
+    
+    // Date
+    doc.setFontSize(12);
+    doc.setTextColor(100);
+    doc.text(`Tarikh: ${new Date().toLocaleDateString('ms-MY')}`, 105, 30, { align: "center" });
+    
+    let yPosition = 45;
+    
+    // Statistik Mengikut Jenis Bantuan
+    doc.setFontSize(14);
+    doc.setTextColor(0);
+    doc.text("Statistik Mengikut Jenis Bantuan", 20, yPosition);
+    yPosition += 10;
+    
+    doc.setFontSize(11);
+    doc.setTextColor(100);
+    doc.text(`Bantuan Makanan Asas: ${stats.makananAsasCount}`, 25, yPosition);
+    yPosition += 7;
+    doc.text(`Food Pack Mingguan: ${stats.foodPackCount}`, 25, yPosition);
+    yPosition += 7;
+    doc.text(`Bantuan Kecemasan: ${stats.bantuanKecemasanCount}`, 25, yPosition);
+    yPosition += 15;
+    
+    // Statistik Utama
+    doc.setFontSize(14);
+    doc.setTextColor(0);
+    doc.text("Statistik Utama", 20, yPosition);
+    yPosition += 10;
+    
+    doc.setFontSize(11);
+    doc.setTextColor(100);
+    doc.text(`Jumlah Permohonan: ${stats.totalApplications}`, 25, yPosition);
+    yPosition += 7;
+    doc.text(`Diluluskan: ${stats.approvedApplications}`, 25, yPosition);
+    yPosition += 7;
+    doc.text(`Ditolak: ${stats.rejectedApplications}`, 25, yPosition);
+    yPosition += 7;
+    doc.text(`Menunggu: ${stats.pendingApplications}`, 25, yPosition);
+    yPosition += 7;
+    doc.text(`Kadar Kejayaan: ${stats.successRate.toFixed(2)}%`, 25, yPosition);
+    yPosition += 15;
+    
+    // Impak & Outcome
+    doc.setFontSize(14);
+    doc.setTextColor(0);
+    doc.text("Impak & Outcome", 20, yPosition);
+    yPosition += 10;
+    
+    doc.setFontSize(11);
+    doc.setTextColor(100);
+    doc.text(`Pelajar Dibantu: ${stats.totalStudentsHelped}`, 25, yPosition);
+    yPosition += 7;
+    doc.text(`Makanan Diedarkan: ${stats.totalFoodDistributed}`, 25, yPosition);
+    yPosition += 7;
+    doc.text(`Nilai Wang Diedarkan: RM${stats.totalMoneyDistributed}`, 25, yPosition);
+    yPosition += 7;
+    doc.text(`Masa Prosesan Purata: ${stats.averageProcessingTime} hari`, 25, yPosition);
+    yPosition += 15;
+    
+    // Trend Bulanan
+    doc.setFontSize(14);
+    doc.setTextColor(0);
+    doc.text("Trend Bulanan", 20, yPosition);
+    yPosition += 10;
+    
+    doc.setFontSize(11);
+    doc.setTextColor(100);
+    stats.monthlyTrend.forEach(trend => {
+      doc.text(`${trend.month}: ${trend.applications} permohonan`, 25, yPosition);
+      yPosition += 7;
+    });
+    
+    // Save PDF
+    doc.save(`laporan-kongsirezeki-${new Date().toISOString().split('T')[0]}.pdf`);
   };
 
   if (loading) {
@@ -225,36 +216,45 @@ ${stats.impactByFaculty.map(f => `${f.faculty}: ${f.students} pelajar`).join('\n
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-red-50 py-10 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-blue-700 mb-3">
-            Laporan
-          </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Statistik bantuan, outcome & impak program KongsiRezeki.
-          </p>
+        <div className="flex justify-between items-center mb-8">
+          <div>
+            <h1 className="text-3xl font-bold text-blue-700 mb-3">
+              Laporan
+            </h1>
+            <p className="text-gray-600 max-w-2xl">
+              Statistik bantuan, outcome & impak program KongsiRezeki.
+            </p>
+          </div>
+          <button
+            onClick={exportToPDF}
+            className="bg-red-600 hover:bg-red-700 text-white p-3 rounded-lg transition-colors"
+            title="Export PDF"
+          >
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-5L9 2a1 1 0 00-1 1H4z" clipRule="evenodd" />
+            </svg>
+          </button>
         </div>
 
-        {/* Export Buttons */}
+        {/* Statistik Mengikut Jenis Bantuan */}
         <div className="bg-white shadow-xl rounded-2xl p-6 mb-8">
-          <div className="flex flex-wrap gap-4">
-            <button
-              onClick={exportToCSV}
-              className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 00-1.414 1.414L9 10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-              </svg>
-              Export CSV
-            </button>
-            <button
-              onClick={exportToPDF}
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors flex items-center"
-            >
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-5L9 2a1 1 0 00-1 1H4z" clipRule="evenodd" />
-              </svg>
-              Export PDF/Text
-            </button>
+          <h2 className="text-xl font-bold text-gray-800 mb-6">
+            Statistik Mengikut Jenis Bantuan
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-blue-50 p-4 rounded-lg">
+              <div className="font-semibold text-gray-800 mb-2">Bantuan Makanan Asas</div>
+              <div className="text-2xl font-bold text-blue-700">{stats.makananAsasCount}</div>
+            </div>
+            <div className="bg-green-50 p-4 rounded-lg">
+              <div className="font-semibold text-gray-800 mb-2">Food Pack Mingguan</div>
+              <div className="text-2xl font-bold text-green-700">{stats.foodPackCount}</div>
+            </div>
+            <div className="bg-red-50 p-4 rounded-lg">
+              <div className="font-semibold text-gray-800 mb-2">Bantuan Kecemasan</div>
+              <div className="text-2xl font-bold text-red-700">{stats.bantuanKecemasanCount}</div>
+            </div>
           </div>
         </div>
 
@@ -262,10 +262,7 @@ ${stats.impactByFaculty.map(f => `${f.faculty}: ${f.students} pelajar`).join('\n
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
           {/* Statistik Bantuan */}
           <div className="bg-white shadow-xl rounded-2xl p-6">
-            <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9 2a1 1 0 000-2h2a1 1 0 000 2v2a1 1 0 001.414 1.414L10.586 7.707a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" />
-              </svg>
+            <h2 className="text-xl font-bold text-gray-800 mb-6">
               Statistik Bantuan
             </h2>
             
@@ -291,10 +288,7 @@ ${stats.impactByFaculty.map(f => `${f.faculty}: ${f.students} pelajar`).join('\n
 
           {/* Outcome & Impak */}
           <div className="bg-white shadow-xl rounded-2xl p-6">
-            <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-              </svg>
+            <h2 className="text-xl font-bold text-gray-800 mb-6">
               Outcome & Impak
             </h2>
             
@@ -320,46 +314,21 @@ ${stats.impactByFaculty.map(f => `${f.faculty}: ${f.students} pelajar`).join('\n
 
           {/* Monthly Trend */}
           <div className="bg-white shadow-xl rounded-2xl p-6">
-            <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293l-3-3a1 1 0 00-1.414 1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-              </svg>
+            <h2 className="text-xl font-bold text-gray-800 mb-6">
               Trend 6 Bulan
             </h2>
             
-            <div className="space-y-3">
-              {stats.monthlyTrend.map((trend, index) => (
-                <div key={index} className="border-l-4 border-purple-600 pl-4">
-                  <div className="font-medium text-gray-800">{trend.month}</div>
-                  <div className="text-sm text-gray-600">
-                    {trend.applications} permohonan • {trend.approved} diluluskan • {trend.distributed} diedarkan
-                  </div>
-                </div>
-              ))}
+            <div className="h-64">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={stats.monthlyTrend}>
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <XAxis dataKey="month" />
+                  <YAxis />
+                  <Tooltip />
+                  <Bar dataKey="applications" fill="#3B82F6" />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
-          </div>
-        </div>
-
-        {/* Impact by Faculty */}
-        <div className="bg-white shadow-xl rounded-2xl p-6">
-          <h2 className="text-xl font-bold text-gray-800 mb-6 flex items-center">
-            <svg className="w-6 h-6 mr-2 text-red-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3z" />
-            </svg>
-            Impak Mengikut Fakulti
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {stats.impactByFaculty.map((faculty, index) => (
-              <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                <div className="font-semibold text-gray-800 mb-2">{faculty.faculty}</div>
-                <div className="text-sm text-gray-600">
-                  <div>Pelajar: {faculty.students}</div>
-                  <div>Makanan: {faculty.foodReceived}</div>
-                  <div>Wang: RM{faculty.moneyReceived}</div>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
