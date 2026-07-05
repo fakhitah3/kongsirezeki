@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { collection, query, onSnapshot, orderBy, doc, updateDoc, getDoc, getDocs } from "firebase/firestore";
+import { collection, query, onSnapshot, orderBy, doc, updateDoc, getDoc, getDocs, addDoc, serverTimestamp } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
 
 interface Application {
@@ -60,10 +60,41 @@ export default function PengurusanPermohonan() {
   const updateApplicationStatus = async (applicationId: string, newStatus: string) => {
     setUpdating(applicationId);
     try {
+      const application = applications.find(app => app.id === applicationId);
+      if (!application) return;
+
+      const oldStatus = application.status;
+      
       await updateDoc(doc(db, "applications", applicationId), {
         status: newStatus,
         updatedAt: new Date()
       });
+
+      // Create notification if status changed from pending to approved or rejected
+      if (oldStatus === "pending" && (newStatus === "approved" || newStatus === "rejected")) {
+        // Find user ID from users collection
+        const usersQuery = query(collection(db, "users"));
+        const usersSnapshot = await getDocs(usersQuery);
+        const userDoc = usersSnapshot.docs.find((d: any) => d.data().email === application.userEmail);
+        
+        if (userDoc) {
+          const userId = userDoc.id;
+          const title = newStatus === "approved" ? "Permohonan Diluluskan" : "Permohonan Ditolak";
+          const message = newStatus === "approved" 
+            ? `Permohonan ${application.jenisBantuan} anda telah diluluskan. Sila pilih slot pengambilan.`
+            : `Permohonan ${application.jenisBantuan} anda telah ditolak.`;
+          
+          await addDoc(collection(db, "notifications"), {
+            userId,
+            title,
+            message,
+            type: newStatus,
+            read: false,
+            applicationId,
+            createdAt: serverTimestamp()
+          });
+        }
+      }
     } catch (error) {
       console.error("Error updating application:", error);
       alert("Gagal mengemaskini status permohonan");

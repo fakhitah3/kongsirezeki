@@ -324,11 +324,21 @@ return (
 
                   {/* Button */}
                   <button
-                    onClick={() => handleBookSlot(slot.id)}
-                    disabled={booked || full || booking === slot.id}
+                    onClick={() => {
+                      if (booked) {
+                        // Show QR code for existing booking
+                        setSelectedSlot(slot);
+                        setShowQRCode(true);
+                      } else {
+                        handleBookSlot(slot.id);
+                      }
+                    }}
+                    disabled={full || booking === slot.id}
                     className={`w-full py-2.5 rounded-lg font-medium ${
-                      booked || full
+                      full
                         ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+                        : booked
+                        ? "bg-green-600 text-white hover:bg-green-700"
                         : booking === slot.id
                         ? "bg-yellow-500 text-white"
                         : "bg-blue-600 text-white hover:bg-blue-700"
@@ -337,7 +347,7 @@ return (
                     {booking === slot.id
                       ? "Memproses..."
                       : booked
-                      ? "Sudah Dipilih"
+                      ? "Lihat Butiran"
                       : full
                       ? "Penuh"
                       : "Pilih Slot"}
