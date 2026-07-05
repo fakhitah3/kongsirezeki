@@ -6,6 +6,7 @@ import { auth, db } from "@/lib/firebase";
 
 interface Application {
   id: string;
+  applicationId: string;
   jenisBantuan: string;
   justifikasi: string;
   status: string;
@@ -70,7 +71,7 @@ export default function PengurusanPermohonan() {
         updatedAt: new Date()
       });
 
-      // Create notification if status changed from pending to approved or rejected
+      // Create notification if status changed
       if (oldStatus === "pending" && (newStatus === "approved" || newStatus === "rejected")) {
         // Find user ID from users collection
         const usersQuery = query(collection(db, "users"));
@@ -90,7 +91,7 @@ export default function PengurusanPermohonan() {
             message,
             type: newStatus,
             read: false,
-            applicationId,
+            applicationId: application.applicationId || applicationId,
             createdAt: serverTimestamp()
           });
         }
@@ -111,6 +112,10 @@ export default function PengurusanPermohonan() {
         return "bg-blue-100 text-blue-800 border-blue-300";
       case "rejected":
         return "bg-red-100 text-red-800 border-red-300";
+      case "assigned":
+        return "bg-purple-100 text-purple-800 border-purple-300";
+      case "completed":
+        return "bg-green-100 text-green-800 border-green-300";
       default:
         return "bg-gray-100 text-gray-800 border-gray-300";
     }
@@ -124,6 +129,10 @@ export default function PengurusanPermohonan() {
         return "Diluluskan";
       case "rejected":
         return "Ditolak";
+      case "assigned":
+        return "Slot Dipilih";
+      case "completed":
+        return "Selesai";
       default:
         return status;
     }

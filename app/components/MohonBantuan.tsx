@@ -44,8 +44,12 @@ export default function MohonBantuan() {
     setMessage("");
 
     try {
+      // Generate applicationId
+      const applicationId = `APP-${Date.now()}-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
+      
       const applicationData = {
         ...form,
+        applicationId,
         userEmail: auth.currentUser.email,
         status: "pending",
         createdAt: serverTimestamp(),

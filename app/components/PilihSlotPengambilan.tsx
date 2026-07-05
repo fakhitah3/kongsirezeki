@@ -1,12 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { collection, query, where, onSnapshot, doc, updateDoc, addDoc, serverTimestamp } from "firebase/firestore";
+import { useState, useEffect } from "react";
+import { collection, query, where, onSnapshot, doc, updateDoc, addDoc, serverTimestamp, getDocs } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
-import { QRCodeCanvas } from "qrcode.react";
 
 interface Slot {
   id: string;
+  slotId: string;
   date: string;
   time: string;
   location: string;
@@ -20,6 +20,7 @@ interface Booking {
   id: string;
   slotId: string;
   userId: string;
+  applicationId: string;
   status: string;
   createdAt: any;
 }
@@ -32,7 +33,6 @@ export default function PilihSlotPengambilan() {
   const [booking, setBooking] = useState<string | null>(null);
   const [showQRCode, setShowQRCode] = useState(false);
   const [selectedSlot, setSelectedSlot] = useState<Slot | null>(null);
-  const qrRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!auth.currentUser) return;
@@ -104,11 +104,47 @@ export default function PilihSlotPengambilan() {
 
     setBooking(slotId);
     try {
-      // Add booking
+      // Find user's approved or assigned application to get applicationId
+      const applicationsQuery = query(
+        collection(db, "applications"),
+        where("userEmail", "==", auth.currentUser.email),
+        where("status", "in", ["approved", "assigned"])
+      );
+      const applicationsSnapshot = await getDocs(applicationsQuery);
+      const approvedApplication = applicationsSnapshot.docs[0];
+      
+      if (!approvedApplication) {
+        alert("Tiada permohonan yang diluluskan dijumpai.");
+        setBooking(null);
+        return;
+      }
+
+      const applicationId = approvedApplication.data().applicationId || approvedApplication.id;
+      const applicationStatus = approvedApplication.data().status;
+
+      // If application is already assigned, show existing booking instead
+      if (applicationStatus === "assigned") {
+        alert("Anda telah memilih slot untuk permohonan ini. Sila lihat kupon sedia ada.");
+        setBooking(null);
+        
+        // Show existing booking coupon
+        const existingBooking = userBookings.find(b => b.applicationId === applicationId);
+        if (existingBooking) {
+          const bookedSlot = slots.find(s => s.id === existingBooking.slotId);
+          if (bookedSlot) {
+            setSelectedSlot(bookedSlot);
+            setShowQRCode(true);
+          }
+        }
+        return;
+      }
+
+      // Add booking with applicationId
       const bookingRef = await addDoc(collection(db, "bookings"), {
         slotId,
         userId: auth.currentUser.uid,
         userEmail: auth.currentUser.email,
+        applicationId,
         status: "approved",
         createdAt: serverTimestamp()
       });
@@ -120,26 +156,23 @@ export default function PilihSlotPengambilan() {
         await updateDoc(slotRef, {
           currentBookings: slot.currentBookings + 1
         });
-        setSelectedSlot(slot);
-        setShowQRCode(true);
       }
 
+      // Update application status to assigned
+      await updateDoc(doc(db, "applications", approvedApplication.id), {
+        status: "assigned",
+        updatedAt: serverTimestamp()
+      });
+
+      if (slot) {
+        setSelectedSlot(slot);
+      }
+      setShowQRCode(true);
       setBooking(null);
     } catch (error) {
       console.error("Error booking slot:", error);
       alert("Gagal memilih slot. Sila cuba lagi.");
       setBooking(null);
-    }
-  };
-
-  const downloadQRCode = () => {
-    const canvas = qrRef.current?.querySelector("canvas");
-    if (canvas) {
-      const url = canvas.toDataURL("image/png");
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = `qr-code-${selectedSlot?.date}-${selectedSlot?.time}.png`;
-      link.click();
     }
   };
 
@@ -192,33 +225,72 @@ export default function PilihSlotPengambilan() {
       <div className="min-h-screen bg-gray-50 py-10 px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl font-bold text-blue-700 mb-6">Pilih Slot Pengambilan</h1>
-          <div className="bg-white shadow-lg rounded-lg p-8 text-center">
-            <div className="mb-6">
-              <div ref={qrRef} className="flex justify-center mb-4">
-                <QRCodeCanvas 
-                  value={`BOOKING:${auth.currentUser?.email}:${selectedSlot.id}:${selectedSlot.date}:${selectedSlot.time}:${selectedSlot.location}`}
-                  size={200}
-                  level="H"
-                />
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            {/* Coupon Header */}
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
+              <h2 className="text-2xl font-bold text-center">Kupon Pengambilan</h2>
+              <p className="text-center text-blue-100 mt-1">Kongsi Rezeki</p>
+            </div>
+            
+            {/* Coupon Body */}
+            <div className="p-8">
+              {/* Dashed line */}
+              <div className="border-t-2 border-dashed border-gray-300 my-6 relative">
+                <div className="absolute -left-3 -top-3 w-6 h-6 bg-gray-50 rounded-full"></div>
+                <div className="absolute -right-3 -top-3 w-6 h-6 bg-gray-50 rounded-full"></div>
               </div>
+
+              {/* Booking Details */}
+              <div className="bg-blue-50 rounded-lg p-6 mb-6">
+                <h3 className="text-lg font-semibold text-gray-800 mb-4">Butiran Pengambilan</h3>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Tarikh:</span>
+                    <span className="font-medium text-gray-900">{selectedSlot.date}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Masa:</span>
+                    <span className="font-medium text-gray-900">{selectedSlot.time}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Lokasi:</span>
+                    <span className="font-medium text-gray-900">{selectedSlot.location}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Email:</span>
+                    <span className="font-medium text-gray-900">{auth.currentUser?.email}</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Coupon Code */}
+              <div className="bg-gray-100 rounded-lg p-4 text-center mb-6">
+                <p className="text-sm text-gray-600 mb-2">Kod Kupon</p>
+                <p className="text-xl font-mono font-bold text-gray-900 tracking-wider">
+                  {auth.currentUser?.email?.split('@')[0].toUpperCase()}-{selectedSlot.date.replace(/-/g, '')}-{selectedSlot.time.replace(':', '')}
+                </p>
+              </div>
+
+              {/* Instructions */}
+              <div className="text-center">
+                <p className="text-sm text-gray-500">
+                  Sila tunjukkan kupon ini semasa pengambilan.
+                </p>
+              </div>
+            </div>
+
+            {/* Coupon Footer */}
+            <div className="bg-gray-100 p-4 text-center">
               <button
-                onClick={downloadQRCode}
-                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 mb-6"
+                onClick={() => {
+                  setShowQRCode(false);
+                  setSelectedSlot(null);
+                }}
+                className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
               >
-                Muat Turun Kod QR
+                Kembali
               </button>
             </div>
-            <div className="bg-gray-50 rounded-lg p-6 text-left">
-              <h2 className="text-lg font-semibold text-gray-800 mb-4">Butiran Pengambilan</h2>
-              <div className="space-y-2">
-                <p className="text-gray-700"><span className="font-medium">Tarikh:</span> {selectedSlot.date}</p>
-                <p className="text-gray-700"><span className="font-medium">Masa:</span> {selectedSlot.time}</p>
-                <p className="text-gray-700"><span className="font-medium">Lokasi:</span> {selectedSlot.location}</p>
-              </div>
-            </div>
-            <p className="text-sm text-gray-500 mt-4">
-              Sila tunjukkan kod QR ini semasa pengambilan.
-            </p>
           </div>
         </div>
       </div>

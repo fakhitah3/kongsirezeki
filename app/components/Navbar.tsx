@@ -122,6 +122,7 @@ export default function Navbar() {
         { label: "Dashboard", path: "/dashboard/admin" },
         { label: "Pengurusan Pelajar", path: "/admin/students" },
         { label: "Pengurusan Permohonan", path: "/admin/applications" },
+        { label: "Pengurusan Bantuan", path: "/admin/aid" },
         { label: "Pengurusan Stok", path: "/admin/stock" },
         { label: "Pengurusan Kempen", path: "/admin/campaigns" },
         { label: "Pengurusan Sumbangan", path: "/admin/donations" },

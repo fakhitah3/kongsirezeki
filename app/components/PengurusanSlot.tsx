@@ -6,6 +6,7 @@ import { auth, db } from "@/lib/firebase";
 
 interface Slot {
   id: string;
+  slotId: string;
   date: string;
   time: string;
   location: string;
@@ -75,8 +76,12 @@ export default function PengurusanSlot() {
           updatedAt: serverTimestamp()
         });
       } else {
+        // Generate slotId
+        const slotId = `SLOT-${Date.now()}-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
+        
         // Add new slot
         await addDoc(collection(db, "slots"), {
+          slotId,
           ...formData,
           currentBookings: 0,
           status: "available",
@@ -235,9 +240,12 @@ export default function PengurusanSlot() {
                 className="w-full border border-gray-300 rounded px-3 py-2"
               >
                 <option value="">Semua Lokasi</option>
-                <option value="UMK Bachok">UMK Bachok</option>
-                <option value="UMK Kampus Kota">UMK Kampus Kota</option>
-                <option value="UMK Jeli">UMK Jeli</option>
+                <option value="Dapur Siswa Madani UMK Bachok">Dapur Siswa Madani UMK Bachok</option>
+                <option value="Dapur Siswa Madani UMK Kampus Kota">Dapur Siswa Madani UMK Kampus Kota</option>
+                <option value="Dapur Siswa Madani UMK Jeli">Dapur Siswa Madani UMK Jeli</option>
+                <option value="Pejabat HEP UMK Kampus Bachok">Pejabat HEP UMK Kampus Bachok</option>
+                <option value="Pejabat HEP UMK Kampus Kota">Pejabat HEP UMK Kampus Kota</option>
+                <option value="Pejabat HEP UMK Kampus Jeli">Pejabat HEP UMK Kampus Jeli</option>
               </select>
             </div>
             <div>
@@ -293,9 +301,12 @@ export default function PengurusanSlot() {
                     required
                   >
                     <option value="">Pilih lokasi</option>
-                    <option value="Food Bank Kampus">Food Bank Kampus</option>
-                    <option value="Kolej Kediaman">Kolej Kediaman</option>
-                    <option value="Pejabat HEP">Pejabat HEP</option>
+                    <option value="Dapur Siswa Madani UMK Bachok">Dapur Siswa Madani UMK Bachok</option>
+                    <option value="Dapur Siswa Madani UMK Kampus Kota">Dapur Siswa Madani UMK Kampus Kota</option>
+                    <option value="Dapur Siswa Madani UMK Jeli">Dapur Siswa Madani UMK Jeli</option>
+                    <option value="Pejabat HEP UMK Kampus Bachok">Pejabat HEP UMK Kampus Bachok</option>
+                    <option value="Pejabat HEP UMK Kampus Kota">Pejabat HEP UMK Kampus Kota</option>
+                    <option value="Pejabat HEP UMK Kampus Jeli">Pejabat HEP UMK Kampus Jeli</option>
                   </select>
                 </div>
                 <div>
@@ -349,6 +360,9 @@ export default function PengurusanSlot() {
             <table className="w-full">
               <thead className="bg-gray-50 border-b">
                 <tr>
+                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    ID Slot
+                  </th>
                   <th 
                     className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer hover:bg-gray-100"
                     onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
@@ -375,6 +389,9 @@ export default function PengurusanSlot() {
               <tbody className="bg-white divide-y divide-gray-200">
                 {getFilteredAndSortedSlots().map((slot) => (
                   <tr key={slot.id} className="hover:bg-gray-50">
+                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900 font-medium">
+                      {slot.slotId || "-"}
+                    </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
                       {slot.date}
                     </td>

@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 
 interface Application {
   id: string;
+  applicationId: string;
   jenisBantuan: string;
   justifikasi: string;
   status: string;
@@ -48,6 +49,10 @@ export default function StatusPermohonan() {
         return "bg-blue-50 text-blue-700 border-blue-200";
       case "rejected":
         return "bg-red-50 text-red-700 border-red-200";
+      case "assigned":
+        return "bg-purple-50 text-purple-700 border-purple-200";
+      case "completed":
+        return "bg-green-50 text-green-700 border-green-200";
       default:
         return "bg-gray-50 text-gray-700 border-gray-200";
     }
@@ -61,6 +66,10 @@ export default function StatusPermohonan() {
         return "Diluluskan";
       case "rejected":
         return "Ditolak";
+      case "assigned":
+        return "Slot Dipilih";
+      case "completed":
+        return "Selesai";
       default:
         return status;
     }
@@ -128,6 +137,14 @@ export default function StatusPermohonan() {
                         className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-700"
                       >
                         Pilih Slot
+                      </button>
+                    )}
+                    {app.status === "assigned" && (
+                      <button
+                        onClick={() => router.push("/slots")}
+                        className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium hover:bg-purple-700"
+                      >
+                        Lihat QR
                       </button>
                     )}
                   </div>

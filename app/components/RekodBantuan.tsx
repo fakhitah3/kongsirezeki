@@ -6,6 +6,7 @@ import { auth, db } from "@/lib/firebase";
 
 interface Application {
   id: string;
+  applicationId: string;
   jenisBantuan: string;
   justifikasi: string;
   status: string;
@@ -23,7 +24,7 @@ export default function RekodBantuan() {
     const q = query(
       collection(db, "applications"),
       where("userEmail", "==", auth.currentUser.email),
-      where("status", "==", "approved"),
+      where("status", "==", "completed"),
       orderBy("createdAt", "desc")
     );
 
@@ -88,8 +89,8 @@ export default function RekodBantuan() {
                     </h3>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="px-3 py-1 rounded-full text-sm font-medium border bg-blue-50 text-blue-700 border-blue-200">
-                      Diluluskan
+                    <span className="px-3 py-1 rounded-full text-sm font-medium border bg-green-50 text-green-700 border-green-200">
+                      Selesai
                     </span>
                   </div>
                 </div>
