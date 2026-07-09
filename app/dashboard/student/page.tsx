@@ -1,141 +1,133 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { auth } from "@/lib/firebase";
-import { db } from "@/lib/firebase";
-import { collection, query, where, getDocs, orderBy, limit } from "firebase/firestore";
+import { auth, db } from "@/lib/firebase";
+import {
+  collection, query, where, getDocs, orderBy, limit,
+  doc, getDoc, onSnapshot
+} from "firebase/firestore";
 import { useRouter } from "next/navigation";
 
 interface Application {
   id: string;
-  status: 'pending' | 'approved' | 'rejected';
-  createdAt: Date;
-  type: string;
-}
-
-interface ActiveAid {
-  id: string;
-  type: string;
-  description: string;
-  expiryDate: Date;
+  jenisBantuan: string;
+  status: string;
+  createdAt: any;
 }
 
 interface Slot {
   id: string;
-  date: Date;
+  date: string;
   time: string;
   location: string;
-  status: 'booked' | 'available';
 }
 
 interface Notification {
   id: string;
-  type: 'approval' | 'reminder' | 'info';
+  type: string;
   message: string;
-  createdAt: Date;
+  createdAt: any;
   read: boolean;
 }
 
 export default function StudentDashboard() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
+  const [userName, setUserName] = useState("");
   const [applications, setApplications] = useState<Application[]>([]);
-  const [activeAids, setActiveAids] = useState<ActiveAid[]>([]);
   const [nextSlot, setNextSlot] = useState<Slot | null>(null);
   const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [userEmail, setUserEmail] = useState<string>("");
 
   useEffect(() => {
-    const fetchDashboardData = async () => {
-      const user = auth.currentUser;
-      if (!user) {
-        router.push('/login');
-        return;
-      }
+    const user = auth.currentUser;
+    if (!user) { router.push('/login'); return; }
 
-      setUserEmail(user.email || "");
-
+    const fetchAll = async () => {
       try {
-        // Fetch applications
-        const applicationsQuery = query(
+        // User name
+        const userSnap = await getDoc(doc(db, "users", user.uid));
+        if (userSnap.exists()) setUserName(userSnap.data().name || user.email || "");
+
+        // Applications (field is userEmail)
+        const appsSnap = await getDocs(query(
           collection(db, "applications"),
-          where("studentEmail", "==", user.email),
-          limit(10)
-        );
-        const applicationsSnapshot = await getDocs(applicationsQuery);
-        const applicationsData = applicationsSnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data(),
-          createdAt: doc.data().createdAt?.toDate()
-        })) as Application[];
-        setApplications(applicationsData);
+          where("userEmail", "==", user.email),
+          orderBy("createdAt", "desc"),
+          limit(20)
+        ));
+        const apps = appsSnap.docs.map(d => ({ id: d.id, ...d.data() })) as Application[];
+        setApplications(apps);
 
-        // Fetch active aids
-        const activeAidsQuery = query(
-          collection(db, "activeAids"),
-          where("studentEmail", "==", user.email),
-          where("status", "==", "active")
-        );
-        const activeAidsSnapshot = await getDocs(activeAidsQuery);
-        const activeAidsData = activeAidsSnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data(),
-          expiryDate: doc.data().expiryDate?.toDate()
-        })) as ActiveAid[];
-        setActiveAids(activeAidsData);
-
-        // Fetch next slot
-        const slotsQuery = query(
-          collection(db, "slots"),
-          where("studentEmail", "==", user.email),
-          where("date", ">=", new Date()),
-          where("status", "==", "booked"),
+        // Next slot — query bookings by userId, then fetch the slot doc
+        const bookingsSnap = await getDocs(query(
+          collection(db, "bookings"),
+          where("userId", "==", user.uid),
+          where("status", "==", "approved"),
           limit(1)
-        );
-        const slotsSnapshot = await getDocs(slotsQuery);
-        if (!slotsSnapshot.empty) {
-          const slotData = {
-            id: slotsSnapshot.docs[0].id,
-            ...slotsSnapshot.docs[0].data(),
-            date: slotsSnapshot.docs[0].data().date?.toDate()
-          } as Slot;
-          setNextSlot(slotData);
+        ));
+        if (!bookingsSnap.empty) {
+          const booking = bookingsSnap.docs[0].data();
+          const slotSnap = await getDoc(doc(db, "slots", booking.slotId));
+          if (slotSnap.exists()) {
+            setNextSlot({ id: slotSnap.id, ...slotSnap.data() } as Slot);
+          }
         }
 
-        // Fetch notifications
-        const notificationsQuery = query(
+        // Notifications by userId
+        const notifSnap = await getDocs(query(
           collection(db, "notifications"),
-          where("studentEmail", "==", user.email),
+          where("userId", "==", user.uid),
           where("read", "==", false),
+          orderBy("createdAt", "desc"),
           limit(5)
-        );
-        const notificationsSnapshot = await getDocs(notificationsQuery);
-        const notificationsData = notificationsSnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data(),
-          createdAt: doc.data().createdAt?.toDate()
-        })) as Notification[];
-        setNotifications(notificationsData);
+        ));
+        setNotifications(notifSnap.docs.map(d => ({ id: d.id, ...d.data() })) as Notification[]);
 
-      } catch (error) {
-        console.error("Error fetching dashboard data:", error);
+      } catch (err) {
+        console.error("Dashboard fetch error:", err);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchDashboardData();
+    fetchAll();
   }, [router]);
 
-  const getStatusCount = () => {
-    const counts = { pending: 0, approved: 0, rejected: 0 };
-    applications.forEach(app => {
-      counts[app.status]++;
-    });
-    return counts;
+  const statusCounts = {
+    pending: applications.filter(a => a.status === "pending").length,
+    approved: applications.filter(a => a.status === "approved").length,
+    rejected: applications.filter(a => a.status === "rejected").length,
+    completed: applications.filter(a => a.status === "completed").length,
   };
 
-  const statusCounts = getStatusCount();
+  const getJenisBantuanText = (jenis: string) => {
+    switch (jenis) {
+      case "makanan_asas": return "Bantuan makanan asas";
+      case "food_pack": return "Food pack mingguan";
+      case "kecemasan": return "Bantuan kecemasan";
+      default: return jenis;
+    }
+  };
+
+  const getStatusBadge = (status: string) => {
+    switch (status) {
+      case "pending": return "bg-yellow-100 text-yellow-700";
+      case "approved": return "bg-blue-100 text-blue-700";
+      case "rejected": return "bg-red-100 text-red-700";
+      case "completed": return "bg-green-100 text-green-700";
+      default: return "bg-gray-100 text-gray-700";
+    }
+  };
+
+  const getStatusText = (status: string) => {
+    switch (status) {
+      case "pending": return "Menunggu";
+      case "approved": return "Diluluskan";
+      case "rejected": return "Ditolak";
+      case "completed": return "Selesai";
+      default: return status;
+    }
+  };
 
   if (loading) {
     return (
@@ -150,120 +142,89 @@ export default function StudentDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard Pelajar</h1>
-          <p className="text-gray-600 mt-2">Selamat datang, {userEmail}</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">Dashboard Pelajar</h1>
+          <p className="text-gray-600 mt-1">Selamat datang, <span className="font-medium">{userName}</span></p>
         </div>
 
         {/* Status Summary */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white rounded-lg shadow p-6">
-            <div className="flex items-center">
-              <div className="p-3 bg-yellow-100 rounded-full">
-                <div className="w-6 h-6 bg-yellow-500 rounded-full"></div>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm text-gray-600">Menunggu Kelulusan</p>
-                <p className="text-2xl font-bold text-yellow-600">{statusCounts.pending}</p>
-              </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          {[
+            { label: "Menunggu", count: statusCounts.pending, color: "yellow" },
+            { label: "Diluluskan", count: statusCounts.approved, color: "blue" },
+            { label: "Ditolak", count: statusCounts.rejected, color: "red" },
+            { label: "Selesai", count: statusCounts.completed, color: "green" },
+          ].map(({ label, count, color }) => (
+            <div key={label} className="bg-white rounded-xl shadow-sm border border-gray-100 p-5">
+              <p className="text-sm text-gray-500">{label}</p>
+              <p className={`text-3xl font-bold mt-1 text-${color}-600`}>{count}</p>
             </div>
-          </div>
-
-          <div className="bg-white rounded-lg shadow p-6">
-            <div className="flex items-center">
-              <div className="p-3 bg-green-100 rounded-full">
-                <div className="w-6 h-6 bg-green-500 rounded-full"></div>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm text-gray-600">Diluluskan</p>
-                <p className="text-2xl font-bold text-green-600">{statusCounts.approved}</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-lg shadow p-6">
-            <div className="flex items-center">
-              <div className="p-3 bg-red-100 rounded-full">
-                <div className="w-6 h-6 bg-red-500 rounded-full"></div>
-              </div>
-              <div className="ml-4">
-                <p className="text-sm text-gray-600">Ditolak</p>
-                <p className="text-2xl font-bold text-red-600">{statusCounts.rejected}</p>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Active Aids */}
-          <div className="bg-white rounded-lg shadow">
-            <div className="p-6 border-b">
-              <h2 className="text-lg font-semibold text-gray-900">Bantuan Aktif</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+          {/* Recent Applications */}
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100">
+            <div className="p-5 border-b border-gray-100 flex justify-between items-center">
+              <h2 className="text-base font-semibold text-gray-800">Permohonan Terkini</h2>
+              <button onClick={() => router.push('/status')} className="text-sm text-blue-600 hover:underline">Lihat semua</button>
             </div>
-            <div className="p-6">
-              {activeAids.length > 0 ? (
-                <div className="space-y-4">
-                  {activeAids.map((aid) => (
-                    <div key={aid.id} className="border rounded-lg p-4">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <h3 className="font-medium text-gray-900">{aid.type}</h3>
-                          <p className="text-sm text-gray-600 mt-1">{aid.description}</p>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-sm text-gray-500">Tamat:</p>
-                          <p className="text-sm font-medium">
-                            {aid.expiryDate?.toLocaleDateString('ms-MY')}
-                          </p>
-                        </div>
+            <div className="p-5">
+              {applications.length === 0 ? (
+                <p className="text-gray-400 text-center py-6">Tiada permohonan lagi</p>
+              ) : (
+                <div className="space-y-3">
+                  {applications.slice(0, 4).map(app => (
+                    <div key={app.id} className="flex justify-between items-center py-2 border-b border-gray-50 last:border-0">
+                      <div>
+                        <p className="text-sm font-medium text-gray-800">{getJenisBantuanText(app.jenisBantuan)}</p>
+                        <p className="text-xs text-gray-400">{app.createdAt?.toDate?.()?.toLocaleDateString("ms-MY")}</p>
                       </div>
+                      <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${getStatusBadge(app.status)}`}>
+                        {getStatusText(app.status)}
+                      </span>
                     </div>
                   ))}
                 </div>
-              ) : (
-                <p className="text-gray-500 text-center py-8">Tiada bantuan aktif pada masa ini</p>
               )}
             </div>
           </div>
 
           {/* Next Slot */}
-          <div className="bg-white rounded-lg shadow">
-            <div className="p-6 border-b">
-              <h2 className="text-lg font-semibold text-gray-900">Slot Pengambilan Seterusnya</h2>
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100">
+            <div className="p-5 border-b border-gray-100">
+              <h2 className="text-base font-semibold text-gray-800">Slot Pengambilan</h2>
             </div>
-            <div className="p-6">
+            <div className="p-5">
               {nextSlot ? (
-                <div className="border rounded-lg p-4">
-                  <div className="space-y-3">
-                    <div>
-                      <p className="text-sm text-gray-500">Tarikh</p>
-                      <p className="font-medium">{nextSlot.date?.toLocaleDateString('ms-MY')}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Masa</p>
-                      <p className="font-medium">{nextSlot.time}</p>
-                    </div>
-                    <div>
-                      <p className="text-sm text-gray-500">Lokasi</p>
-                      <p className="font-medium">{nextSlot.location}</p>
-                    </div>
-                    <div className="pt-3">
-                      <button 
-                        onClick={() => router.push('/slots')}
-                        className="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors"
-                      >
-                        Urus Slot
-                      </button>
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-500">Tarikh</span>
+                    <span className="text-sm font-medium text-gray-800">{nextSlot.date}</span>
                   </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-500">Masa</span>
+                    <span className="text-sm font-medium text-gray-800">{nextSlot.time}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-sm text-gray-500">Lokasi</span>
+                    <span className="text-sm font-medium text-gray-800">{nextSlot.location}</span>
+                  </div>
+                  <button
+                    onClick={() => router.push('/slots')}
+                    className="mt-2 w-full bg-blue-600 text-white py-2 rounded-lg text-sm hover:bg-blue-700 transition-colors"
+                  >
+                    Urus Slot
+                  </button>
                 </div>
               ) : (
-                <div className="text-center py-8">
-                  <p className="text-gray-500 mb-4">Tiada slot pengambilan dijadualkan</p>
-                  <button 
+                <div className="text-center py-6">
+                  <p className="text-gray-400 mb-4">Tiada slot pengambilan dijadualkan</p>
+                  <button
                     onClick={() => router.push('/slots')}
-                    className="bg-blue-700 text-white px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors"
+                    className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-blue-700 transition-colors"
                   >
                     Pilih Slot
                   </button>
@@ -274,68 +235,42 @@ export default function StudentDashboard() {
         </div>
 
         {/* Notifications */}
-        <div className="bg-white rounded-lg shadow mt-8">
-          <div className="p-6 border-b">
-            <h2 className="text-lg font-semibold text-gray-900">Notifikasi Penting</h2>
+        <div className="bg-white rounded-xl shadow-sm border border-gray-100 mb-6">
+          <div className="p-5 border-b border-gray-100">
+            <h2 className="text-base font-semibold text-gray-800">Notifikasi</h2>
           </div>
-          <div className="p-6">
-            {notifications.length > 0 ? (
+          <div className="p-5">
+            {notifications.length === 0 ? (
+              <p className="text-gray-400 text-center py-6">Tiada notifikasi baru</p>
+            ) : (
               <div className="space-y-3">
-                {notifications.map((notification) => (
-                  <div 
-                    key={notification.id} 
-                    className={`border rounded-lg p-4 ${
-                      notification.type === 'approval' ? 'border-green-200 bg-green-50' :
-                      notification.type === 'reminder' ? 'border-yellow-200 bg-yellow-50' :
-                      'border-blue-200 bg-blue-50'
-                    }`}
-                  >
-                    <div className="flex items-start">
-                      <div className={`w-2 h-2 rounded-full mt-2 mr-3 ${
-                        notification.type === 'approval' ? 'bg-green-500' :
-                        notification.type === 'reminder' ? 'bg-yellow-500' :
-                        'bg-blue-500'
-                      }`}></div>
-                      <div className="flex-1">
-                        <p className="text-gray-900">{notification.message}</p>
-                        <p className="text-sm text-gray-500 mt-1">
-                          {notification.createdAt?.toLocaleDateString('ms-MY')} {notification.createdAt?.toLocaleTimeString('ms-MY')}
-                        </p>
-                      </div>
+                {notifications.map(n => (
+                  <div key={n.id} className="flex items-start gap-3 p-3 rounded-lg bg-blue-50 border border-blue-100">
+                    <div className="w-2 h-2 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"></div>
+                    <div>
+                      <p className="text-sm text-gray-800">{n.message}</p>
+                      <p className="text-xs text-gray-400 mt-0.5">{n.createdAt?.toDate?.()?.toLocaleDateString("ms-MY")}</p>
                     </div>
                   </div>
                 ))}
               </div>
-            ) : (
-              <p className="text-gray-500 text-center py-8">Tiada notifikasi baru</p>
             )}
           </div>
         </div>
 
         {/* Quick Actions */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <button 
-            onClick={() => router.push('/apply')}
-            className="bg-blue-700 text-white p-4 rounded-lg hover:bg-blue-800 transition-colors"
-          >
-            <h3 className="font-medium">Mohon Bantuan</h3>
-            <p className="text-sm mt-1 opacity-90">Hantar permohonan baharu</p>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <button onClick={() => router.push('/apply')} className="bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-colors text-left">
+            <p className="font-semibold">Mohon Bantuan</p>
+            <p className="text-sm mt-1 opacity-80">Hantar permohonan baharu</p>
           </button>
-          
-          <button 
-            onClick={() => router.push('/status')}
-            className="bg-gray-700 text-white p-4 rounded-lg hover:bg-gray-800 transition-colors"
-          >
-            <h3 className="font-medium">Semak Status</h3>
-            <p className="text-sm mt-1 opacity-90">Lihat status permohonan</p>
+          <button onClick={() => router.push('/status')} className="bg-gray-700 text-white p-4 rounded-xl hover:bg-gray-800 transition-colors text-left">
+            <p className="font-semibold">Semak Status</p>
+            <p className="text-sm mt-1 opacity-80">Lihat status permohonan</p>
           </button>
-          
-          <button 
-            onClick={() => router.push('/profile')}
-            className="bg-purple-700 text-white p-4 rounded-lg hover:bg-purple-800 transition-colors"
-          >
-            <h3 className="font-medium">Kemas Kini Profil</h3>
-            <p className="text-sm mt-1 opacity-90">Edit maklumat peribadi</p>
+          <button onClick={() => router.push('/profile')} className="bg-purple-600 text-white p-4 rounded-xl hover:bg-purple-700 transition-colors text-left">
+            <p className="font-semibold">Kemas Kini Profil</p>
+            <p className="text-sm mt-1 opacity-80">Edit maklumat peribadi</p>
           </button>
         </div>
       </div>

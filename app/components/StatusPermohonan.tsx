@@ -117,34 +117,20 @@ export default function StatusPermohonan() {
                 key={app.id}
                 className="bg-white shadow-md hover:shadow-xl transition-all duration-300 rounded-2xl p-6 border border-gray-100"
               >
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {getJenisBantuanText(app.jenisBantuan)}
-                    </h3>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={`px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(
-                        app.status
-                      )}`}
-                    >
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-4">
+                  <h3 className="text-xl font-bold text-gray-900">
+                    {getJenisBantuanText(app.jenisBantuan)}
+                  </h3>
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className={`px-3 py-1 rounded-full text-sm font-medium border ${getStatusColor(app.status)}`}>
                       {getStatusText(app.status)}
                     </span>
                     {app.status === "approved" && (
                       <button
                         onClick={() => router.push("/slots")}
-                        className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium hover:bg-blue-700"
+                        className="bg-blue-600 text-white px-4 py-1.5 rounded-lg text-sm font-medium hover:bg-blue-700"
                       >
                         Pilih Slot
-                      </button>
-                    )}
-                    {app.status === "assigned" && (
-                      <button
-                        onClick={() => router.push("/slots")}
-                        className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-medium hover:bg-purple-700"
-                      >
-                        Lihat QR
                       </button>
                     )}
                   </div>

@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { collection, query, where, onSnapshot, doc, updateDoc, addDoc, serverTimestamp, getDocs } from "firebase/firestore";
+import { collection, query, where, onSnapshot, doc, updateDoc, addDoc, serverTimestamp, getDocs, getDoc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
+import { QRCodeSVG } from "qrcode.react";
+import { useRouter } from "next/navigation";
 
 interface Slot {
   id: string;
@@ -29,13 +31,22 @@ export default function PilihSlotPengambilan() {
   const [slots, setSlots] = useState<Slot[]>([]);
   const [userBookings, setUserBookings] = useState<Booking[]>([]);
   const [hasApprovedApplication, setHasApprovedApplication] = useState(false);
+  const [completedSlot, setCompletedSlot] = useState<{ location: string; date: string; time: string } | null>(null);
   const [loading, setLoading] = useState(true);
   const [booking, setBooking] = useState<string | null>(null);
   const [showQRCode, setShowQRCode] = useState(false);
   const [selectedSlot, setSelectedSlot] = useState<Slot | null>(null);
+  const [showSuccessDialog, setShowSuccessDialog] = useState(false);
+  const [studentName, setStudentName] = useState<string>("");
+  const router = useRouter();
 
   useEffect(() => {
     if (!auth.currentUser) return;
+
+    // Fetch student name from Firestore
+    getDoc(doc(db, "users", auth.currentUser.uid)).then((snap) => {
+      if (snap.exists()) setStudentName(snap.data().name || auth.currentUser?.displayName || "");
+    });
 
     // Fetch user's approved applications
     const applicationsQuery = query(
@@ -46,6 +57,24 @@ export default function PilihSlotPengambilan() {
 
     const unsubscribeApplications = onSnapshot(applicationsQuery, (snapshot) => {
       setHasApprovedApplication(!snapshot.empty);
+    });
+
+    // Fetch completed application with slot details (already picked a slot)
+    const completedQuery = query(
+      collection(db, "applications"),
+      where("userEmail", "==", auth.currentUser.email),
+      where("status", "==", "completed")
+    );
+
+    const unsubscribeCompleted = onSnapshot(completedQuery, (snapshot) => {
+      if (!snapshot.empty) {
+        const data = snapshot.docs[0].data();
+        if (data.slotLocation && data.slotDate && data.slotTime) {
+          setCompletedSlot({ location: data.slotLocation, date: data.slotDate, time: data.slotTime });
+        }
+      } else {
+        setCompletedSlot(null);
+      }
     });
 
     // Fetch available slots
@@ -79,6 +108,7 @@ export default function PilihSlotPengambilan() {
 
     return () => {
       unsubscribeApplications();
+      unsubscribeCompleted();
       unsubscribeSlots();
       unsubscribeBookings();
     };
@@ -87,28 +117,13 @@ export default function PilihSlotPengambilan() {
   const handleBookSlot = async (slotId: string) => {
     if (!auth.currentUser) return;
 
-    // Check if user already has a booking
-    const existingBooking = userBookings.find(booking => 
-      booking.status === "approved" || booking.status === "pending"
-    );
-
-    if (existingBooking) {
-      // Show QR code for existing booking instead of alerting
-      const bookedSlot = slots.find(s => s.id === existingBooking.slotId);
-      if (bookedSlot) {
-        setSelectedSlot(bookedSlot);
-        setShowQRCode(true);
-      }
-      return;
-    }
-
     setBooking(slotId);
     try {
       // Find user's approved or assigned application to get applicationId
       const applicationsQuery = query(
         collection(db, "applications"),
         where("userEmail", "==", auth.currentUser.email),
-        where("status", "in", ["approved", "assigned"])
+        where("status", "==", "approved")
       );
       const applicationsSnapshot = await getDocs(applicationsQuery);
       const approvedApplication = applicationsSnapshot.docs[0];
@@ -120,24 +135,6 @@ export default function PilihSlotPengambilan() {
       }
 
       const applicationId = approvedApplication.data().applicationId || approvedApplication.id;
-      const applicationStatus = approvedApplication.data().status;
-
-      // If application is already assigned, show existing booking instead
-      if (applicationStatus === "assigned") {
-        alert("Anda telah memilih slot untuk permohonan ini. Sila lihat kupon sedia ada.");
-        setBooking(null);
-        
-        // Show existing booking coupon
-        const existingBooking = userBookings.find(b => b.applicationId === applicationId);
-        if (existingBooking) {
-          const bookedSlot = slots.find(s => s.id === existingBooking.slotId);
-          if (bookedSlot) {
-            setSelectedSlot(bookedSlot);
-            setShowQRCode(true);
-          }
-        }
-        return;
-      }
 
       // Add booking with applicationId
       const bookingRef = await addDoc(collection(db, "bookings"), {
@@ -158,16 +155,20 @@ export default function PilihSlotPengambilan() {
         });
       }
 
-      // Update application status to assigned
+      // Update application status to completed and store slot details
       await updateDoc(doc(db, "applications", approvedApplication.id), {
-        status: "assigned",
+        status: "completed",
+        slotId,
+        slotLocation: slot?.location ?? "",
+        slotDate: slot?.date ?? "",
+        slotTime: slot?.time ?? "",
         updatedAt: serverTimestamp()
       });
 
       if (slot) {
         setSelectedSlot(slot);
       }
-      setShowQRCode(true);
+      setShowSuccessDialog(true);
       setBooking(null);
     } catch (error) {
       console.error("Error booking slot:", error);
@@ -202,90 +203,114 @@ export default function PilihSlotPengambilan() {
       <div className="min-h-screen bg-gray-50 py-10 px-4">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-2xl font-bold text-blue-700 mb-6">Pilih Slot Pengambilan</h1>
-          <div className="bg-white shadow-lg rounded-lg p-8 text-center">
-            <p className="text-gray-600">Tiada permohonan yang telah lulus.</p>
-          </div>
+          {completedSlot ? (
+            <div className="bg-white shadow-lg rounded-2xl p-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                  <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h2 className="text-lg font-bold text-gray-800">Slot Telah Dipilih</h2>
+                  <p className="text-sm text-gray-500">Anda telah berjaya memilih slot pengambilan</p>
+                </div>
+              </div>
+              <div className="bg-blue-50 rounded-xl p-5 space-y-3 mb-6">
+                <div className="flex justify-between">
+                  <span className="text-gray-500 text-sm">Lokasi</span>
+                  <span className="font-semibold text-gray-800">{completedSlot.location}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-500 text-sm">Tarikh</span>
+                  <span className="font-semibold text-gray-800">{completedSlot.date}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span className="text-gray-500 text-sm">Masa</span>
+                  <span className="font-semibold text-gray-800">{completedSlot.time}</span>
+                </div>
+              </div>
+              <button
+                onClick={() => router.push("/records")}
+                className="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+              >
+                Lihat Rekod Bantuan
+              </button>
+            </div>
+          ) : (
+            <div className="bg-white shadow-lg rounded-lg p-8 text-center">
+              <p className="text-gray-600">Tiada permohonan yang telah lulus.</p>
+            </div>
+          )}
         </div>
       </div>
     );
   }
 
-  // Check if user already has a booking
-  const existingBooking = userBookings.find(b => b.status === "approved" || b.status === "pending");
-  if (existingBooking && !showQRCode) {
-    const bookedSlot = slots.find(s => s.id === existingBooking.slotId);
-    if (bookedSlot) {
-      setSelectedSlot(bookedSlot);
-      setShowQRCode(true);
-    }
-  }
-
   if (showQRCode && selectedSlot) {
+    const qrData = JSON.stringify({
+      nama: studentName || auth.currentUser?.email,
+      lokasi: selectedSlot.location,
+      tarikh: selectedSlot.date,
+      masa: selectedSlot.time,
+    });
+
     return (
       <div className="min-h-screen bg-gray-50 py-10 px-4">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-2xl font-bold text-blue-700 mb-6">Pilih Slot Pengambilan</h1>
-          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+        <div className="max-w-md mx-auto">
+          <h1 className="text-2xl font-bold text-blue-700 mb-6 text-center">Pilih Slot Pengambilan</h1>
+          <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
             {/* Coupon Header */}
             <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6">
               <h2 className="text-2xl font-bold text-center">Kupon Pengambilan</h2>
               <p className="text-center text-blue-100 mt-1">Kongsi Rezeki</p>
             </div>
-            
+
             {/* Coupon Body */}
             <div className="p-8">
-              {/* Dashed line */}
+              {/* QR Code */}
+              <div className="flex justify-center mb-6">
+                <div className="bg-white p-3 rounded-xl shadow-md border border-gray-100">
+                  <QRCodeSVG value={qrData} size={180} />
+                </div>
+              </div>
+              <p className="text-center text-xs text-gray-400 mb-6">Imbas kod QR ini semasa pengambilan</p>
+
+              {/* Dashed divider */}
               <div className="border-t-2 border-dashed border-gray-300 my-6 relative">
-                <div className="absolute -left-3 -top-3 w-6 h-6 bg-gray-50 rounded-full"></div>
-                <div className="absolute -right-3 -top-3 w-6 h-6 bg-gray-50 rounded-full"></div>
+                <div className="absolute -left-8 -top-3 w-6 h-6 bg-gray-50 rounded-full border border-gray-200"></div>
+                <div className="absolute -right-8 -top-3 w-6 h-6 bg-gray-50 rounded-full border border-gray-200"></div>
               </div>
 
               {/* Booking Details */}
-              <div className="bg-blue-50 rounded-lg p-6 mb-6">
-                <h3 className="text-lg font-semibold text-gray-800 mb-4">Butiran Pengambilan</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Tarikh:</span>
-                    <span className="font-medium text-gray-900">{selectedSlot.date}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Masa:</span>
-                    <span className="font-medium text-gray-900">{selectedSlot.time}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Lokasi:</span>
-                    <span className="font-medium text-gray-900">{selectedSlot.location}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Email:</span>
-                    <span className="font-medium text-gray-900">{auth.currentUser?.email}</span>
-                  </div>
+              <div className="bg-blue-50 rounded-xl p-5 space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-500 text-sm">Nama Pelajar</span>
+                  <span className="font-semibold text-gray-900">{studentName || auth.currentUser?.email}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-500 text-sm">Lokasi</span>
+                  <span className="font-semibold text-gray-900">{selectedSlot.location}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-500 text-sm">Tarikh</span>
+                  <span className="font-semibold text-gray-900">{selectedSlot.date}</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-gray-500 text-sm">Masa</span>
+                  <span className="font-semibold text-gray-900">{selectedSlot.time}</span>
                 </div>
               </div>
 
-              {/* Coupon Code */}
-              <div className="bg-gray-100 rounded-lg p-4 text-center mb-6">
-                <p className="text-sm text-gray-600 mb-2">Kod Kupon</p>
-                <p className="text-xl font-mono font-bold text-gray-900 tracking-wider">
-                  {auth.currentUser?.email?.split('@')[0].toUpperCase()}-{selectedSlot.date.replace(/-/g, '')}-{selectedSlot.time.replace(':', '')}
-                </p>
-              </div>
-
-              {/* Instructions */}
-              <div className="text-center">
-                <p className="text-sm text-gray-500">
-                  Sila tunjukkan kupon ini semasa pengambilan.
-                </p>
-              </div>
+              <p className="text-center text-sm text-gray-500 mt-6">
+                Sila tunjukkan kupon ini semasa pengambilan.
+              </p>
             </div>
 
             {/* Coupon Footer */}
             <div className="bg-gray-100 p-4 text-center">
               <button
-                onClick={() => {
-                  setShowQRCode(false);
-                  setSelectedSlot(null);
-                }}
+                onClick={() => router.push("/records")}
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
               >
                 Kembali
@@ -298,6 +323,7 @@ export default function PilihSlotPengambilan() {
   }
 
 return (
+  <>
   <div className="min-h-screen bg-gray-100 py-10 px-4">
     <div className="max-w-6xl mx-auto">
 
@@ -310,25 +336,6 @@ return (
           Sila pilih slot yang sesuai untuk pengambilan
         </p>
       </div>
-
-      {/* Selected Slot */}
-      {userBookings.some(b => b.status === "approved") && (
-        <div className="bg-green-50 border border-green-200 rounded-2xl p-5 mb-6">
-          <p className="font-semibold text-green-700 mb-2">
-            Slot Dipilih
-          </p>
-          {userBookings
-            .filter(b => b.status === "approved")
-            .map(booking => {
-              const slot = slots.find(s => s.id === booking.slotId);
-              return slot ? (
-                <div key={booking.id} className="text-sm text-gray-700">
-                  {slot.date} | {slot.time} | {slot.location}
-                </div>
-              ) : null;
-            })}
-        </div>
-      )}
 
       {/* Main Content Box */}
       <div className="bg-white rounded-2xl shadow-md border border-gray-200 p-6">
@@ -432,5 +439,51 @@ return (
       </div>
     </div>
   </div>
+
+  {/* Success Dialog */}
+  {showSuccessDialog && selectedSlot && (
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 px-4">
+      <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm overflow-hidden">
+        <div className="p-6 text-center">
+          <div className="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg className="w-7 h-7 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <h2 className="text-xl font-bold text-gray-900 mb-1">Slot Berjaya Dipilih!</h2>
+          <p className="text-sm text-gray-500 mb-5">Butiran slot pengambilan anda:</p>
+          <div className="bg-blue-50 rounded-xl p-4 text-left space-y-2.5 mb-6">
+            <div className="flex justify-between text-sm">
+              <span className="text-gray-500">Lokasi</span>
+              <span className="font-semibold text-gray-800">{selectedSlot.location}</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-gray-500">Tarikh</span>
+              <span className="font-semibold text-gray-800">{selectedSlot.date}</span>
+            </div>
+            <div className="flex justify-between text-sm">
+              <span className="text-gray-500">Masa</span>
+              <span className="font-semibold text-gray-800">{selectedSlot.time}</span>
+            </div>
+          </div>
+          <div className="flex gap-3">
+            <button
+              onClick={() => { setShowSuccessDialog(false); setShowQRCode(true); }}
+              className="flex-1 bg-blue-600 text-white py-2.5 rounded-xl font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Lihat Kupon
+            </button>
+            <button
+              onClick={() => router.push("/records")}
+              className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-xl font-semibold hover:bg-gray-50 transition-colors"
+            >
+              Rekod Bantuan
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+  </>
 );
 }
