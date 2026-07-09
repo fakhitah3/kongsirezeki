@@ -123,12 +123,10 @@ export default function Navbar() {
         { label: "Dashboard", path: "/dashboard/admin" },
         { label: "Pengurusan Pelajar", path: "/admin/students" },
         { label: "Pengurusan Permohonan", path: "/admin/applications" },
-        { label: "Pengurusan Bantuan", path: "/admin/aid" },
         { label: "Pengurusan Stok", path: "/admin/stock" },
         { label: "Pengurusan Kempen", path: "/admin/campaigns" },
         { label: "Pengurusan Sumbangan", path: "/admin/donations" },
         { label: "Pengurusan Slot", path: "/admin/slots" },
-        { label: "Laporan", path: "/admin/reports" }
       ]
     };
 
@@ -195,7 +193,6 @@ export default function Navbar() {
         { label: "Pengurusan Kempen", path: "/admin/campaigns" },
         { label: "Pengurusan Sumbangan", path: "/admin/donations" },
         { label: "Pengurusan Slot", path: "/admin/slots" },
-        { label: "Laporan", path: "/admin/reports" },
       ],
     };
     const currentRole = userRole === "student" ? "pelajar" : userRole;
