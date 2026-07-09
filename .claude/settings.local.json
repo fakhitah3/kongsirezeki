@@ -15,7 +15,9 @@
       "Bash(gh api *)",
       "WebFetch(domain:github.com)",
       "WebSearch",
-      "WebFetch(domain:support.bolt.new)"
+      "WebFetch(domain:support.bolt.new)",
+      "Bash(kill 1855)",
+      "Bash(git checkout *)"
     ]
   }
 }

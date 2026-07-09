@@ -127,28 +127,6 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
-
-        {/* Quick Actions */}
-        <div className="mt-12 flex flex-wrap justify-center gap-4">
-          <button 
-            onClick={() => window.location.href = '/donate'}
-            className="bg-purple-600 hover:bg-purple-700  text-white px-8 py-4 rounded-lg font-semibold hover:from-red-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-          >
-            Sumbang Sekarang
-          </button>
-          <button 
-            onClick={() => window.location.href = '/apply'}
-            className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-          >
-            Mohon Bantuan
-          </button>
-          <button 
-            onClick={() => window.location.href = '/register'}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-          >
-            Daftar Sekarang
-          </button>
-        </div>
       </div>
     </section>
   );
