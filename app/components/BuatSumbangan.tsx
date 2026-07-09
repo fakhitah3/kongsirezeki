@@ -5,6 +5,7 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { auth, db, storage } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
+import Image from "next/image";
 
 interface DonationForm {
   jenisSumbangan: string;
@@ -379,6 +380,19 @@ export default function BuatSumbangan() {
                 <h3 className="text-lg font-semibold text-blue-800 mb-4 flex items-center">
                   Maklumat Wang
                 </h3>
+                {/* DuitNow QR Code */}
+                <div className="mt-6 flex flex-col items-center bg-white border-2 border-blue-100 rounded-xl p-5">
+                  <p className="text-sm font-semibold text-blue-800 mb-3">Imbas kod QR untuk membuat pembayaran</p>
+                  <div className="relative w-56 h-56">
+                    <Image
+                      src="/duitnow-qr.png"
+                      alt="DuitNow QR Code"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                  <p className="text-xs text-gray-500 mt-3 text-center">Sila muat naik bukti pembayaran selepas imbasan berjaya.</p>
+                </div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -420,7 +434,9 @@ export default function BuatSumbangan() {
                   </div>
                 </div>
 
-                <div className="mt-6">        
+                
+
+                <div className="mt-6">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
                         Muat Naik Bukti (PDF/JPG/PNG)

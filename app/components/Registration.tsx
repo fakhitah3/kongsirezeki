@@ -1,7 +1,7 @@
 "use client";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc, serverTimestamp } from "firebase/firestore";
+import { doc, setDoc, serverTimestamp, collection, query, where, getDocs } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -14,6 +14,7 @@ export default function RegisterPage() {
   const [role, setRole] = useState("pelajar");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [emailExists, setEmailExists] = useState(false);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -21,8 +22,19 @@ export default function RegisterPage() {
     try {
       setError("");
       setMessage("");
+      setEmailExists(false);
       setLoading(true);
-      
+
+      // Check if email already exists in Firestore users collection
+      const emailQuery = query(collection(db, "users"), where("email", "==", email));
+      const emailSnap = await getDocs(emailQuery);
+      if (!emailSnap.empty) {
+        setError("Email ini sudah didaftarkan. Sila log masuk.");
+        setEmailExists(true);
+        setLoading(false);
+        return;
+      }
+
       const userCred = await createUserWithEmailAndPassword(auth, email, password);
 
       await setDoc(doc(db, "users", userCred.user.uid), {
@@ -33,30 +45,15 @@ export default function RegisterPage() {
         createdAt: serverTimestamp(),
       });
 
-      setMessage("Pendaftaran berjaya! Anda akan dialihkan ke dashboard...");
-      
-      // Redirect to appropriate dashboard based on role
-      setTimeout(() => {
-        switch (role) {
-          case "pelajar":
-            router.push("/dashboard/student");
-            break;
-          case "penyumbang":
-            router.push("/dashboard/donor");
-            break;
-          case "sukarelawan":
-            router.push("/dashboard/volunteer");
-            break;
-          default:
-            router.push("/");
-        }
-      }, 2000);
+      setMessage("Pendaftaran berjaya! Sila log masuk untuk meneruskan...");
+      setTimeout(() => router.push("/login"), 2000);
       
     } catch (err: any) {
       let errorMessage = "Pendaftaran gagal. Sila cuba lagi.";
       
       if (err.code === 'auth/email-already-in-use') {
-        errorMessage = "Email ini sudah digunakan. Sila gunakan email lain atau log masuk.";
+        errorMessage = "Email ini sudah didaftarkan. Sila log masuk.";
+        setEmailExists(true);
       } else if (err.code === 'auth/invalid-email') {
         errorMessage = "Format email tidak sah. Sila semak semula email anda.";
       } else if (err.code === 'auth/weak-password') {
@@ -99,11 +96,21 @@ export default function RegisterPage() {
         )}
 
         {error && (
-          <div className="bg-red-50 border border-red-200 text-red-800 px-6 py-4 rounded-lg mb-6 flex items-center">
-            <svg className="w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
-            </svg>
-            {error}
+          <div className="bg-red-50 border border-red-200 text-red-800 px-6 py-4 rounded-lg mb-6">
+            <div className="flex items-center">
+              <svg className="w-5 h-5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 101.414 1.414l2 2a1 1 0 001.414 0z" clipRule="evenodd" />
+              </svg>
+              <span>{error}</span>
+            </div>
+            {emailExists && (
+              <button
+                onClick={() => router.push("/login")}
+                className="mt-3 w-full bg-red-700 text-white py-2 rounded-lg font-medium hover:bg-red-800 transition-colors"
+              >
+                Pergi ke Log Masuk
+              </button>
+            )}
           </div>
         )}
 
