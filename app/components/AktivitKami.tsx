@@ -4,14 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 
 const photos = [
-  { src: "/aktiviti-1.jpg", alt: "Pengagihan makanan di luar kampus" },
-  { src: "/aktiviti-2.jpg", alt: "Acara kongsi rezeki bersama pelajar dan staf" },
+  { src: "/aktiviti-1.jpeg", alt: "Pengagihan makanan di luar kampus" },
+  { src: "/aktiviti-2.jpeg", alt: "Acara kongsi rezeki bersama pelajar dan staf" },
 ];
 
 const posters = [
-  { src: "/poster-masak-merah.jpg", alt: "Menu: Ayam Masak Merah" },
-  { src: "/poster-lada-hitam.jpg", alt: "Menu: Daging Masak Lada Hitam" },
-  { src: "/poster-singgang.jpg", alt: "Menu: Daging Singgang" },
+  { src: "/poster-masak-merah.jpeg", alt: "Menu: Ayam Masak Merah" },
+  { src: "/poster-lada-hitam.jpeg", alt: "Menu: Daging Masak Lada Hitam" },
+  { src: "/poster-singgang.jpeg", alt: "Menu: Daging Singgang" },
 ];
 
 export default function AktivitKami() {
