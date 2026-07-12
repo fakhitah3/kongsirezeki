@@ -13,28 +13,34 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const checkUserRole = async () => {
-      const role = await getUserRole();
-      setUserRole(role);
-      setLoading(false);
-    };
+    let unsubPersonal: (() => void) | null = null;
+    let unsubAdmin: (() => void) | null = null;
 
     const unsubscribe = auth.onAuthStateChanged((user) => {
+      // Clean up previous listeners
+      unsubPersonal?.();
+      unsubAdmin?.();
+
       if (user) {
-        checkUserRole();
-        
-        // Fetch unread notifications
-        const notificationsQuery = query(
-          collection(db, "notifications"),
-          where("userId", "==", user.uid),
-          where("read", "==", false)
-        );
-        
-        const unsubscribeNotifications = onSnapshot(notificationsQuery, (snapshot) => {
-          setNotificationCount(snapshot.size);
+        getUserRole().then((role) => {
+          setUserRole(role);
+          setLoading(false);
+
+          let personalCount = 0;
+          let adminCount = 0;
+
+          unsubPersonal = onSnapshot(
+            query(collection(db, "notifications"), where("userId", "==", user.uid), where("read", "==", false)),
+            (snap) => { personalCount = snap.size; setNotificationCount(personalCount + adminCount); }
+          );
+
+          if (role === "admin") {
+            unsubAdmin = onSnapshot(
+              query(collection(db, "notifications"), where("role", "==", "admin"), where("read", "==", false)),
+              (snap) => { adminCount = snap.size; setNotificationCount(personalCount + adminCount); }
+            );
+          }
         });
-        
-        return () => unsubscribeNotifications();
       } else {
         setUserRole(null);
         setLoading(false);
@@ -42,7 +48,11 @@ export default function Navbar() {
       }
     });
 
-    return () => unsubscribe();
+    return () => {
+      unsubscribe();
+      unsubPersonal?.();
+      unsubAdmin?.();
+    };
   }, []);
 
   const handleLogout = async () => {

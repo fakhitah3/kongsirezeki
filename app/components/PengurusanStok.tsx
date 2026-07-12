@@ -27,7 +27,6 @@ export default function PengurusanStok() {
     nama: "",
     kuantiti: 0,
     unit: "kg",
-    ambangRendah: 10,
     penerangan: ""
   });
   const [saving, setSaving] = useState(false);
@@ -84,7 +83,6 @@ export default function PengurusanStok() {
       nama: "",
       kuantiti: 0,
       unit: "kg",
-      ambangRendah: 10,
       penerangan: ""
     });
     setEditingStock(null);
@@ -97,7 +95,6 @@ export default function PengurusanStok() {
       nama: stock.nama,
       kuantiti: stock.kuantiti,
       unit: stock.unit,
-      ambangRendah: stock.ambangRendah,
       penerangan: stock.penerangan
     });
     setEditingStock(stock);
@@ -126,6 +123,7 @@ export default function PengurusanStok() {
       case "roti": return "Roti";
       case "susu": return "Susu";
       case "makanan_kering": return "Makanan Kering";
+      case "lain_lain": return "Lain-lain";
       default: return jenis;
     }
   };
@@ -211,6 +209,7 @@ export default function PengurusanStok() {
                   <option value="roti">Roti</option>
                   <option value="susu">Susu</option>
                   <option value="makanan_kering">Makanan Kering</option>
+                  <option value="lain_lain">Lain-lain</option>
                 </select>
               </div>
               <div>
@@ -248,19 +247,8 @@ export default function PengurusanStok() {
                   </select>
                 </div>
               </div>
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Ambang Stok Rendah</label>
-                <input
-                  type="number"
-                  value={formData.ambangRendah}
-                  onChange={(e) => setFormData({...formData, ambangRendah: parseInt(e.target.value)})}
-                  min="1"
-                  className="w-full border border-gray-300 rounded px-3 py-2"
-                  required
-                />
-              </div>
               <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-2">Penerangan</label>
+                <label className="block text-sm font-medium text-gray-700 mb-2">Penerangan <span className="text-gray-400 font-normal">(pilihan)</span></label>
                 <textarea
                   value={formData.penerangan}
                   onChange={(e) => setFormData({...formData, penerangan: e.target.value})}

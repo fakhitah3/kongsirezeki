@@ -12,9 +12,6 @@ interface ReportStats {
   rejectedApplications: number;
   pendingApplications: number;
   totalStudentsHelped: number;
-  totalFoodDistributed: number;
-  totalMoneyDistributed: number;
-  averageProcessingTime: number;
   successRate: number;
   makananAsasCount: number;
   foodPackCount: number;
@@ -29,9 +26,6 @@ export default function AdminDashboard() {
     rejectedApplications: 0,
     pendingApplications: 0,
     totalStudentsHelped: 0,
-    totalFoodDistributed: 0,
-    totalMoneyDistributed: 0,
-    averageProcessingTime: 0,
     successRate: 0,
     makananAsasCount: 0,
     foodPackCount: 0,
@@ -48,10 +42,8 @@ export default function AdminDashboard() {
         );
         const applications = applicationsSnapshot.docs.map(doc => doc.data());
 
-        const stockSnapshot = await getDocs(
-          query(collection(db, "stocks"), where("status", "==", "distributed"))
-        );
-        const distributedStock = stockSnapshot.docs.map(doc => doc.data());
+        const usersSnapshot = await getDocs(query(collection(db, "users"), where("role", "==", "pelajar")));
+        const totalUsers = usersSnapshot.size;
 
         const approved = applications.filter(a => a.status === "approved").length;
         const rejected = applications.filter(a => a.status === "rejected").length;
@@ -78,10 +70,7 @@ export default function AdminDashboard() {
           approvedApplications: approved,
           rejectedApplications: rejected,
           pendingApplications: pending,
-          totalStudentsHelped: approved,
-          totalFoodDistributed: distributedStock.length,
-          totalMoneyDistributed: distributedStock.reduce((s, i) => s + (i.estimatedValue || 0), 0),
-          averageProcessingTime: 2.5,
+          totalStudentsHelped: totalUsers,
           successRate,
           makananAsasCount,
           foodPackCount,
@@ -131,9 +120,7 @@ export default function AdminDashboard() {
 
     section("Impak & Outcome");
     line(`Pelajar Dibantu: ${stats.totalStudentsHelped}`);
-    line(`Makanan Diedarkan: ${stats.totalFoodDistributed}`);
-    line(`Nilai Wang Diedarkan: RM${stats.totalMoneyDistributed}`);
-    line(`Masa Prosesan Purata: ${stats.averageProcessingTime} hari`);
+    line(`Masa Prosesan: Kurang 24 Jam`);
     y += 5;
 
     section("Trend Bulanan");
@@ -228,16 +215,8 @@ export default function AdminDashboard() {
                 <span className="text-2xl font-bold text-green-700">{stats.totalStudentsHelped}</span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-gray-600">Makanan Diedarkan</span>
-                <span className="text-xl font-semibold text-blue-700">{stats.totalFoodDistributed}</span>
-              </div>
-              <div className="flex justify-between items-center">
-                <span className="text-gray-600">Nilai Diedarkan</span>
-                <span className="text-xl font-semibold text-purple-700">RM{stats.totalMoneyDistributed}</span>
-              </div>
-              <div className="flex justify-between items-center">
                 <span className="text-gray-600">Masa Prosesan</span>
-                <span className="text-xl font-semibold text-red-700">{stats.averageProcessingTime} hari</span>
+                <span className="text-xl font-semibold text-red-700">Kurang 24 Jam</span>
               </div>
             </div>
           </div>

@@ -57,6 +57,16 @@ export default function MohonBantuan() {
 
       await addDoc(collection(db, "applications"), applicationData);
 
+      // Notify admin
+      await addDoc(collection(db, "notifications"), {
+        role: "admin",
+        title: "Permohonan Baru Diterima",
+        message: `Permohonan baharu daripada ${auth.currentUser.email} telah dihantar.`,
+        type: "new_application",
+        read: false,
+        createdAt: serverTimestamp(),
+      });
+
       // Show success popup and auto-close after 5 seconds
       setShowSuccessPopup(true);
       setTimeout(() => {

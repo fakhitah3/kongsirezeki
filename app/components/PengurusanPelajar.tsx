@@ -223,9 +223,6 @@ export default function PengurusanPelajar() {
                     Maklumat Pelajar
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                    Hubungan
-                  </th>
-                  <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                     Akademik
                   </th>
                   <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -248,14 +245,6 @@ export default function PengurusanPelajar() {
                           {student.name || "Tiada nama"}
                         </p>
                         <p className="text-xs text-gray-500">{student.email}</p>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      <div>
-                        <p>{student.phone || "Tiada telefon"}</p>
-                        <p className="text-xs text-gray-500 truncate max-w-[200px]">
-                          {student.address || "Tiada alamat"}
-                        </p>
                       </div>
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">

@@ -151,6 +151,7 @@ export default function PengurusanSlot() {
     }
     switch (status) {
       case "available":
+      case "active":
         return "bg-green-100 text-green-800 border-green-300";
       case "disabled":
         return "bg-yellow-100 text-yellow-800 border-yellow-300";
@@ -165,6 +166,7 @@ export default function PengurusanSlot() {
     }
     switch (status) {
       case "available":
+      case "active":
         return "Aktif";
       case "disabled":
         return "Tidak Aktif";
@@ -423,17 +425,23 @@ export default function PengurusanSlot() {
                         >
                           Edit
                         </button>
-                        <button
-                          onClick={() => toggleSlotStatus(slot.id, slot.status)}
-                          disabled={updating === slot.id}
-                          className={`px-3 py-1 rounded text-xs disabled:opacity-50 ${
-                            slot.status === "available"
-                              ? "bg-red-600 hover:bg-red-700 text-white"
-                              : "bg-green-600 hover:bg-green-700 text-white"
-                          }`}
-                        >
-                          {updating === slot.id ? "..." : slot.status === "available" ? "Nyahaktif" : "Aktifkan"}
-                        </button>
+                        {slot.currentBookings < slot.maxStudents && (
+                          <button
+                            onClick={() => toggleSlotStatus(slot.id, slot.status)}
+                            disabled={updating === slot.id}
+                            className={`px-3 py-1 rounded text-xs disabled:opacity-50 ${
+                              slot.status === "available" || slot.status === "active"
+                                ? "bg-red-600 hover:bg-red-700 text-white"
+                                : "bg-green-600 hover:bg-green-700 text-white"
+                            }`}
+                          >
+                            {updating === slot.id
+                              ? "..."
+                              : slot.status === "available" || slot.status === "active"
+                              ? "Tidak Aktif"
+                              : "Aktif"}
+                          </button>
+                        )}
                       </div>
                     </td>
                   </tr>

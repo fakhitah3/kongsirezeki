@@ -3,7 +3,8 @@
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { onAuthStateChanged, User } from "firebase/auth";
-import { auth } from "@/lib/firebase";
+import { auth, db } from "@/lib/firebase";
+import { doc, getDoc } from "firebase/firestore";
 import MohonBantuan from "../components/MohonBantuan";
 
 export default function ApplyPage() {
@@ -12,15 +13,13 @@ export default function ApplyPage() {
   const [isProfileIncomplete, setIsProfileIncomplete] = useState(false);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (u) => {
+    const unsubscribe = onAuthStateChanged(auth, async (u) => {
       setUser(u);
       if (u) {
-        const missing = [
-          !localStorage.getItem("phoneNumber"),
-          !localStorage.getItem("faculty"),
-          !localStorage.getItem("semester"),
-        ];
-        setIsProfileIncomplete(missing.some(Boolean));
+        const snap = await getDoc(doc(db, "users", u.uid));
+        const data = snap.data();
+        const missing = !data?.faculty || !data?.semester;
+        setIsProfileIncomplete(missing);
       }
     });
     return () => unsubscribe();

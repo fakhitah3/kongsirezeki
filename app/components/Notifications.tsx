@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { collection, query, where, onSnapshot, orderBy, updateDoc, doc } from "firebase/firestore";
 import { auth, db } from "@/lib/firebase";
+import { getUserRole } from "@/lib/useUserRole";
 
 interface Notification {
   id: string;
@@ -21,22 +22,39 @@ export default function Notifications() {
   useEffect(() => {
     if (!auth.currentUser) return;
 
-    const q = query(
-      collection(db, "notifications"),
-      where("userId", "==", auth.currentUser.uid),
-      orderBy("createdAt", "desc")
+    const uid = auth.currentUser.uid;
+    let combined: Notification[] = [];
+    let personalList: Notification[] = [];
+    let adminList: Notification[] = [];
+
+    const merge = () => {
+      const merged = [...personalList, ...adminList].sort((a, b) => {
+        const ta = a.createdAt?.toDate?.() ?? new Date(0);
+        const tb = b.createdAt?.toDate?.() ?? new Date(0);
+        return tb.getTime() - ta.getTime();
+      });
+      setNotifications(merged);
+      setLoading(false);
+    };
+
+    const personalUnsub = onSnapshot(
+      query(collection(db, "notifications"), where("userId", "==", uid), orderBy("createdAt", "desc")),
+      (snap) => { personalList = snap.docs.map(d => ({ id: d.id, ...d.data() } as Notification)); merge(); }
     );
 
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const notifList: Notification[] = [];
-      snapshot.forEach((doc) => {
-        notifList.push({ id: doc.id, ...doc.data() } as Notification);
-      });
-      setNotifications(notifList);
-      setLoading(false);
+    let adminUnsub: (() => void) | null = null;
+    getUserRole().then((role) => {
+      if (role === "admin") {
+        adminUnsub = onSnapshot(
+          query(collection(db, "notifications"), where("role", "==", "admin"), orderBy("createdAt", "desc")),
+          (snap) => { adminList = snap.docs.map(d => ({ id: d.id, ...d.data() } as Notification)); merge(); }
+        );
+      } else {
+        setLoading(false);
+      }
     });
 
-    return () => unsubscribe();
+    return () => { personalUnsub(); adminUnsub?.(); };
   }, []);
 
   const markAsRead = async (notificationId: string) => {

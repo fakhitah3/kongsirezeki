@@ -258,21 +258,6 @@ export default function StudentDashboard() {
           </div>
         </div>
 
-        {/* Quick Actions */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <button onClick={() => router.push('/apply')} className="bg-blue-600 text-white p-4 rounded-xl hover:bg-blue-700 transition-colors text-left">
-            <p className="font-semibold">Mohon Bantuan</p>
-            <p className="text-sm mt-1 opacity-80">Hantar permohonan baharu</p>
-          </button>
-          <button onClick={() => router.push('/status')} className="bg-gray-700 text-white p-4 rounded-xl hover:bg-gray-800 transition-colors text-left">
-            <p className="font-semibold">Semak Status</p>
-            <p className="text-sm mt-1 opacity-80">Lihat status permohonan</p>
-          </button>
-          <button onClick={() => router.push('/profile')} className="bg-purple-600 text-white p-4 rounded-xl hover:bg-purple-700 transition-colors text-left">
-            <p className="font-semibold">Kemas Kini Profil</p>
-            <p className="text-sm mt-1 opacity-80">Edit maklumat peribadi</p>
-          </button>
-        </div>
       </div>
     </div>
   );
