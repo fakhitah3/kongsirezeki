@@ -31,7 +31,7 @@ export default function PengurusanPelajar() {
   useEffect(() => {
     const q = query(
       collection(db, "users"),
-      where("role", "==", "pelajar")
+      where("role", "in", ["pelajar", "Pelajar"])
     );
     
     const unsubscribe = onSnapshot(q, (snapshot) => {
@@ -49,7 +49,11 @@ export default function PengurusanPelajar() {
   const filteredStudents = students.filter(student => {
     const facultyMatch = filter.faculty === "all" || student.faculty === filter.faculty;
     const semesterMatch = filter.semester === "all" || student.semester === filter.semester;
-    const statusMatch = filter.status === "all" || student.status === filter.status;
+    
+    // Case-insensitive status matching
+    const statusMatch = filter.status === "all" || 
+      student.status?.toLowerCase() === filter.status.toLowerCase();
+      
     const searchMatch = searchTerm === "" || 
       student.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       student.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -82,10 +86,10 @@ export default function PengurusanPelajar() {
   };
 
   const getStatusColor = (status?: string) => {
-    switch (status) {
+    switch (status?.toLowerCase()) {
       case "aktif":
         return "bg-green-100 text-green-800 border-green-300";
-      case "tidak_aktif":
+      case "tidak aktif":
         return "bg-red-100 text-red-800 border-red-300";
       case "ditangguhkan":
         return "bg-yellow-100 text-yellow-800 border-yellow-300";
@@ -95,9 +99,9 @@ export default function PengurusanPelajar() {
   };
 
   const getStatusText = (status?: string) => {
-    switch (status) {
+    switch (status?.toLowerCase()) {
       case "aktif": return "Aktif";
-      case "tidak_aktif": return "Tidak Aktif";
+      case "tidak aktif": return "Tidak Aktif";
       case "ditangguhkan": return "Ditangguhkan";
       default: return "Tidak Diketahui";
     }
@@ -114,9 +118,10 @@ export default function PengurusanPelajar() {
   };
 
   const totalStudents = filteredStudents.length;
-  const activeStudents = filteredStudents.filter(s => s.status === "aktif").length;
-  const inactiveStudents = filteredStudents.filter(s => s.status === "tidak_aktif").length;
-  const suspendedStudents = filteredStudents.filter(s => s.status === "ditangguhkan").length;
+  // Case-insensitive active student count check
+  const activeStudents = filteredStudents.filter(s => s.status?.toLowerCase() === "aktif").length;
+  const inactiveStudents = filteredStudents.filter(s => s.status?.toLowerCase() === "tidak aktif").length;
+  const suspendedStudents = filteredStudents.filter(s => s.status?.toLowerCase() === "ditangguhkan").length;
 
   if (loading) {
     return (
@@ -206,7 +211,7 @@ export default function PengurusanPelajar() {
               >
                 <option value="all">Semua Status</option>
                 <option value="aktif">Aktif</option>
-                <option value="tidak_aktif">Tidak Aktif</option>
+                <option value="Tidak Aktif">Tidak Aktif</option>
                 <option value="ditangguhkan">Ditangguhkan</option>
               </select>
             </div>
@@ -237,57 +242,64 @@ export default function PengurusanPelajar() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {filteredStudents.map((student) => (
-                  <tr key={student.id} className="hover:bg-gray-50">
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <div>
-                        <p className="text-sm font-medium text-gray-900">
-                          {student.name || "Tiada nama"}
-                        </p>
-                        <p className="text-xs text-gray-500">{student.email}</p>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      <div>
-                        <p>{student.faculty || "Tiada fakulti"}</p>
-                        <p className="text-xs text-gray-500">
-                          {student.semester ? `Semester ${student.semester}` : "Tiada semester"}
-                        </p>
-                      </div>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap">
-                      <span
-                        className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(
-                          student.status
-                        )}`}
-                      >
-                        {getStatusText(student.status)}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      {student.createdAt?.toDate()?.toLocaleDateString("ms-MY")}
-                    </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                      <div className="flex space-x-2">
-                        <select
-                          value={student.status || "tidak_aktif"}
-                          onChange={(e) => handleStatusUpdate(student.id, e.target.value)}
-                          className="border border-gray-300 rounded px-2 py-1 text-xs"
+                {filteredStudents.map((student) => {
+                  // Normalize value so select element matches even if DB contains "Aktif" or "aktif"
+                  const normalizedStatus = student.status?.toLowerCase() === "aktif" 
+                    ? "aktif" 
+                    : student.status || "Tidak Aktif";
+
+                  return (
+                    <tr key={student.id} className="hover:bg-gray-50">
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">
+                            {student.name || "Tiada nama"}
+                          </p>
+                          <p className="text-xs text-gray-500">{student.email}</p>
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                        <div>
+                          <p>{student.faculty || "Tiada fakulti"}</p>
+                          <p className="text-xs text-gray-500">
+                            {student.semester ? `Semester ${student.semester}` : "Tiada semester"}
+                          </p>
+                        </div>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap">
+                        <span
+                          className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(
+                            student.status
+                          )}`}
                         >
-                          <option value="aktif">Aktif</option>
-                          <option value="tidak_aktif">Tidak Aktif</option>
-                          <option value="ditangguhkan">Ditangguhkan</option>
-                        </select>
-                        <button
-                          onClick={() => handleDelete(student.id)}
-                          className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs"
-                        >
-                          Padam
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
+                          {getStatusText(student.status)}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                        {student.createdAt?.toDate()?.toLocaleDateString("ms-MY")}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                        <div className="flex space-x-2">
+                          <select
+                            value={normalizedStatus}
+                            onChange={(e) => handleStatusUpdate(student.id, e.target.value)}
+                            className="border border-gray-300 rounded px-2 py-1 text-xs"
+                          >
+                            <option value="aktif">Aktif</option>
+                            <option value="Tidak Aktif">Tidak Aktif</option>
+                            <option value="ditangguhkan">Ditangguhkan</option>
+                          </select>
+                          <button
+                            onClick={() => handleDelete(student.id)}
+                            className="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs"
+                          >
+                            Padam
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
           </div>

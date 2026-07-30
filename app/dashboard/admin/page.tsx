@@ -42,7 +42,7 @@ export default function AdminDashboard() {
         );
         const applications = applicationsSnapshot.docs.map(doc => doc.data());
 
-        const usersSnapshot = await getDocs(query(collection(db, "users"), where("role", "==", "pelajar")));
+        const usersSnapshot = await getDocs(query(collection(db, "users"), where("role", "in", ["pelajar", "Pelajar"])));
         const totalUsers = usersSnapshot.size;
 
         const approved = applications.filter(a => a.status === "approved").length;

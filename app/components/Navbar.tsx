@@ -140,7 +140,7 @@ export default function Navbar() {
       ]
     };
 
-    const currentRole = userRole === "student" ? "pelajar" : userRole;
+    const currentRole = userRole === "student" || userRole === "Pelajar" ? "pelajar" : userRole;
     const menuItems = roleMenus[currentRole as keyof typeof roleMenus] || [];
 
     return (
@@ -205,7 +205,7 @@ export default function Navbar() {
         { label: "Pengurusan Slot", path: "/admin/slots" },
       ],
     };
-    const currentRole = userRole === "student" ? "pelajar" : userRole;
+    const currentRole = userRole === "student" || userRole === "Pelajar" ? "pelajar" : userRole;
     const menuItems = roleMenus[currentRole as keyof typeof roleMenus] || [];
     return (
       <>
