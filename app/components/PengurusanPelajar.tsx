@@ -24,7 +24,7 @@ export default function PengurusanPelajar() {
   const [filter, setFilter] = useState({
     faculty: "all",
     semester: "all",
-    status: "all"
+    status: "aktif"
   });
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -60,6 +60,18 @@ export default function PengurusanPelajar() {
       student.phone?.includes(searchTerm);
     
     return facultyMatch && semesterMatch && statusMatch && searchMatch;
+  }).sort((a, b) => {
+    // Sort: active students first, then alphabetical by name
+    const isAActive = a.status?.toLowerCase() === "aktif";
+    const isBActive = b.status?.toLowerCase() === "aktif";
+    
+    if (isAActive && !isBActive) return -1;
+    if (!isAActive && isBActive) return 1;
+    
+    // Both have same status, sort alphabetically
+    const nameA = a.name?.toLowerCase() || "";
+    const nameB = b.name?.toLowerCase() || "";
+    return nameA.localeCompare(nameB);
   });
 
   const handleStatusUpdate = async (studentId: string, newStatus: string) => {
@@ -117,7 +129,7 @@ export default function PengurusanPelajar() {
     return semesters;
   };
 
-  const totalStudents = filteredStudents.length;
+  const totalStudents = students.length;
   // Case-insensitive active student count check
   const activeStudents = filteredStudents.filter(s => s.status?.toLowerCase() === "aktif").length;
   const inactiveStudents = filteredStudents.filter(s => s.status?.toLowerCase() === "tidak aktif").length;

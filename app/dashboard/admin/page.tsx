@@ -13,9 +13,9 @@ interface ReportStats {
   pendingApplications: number;
   totalStudentsHelped: number;
   successRate: number;
-  makananAsasCount: number;
   foodPackCount: number;
   bantuanKecemasanCount: number;
+  lainLainCount: number;
   monthlyTrend: { month: string; applications: number }[];
 }
 
@@ -27,9 +27,9 @@ export default function AdminDashboard() {
     pendingApplications: 0,
     totalStudentsHelped: 0,
     successRate: 0,
-    makananAsasCount: 0,
     foodPackCount: 0,
     bantuanKecemasanCount: 0,
+    lainLainCount: 0,
     monthlyTrend: [],
   });
   const [loading, setLoading] = useState(true);
@@ -50,9 +50,11 @@ export default function AdminDashboard() {
         const pending = applications.filter(a => a.status === "pending").length;
         const successRate = applications.length > 0 ? (approved / applications.length) * 100 : 0;
 
-        const makananAsasCount = applications.filter(a => a.jenisBantuan === "makanan_asas").length;
         const foodPackCount = applications.filter(a => a.jenisBantuan === "food_pack").length;
         const bantuanKecemasanCount = applications.filter(a => a.jenisBantuan === "kecemasan").length;
+        const lainLainCount = applications.filter(a => 
+          a.jenisBantuan === "lain_lain" || a.jenisBantuan === "lain-lain" || a.jenisBantuan === "lain"
+        ).length;
 
         const now = new Date();
         const monthlyTrend = Array.from({ length: 6 }, (_, i) => {
@@ -72,9 +74,9 @@ export default function AdminDashboard() {
           pendingApplications: pending,
           totalStudentsHelped: totalUsers,
           successRate,
-          makananAsasCount,
           foodPackCount,
           bantuanKecemasanCount,
+          lainLainCount,
           monthlyTrend,
         });
       } catch (error) {
@@ -105,9 +107,9 @@ export default function AdminDashboard() {
     };
 
     section("Statistik Mengikut Jenis Bantuan");
-    line(`Bantuan Makanan Asas: ${stats.makananAsasCount}`);
     line(`Food Pack Mingguan: ${stats.foodPackCount}`);
     line(`Bantuan Kecemasan: ${stats.bantuanKecemasanCount}`);
+    line(`Bantuan Lain-lain: ${stats.lainLainCount}`);
     y += 5;
 
     section("Statistik Utama");
@@ -162,10 +164,6 @@ export default function AdminDashboard() {
         <div className="bg-white shadow-xl rounded-2xl p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-800 mb-6">Statistik Mengikut Jenis Bantuan</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div className="bg-blue-50 p-4 rounded-lg">
-              <div className="font-semibold text-gray-800 mb-2">Bantuan Makanan Asas</div>
-              <div className="text-2xl font-bold text-blue-700">{stats.makananAsasCount}</div>
-            </div>
             <div className="bg-green-50 p-4 rounded-lg">
               <div className="font-semibold text-gray-800 mb-2">Food Pack Mingguan</div>
               <div className="text-2xl font-bold text-green-700">{stats.foodPackCount}</div>
@@ -173,6 +171,10 @@ export default function AdminDashboard() {
             <div className="bg-red-50 p-4 rounded-lg">
               <div className="font-semibold text-gray-800 mb-2">Bantuan Kecemasan</div>
               <div className="text-2xl font-bold text-red-700">{stats.bantuanKecemasanCount}</div>
+            </div>
+            <div className="bg-purple-50 p-4 rounded-lg">
+              <div className="font-semibold text-gray-800 mb-2">Bantuan Lain-lain</div>
+              <div className="text-2xl font-bold text-purple-700">{stats.lainLainCount}</div>
             </div>
           </div>
         </div>
