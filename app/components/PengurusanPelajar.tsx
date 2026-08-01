@@ -27,6 +27,8 @@ export default function PengurusanPelajar() {
     status: "aktif"
   });
   const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(20);
 
   useEffect(() => {
     const q = query(
@@ -73,6 +75,18 @@ export default function PengurusanPelajar() {
     const nameB = b.name?.toLowerCase() || "";
     return nameA.localeCompare(nameB);
   });
+
+  // Pagination logic
+  const totalPages = Math.ceil(filteredStudents.length / itemsPerPage);
+  const paginatedStudents = filteredStudents.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+
+  // Reset to page 1 when filters or items per page change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filter, searchTerm, itemsPerPage]);
 
   const handleStatusUpdate = async (studentId: string, newStatus: string) => {
     try {
@@ -254,7 +268,7 @@ export default function PengurusanPelajar() {
                 </tr>
               </thead>
               <tbody className="bg-white divide-y divide-gray-200">
-                {filteredStudents.map((student) => {
+                {paginatedStudents.map((student) => {
                   // Normalize value so select element matches even if DB contains "Aktif" or "aktif"
                   const normalizedStatus = student.status?.toLowerCase() === "aktif" 
                     ? "aktif" 
@@ -316,6 +330,49 @@ export default function PengurusanPelajar() {
             </table>
           </div>
         </div>
+
+        {/* Pagination Controls */}
+        {filteredStudents.length > 0 && (
+          <div className="bg-white shadow-lg rounded-lg p-4 mt-4">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-700">Tunjukkan:</span>
+                <select
+                  value={itemsPerPage}
+                  onChange={(e) => setItemsPerPage(Number(e.target.value))}
+                  className="border border-gray-300 rounded px-2 py-1 text-sm"
+                >
+                  <option value={20}>20</option>
+                  <option value={50}>50</option>
+                  <option value={100}>100</option>
+                </select>
+                <span className="text-sm text-gray-700">setiap halaman</span>
+              </div>
+              
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-700">
+                  Halaman {currentPage} daripada {totalPages}
+                </span>
+                <div className="flex gap-1">
+                  <button
+                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                    disabled={currentPage === 1}
+                    className="px-3 py-1 border rounded text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                  >
+                    &lt;
+                  </button>
+                  <button
+                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                    disabled={currentPage === totalPages}
+                    className="px-3 py-1 border rounded text-sm disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                  >
+                    &gt;
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {filteredStudents.length === 0 && (
           <div className="bg-white shadow-lg rounded-lg p-8 text-center">

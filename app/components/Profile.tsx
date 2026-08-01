@@ -253,16 +253,16 @@ export default function Profile() {
                         required
                       >
                         <option value="">Pilih fakulti</option>
-                        <option value="Fakulti Keusahawanan dan Perniagaan (FKP)">Fakulti Keusahawanan dan Perniagaan (FKP)</option>
-                        <option value="Fakulti Teknologi Kreatif dan Warisan (FTKW)">Fakulti Teknologi Kreatif dan Warisan (FTKW)</option>
-                        <option value="Fakulti Hospitaliti, Pelancongan dan Kesejahteraan (FHPK)">Fakulti Hospitaliti, Pelancongan dan Kesejahteraan (FHPK)</option>
-                        <option value="Fakulti Sains Data dan Komputeran (FSDK)">Fakulti Sains Data dan Komputeran (FSDK)</option>
-                        <option value="Fakulti Pengajian Bahasa dan Pembangunan Insaniah (FBI)">Fakulti Pengajian Bahasa dan Pembangunan Insaniah (FBI)</option>
-                        <option value="Fakulti Senibina dan Ekistik (FSE)">Fakulti Senibina dan Ekistik (FSE)</option>
-                        <option value="Fakulti Sains Bumi (FSB)">Fakulti Sains Bumi (FSB)</option>
-                        <option value="Fakulti Industri Asas Tani (FIAT)">Fakulti Industri Asas Tani (FIAT)</option>
-                        <option value="Fakulti Biokejuruteraan dan Teknologi (FBKT)">Fakulti Biokejuruteraan dan Teknologi (FBKT)</option>
-                        <option value="Fakulti Perubatan Veterinar (FPV)">Fakulti Perubatan Veterinar (FPV)</option>
+                        <option value="Fakulti Keusahawanan dan Perniagaan">Fakulti Keusahawanan dan Perniagaan (FKP)</option>
+                        <option value="Fakulti Teknologi Kreatif dan Warisan">Fakulti Teknologi Kreatif dan Warisan (FTKW)</option>
+                        <option value="Fakulti Hospitaliti, Pelancongan dan Kesejahteraan">Fakulti Hospitaliti, Pelancongan dan Kesejahteraan (FHPK)</option>
+                        <option value="Fakulti Sains Data dan Komputeran">Fakulti Sains Data dan Komputeran (FSDK)</option>
+                        <option value="Fakulti Pengajian Bahasa dan Pembangunan Insaniah">Fakulti Pengajian Bahasa dan Pembangunan Insaniah (FBI)</option>
+                        <option value="Fakulti Senibina dan Ekistik">Fakulti Senibina dan Ekistik (FSE)</option>
+                        <option value="Fakulti Sains Bumi">Fakulti Sains Bumi (FSB)</option>
+                        <option value="Fakulti Industri Asas Tani">Fakulti Industri Asas Tani (FIAT)</option>
+                        <option value="Fakulti Biokejuruteraan dan Teknologi">Fakulti Biokejuruteraan dan Teknologi (FBKT)</option>
+                        <option value="Fakulti Perubatan Veterinar">Fakulti Perubatan Veterinar (FPV)</option>
                         <option value="Pusat Asasi">Pusat Asasi</option>
                       </select>
                     </div>
