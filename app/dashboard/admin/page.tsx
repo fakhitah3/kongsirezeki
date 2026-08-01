@@ -35,56 +35,61 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchReportData = async () => {
-      try {
-        const applicationsSnapshot = await getDocs(
-          query(collection(db, "applications"), orderBy("createdAt", "desc"))
-        );
-        const applications = applicationsSnapshot.docs.map(doc => doc.data());
+  const fetchReportData = async () => {
+    try {
+      const applicationsSnapshot = await getDocs(
+        query(collection(db, "applications"), orderBy("createdAt", "desc"))
+      );
+      const applications = applicationsSnapshot.docs.map(doc => doc.data());
 
-        const usersSnapshot = await getDocs(query(collection(db, "users"), where("role", "in", ["pelajar", "Pelajar"])));
-        const totalUsers = usersSnapshot.size;
+      const usersSnapshot = await getDocs(query(collection(db, "users"), where("role", "in", ["pelajar", "Pelajar"])));
+      const totalUsers = usersSnapshot.size;
 
-        const approved = applications.filter(a => a.status === "approved").length;
-        const rejected = applications.filter(a => a.status === "rejected").length;
-        const pending = applications.filter(a => a.status === "pending").length;
-        const successRate = applications.length > 0 ? (approved / applications.length) * 100 : 0;
+      // Updated filter logic here
+      const approved = applications.filter(a => {
+        const status = a.status?.toLowerCase();
+        return status === "approved" || status === "completed";
+      }).length;
 
-        const foodPackCount = applications.filter(a => a.jenisBantuan === "food_pack").length;
-        const bantuanKecemasanCount = applications.filter(a => a.jenisBantuan === "kecemasan").length;
-        const lainLainCount = applications.filter(a => 
-          a.jenisBantuan === "lain_lain" || a.jenisBantuan === "lain-lain" || a.jenisBantuan === "lain"
-        ).length;
+      const rejected = applications.filter(a => a.status?.toLowerCase() === "rejected").length;
+      const pending = applications.filter(a => a.status?.toLowerCase() === "pending").length;
+      const successRate = applications.length > 0 ? (approved / applications.length) * 100 : 0;
 
-        const now = new Date();
-        const monthlyTrend = Array.from({ length: 6 }, (_, i) => {
-          const d = new Date(now.getFullYear(), now.getMonth() - (5 - i), 1);
-          const month = d.toLocaleDateString("ms-MY", { month: "long" });
-          const count = applications.filter(a => {
-            const date = a.createdAt?.toDate ? a.createdAt.toDate() : new Date(a.createdAt);
-            return date.getMonth() === d.getMonth() && date.getFullYear() === d.getFullYear();
-          }).length;
-          return { month, applications: count };
-        });
+      const foodPackCount = applications.filter(a => a.jenisBantuan === "food_pack").length;
+      const bantuanKecemasanCount = applications.filter(a => a.jenisBantuan === "kecemasan").length;
+      const lainLainCount = applications.filter(a => 
+        a.jenisBantuan === "lain_lain" || a.jenisBantuan === "lain-lain" || a.jenisBantuan === "lain"
+      ).length;
 
-        setStats({
-          totalApplications: applications.length,
-          approvedApplications: approved,
-          rejectedApplications: rejected,
-          pendingApplications: pending,
-          totalStudentsHelped: totalUsers,
-          successRate,
-          foodPackCount,
-          bantuanKecemasanCount,
-          lainLainCount,
-          monthlyTrend,
-        });
-      } catch (error) {
-        console.error("Error fetching dashboard data:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+      const now = new Date();
+      const monthlyTrend = Array.from({ length: 6 }, (_, i) => {
+        const d = new Date(now.getFullYear(), now.getMonth() - (5 - i), 1);
+        const month = d.toLocaleDateString("ms-MY", { month: "long" });
+        const count = applications.filter(a => {
+          const date = a.createdAt?.toDate ? a.createdAt.toDate() : new Date(a.createdAt);
+          return date.getMonth() === d.getMonth() && date.getFullYear() === d.getFullYear();
+        }).length;
+        return { month, applications: count };
+      });
+
+      setStats({
+        totalApplications: applications.length,
+        approvedApplications: approved,
+        rejectedApplications: rejected,
+        pendingApplications: pending,
+        totalStudentsHelped: totalUsers,
+        successRate,
+        foodPackCount,
+        bantuanKecemasanCount,
+        lainLainCount,
+        monthlyTrend,
+      });
+    } catch (error) {
+      console.error("Error fetching dashboard data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
     fetchReportData();
   }, []);
